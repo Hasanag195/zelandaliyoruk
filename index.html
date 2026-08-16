@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>zelandalıyoruk — Yeni Zelanda Rehberi</title>
+  <meta name="description" content="Yeni Zelanda'ya göç, vize, maaş ve günlük hayat hakkında konu başlıklarıyla video rehberi." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">zelandalıyoruk</a>
+      <nav class="social-links" id="social-links"></nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Yeni Zelanda'ya Göç Rehberi</h1>
+      <p>Vize süreçlerinden günlük hayata, konu başlığına göre derlenmiş video rehberi.</p>
+    </div>
+  </section>
+
+  <section class="topics">
+    <div class="container">
+      <h2>Konu Başlıkları</h2>
+      <div class="topic-grid" id="topic-grid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      &copy; <span id="year"></span> zelandalıyoruk
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("social-links").innerHTML = `
+      <a href="${SITE.channelUrl}" target="_blank" rel="noopener">YouTube</a>
+      <a href="${SITE.instagramUrl}" target="_blank" rel="noopener">Instagram</a>
+      <a href="${SITE.tiktokUrl}" target="_blank" rel="noopener">TikTok</a>
+    `;
+
+    const grid = document.getElementById("topic-grid");
+    grid.innerHTML = TOPICS.map(
+      (t) => `
+        <a class="topic-card" href="topic.html?t=${t.slug}">
+          <h3>${t.title}</h3>
+          <p>${t.summary}</p>
+        </a>
+      `
+    ).join("");
+  </script>
+</body>
+</html>
