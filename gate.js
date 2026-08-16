@@ -1,5 +1,39 @@
 (function () {
-  if (localStorage.getItem("zy_lead_ok") === "1") return;
+  function showWelcome() {
+    if (localStorage.getItem("zy_welcome_seen") === "1") return;
+
+    document.documentElement.style.overflow = "hidden";
+    const name = localStorage.getItem("zy_lead_name") || "";
+
+    const overlay = document.createElement("div");
+    overlay.className = "gate-overlay";
+    overlay.innerHTML = `
+      <div class="gate-card">
+        <img class="gate-logo" src="assets/logo.jpg" alt="zelandalıyoruk logo" />
+        <h1>Hoş Geldin${name ? ", " + name.split(" ")[0] : ""} 👋</h1>
+        <p>zelandalıyoruk rehberinde şunları bulacaksın:</p>
+        <ul class="welcome-list">
+          <li>🛂 Vize Türleri &amp; Resmi Süreçler</li>
+          <li>✈️ Yeni Zelanda'ya Nasıl Gelinir</li>
+          <li>💰 Maaş &amp; Vergi Sistemi</li>
+          <li>🏡 Günlük Hayat Gerçekleri</li>
+        </ul>
+        <button id="welcome-start" type="button">Keşfetmeye Başla</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    overlay.querySelector("#welcome-start").addEventListener("click", () => {
+      localStorage.setItem("zy_welcome_seen", "1");
+      document.documentElement.style.overflow = "";
+      overlay.remove();
+    });
+  }
+
+  if (localStorage.getItem("zy_lead_ok") === "1") {
+    showWelcome();
+    return;
+  }
 
   document.documentElement.style.overflow = "hidden";
 
@@ -52,8 +86,9 @@
       localStorage.setItem("zy_lead_ok", "1");
       localStorage.setItem("zy_lead_name", name);
       localStorage.setItem("zy_lead_email", email);
-      document.documentElement.style.overflow = "";
       overlay.remove();
+      showWelcome();
+      if (!document.querySelector(".gate-overlay")) document.documentElement.style.overflow = "";
     } catch (err) {
       errorEl.textContent = "Bir şeyler ters gitti, lütfen tekrar dene.";
       btn.disabled = false;
