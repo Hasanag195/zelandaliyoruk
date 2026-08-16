@@ -9,9 +9,9 @@
     overlay.className = "gate-overlay";
     overlay.innerHTML = `
       <div class="gate-card">
-        <img class="gate-logo" src="assets/logo.jpg" alt="zelandalıyoruk logo" />
+        <img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
         <h1>Hoş Geldin${name ? ", " + name.split(" ")[0] : ""} 👋</h1>
-        <p>zelandalıyoruk rehberinde şunları bulacaksın:</p>
+        <p>zelandaliyoruk rehberinde şunları bulacaksın:</p>
         <ul class="welcome-list">
           <li>🛂 Vize Türleri &amp; Resmi Süreçler</li>
           <li>✈️ Yeni Zelanda'ya Nasıl Gelinir</li>
@@ -41,8 +41,8 @@
   overlay.className = "gate-overlay";
   overlay.innerHTML = `
     <div class="gate-card">
-      <img class="gate-logo" src="assets/logo.jpg" alt="zelandalıyoruk logo" />
-      <h1>zelandalıyoruk'a Hoş Geldin</h1>
+      <img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
+      <h1>zelandaliyoruk'a Hoş Geldin</h1>
       <p>Yeni Zelanda rehberine erişmeden önce birkaç bilgini bırakır mısın?</p>
       <form id="gate-form" novalidate>
         <input type="text" name="name" placeholder="Ad Soyad" autocomplete="name" required />
