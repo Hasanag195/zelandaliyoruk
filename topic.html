@@ -89,13 +89,73 @@
             .join("")}</div>`
         : "";
 
+      const savedName = localStorage.getItem("zy_lead_name") || "";
+      const savedEmail = localStorage.getItem("zy_lead_email") || "";
+
+      const questionFormHtml = `
+        <div class="ask-box">
+          <h3>Bu konuyla ilgili sorun mu var?</h3>
+          <p>Sorunu bırak, gelecek videolarda cevaplayayım. Yorum alanı değildir, cevaplar burada değil kanalda gelir.</p>
+          <form id="ask-form" novalidate>
+            <input type="text" name="name" placeholder="Ad Soyad" value="${savedName}" required />
+            <input type="email" name="email" placeholder="E-posta" value="${savedEmail}" required />
+            <textarea name="question" placeholder="Sorunu yaz…" rows="3" required></textarea>
+            <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
+            <button type="submit">Soruyu Gönder</button>
+            <div class="ask-msg" id="ask-msg"></div>
+          </form>
+        </div>
+      `;
+
       detail.innerHTML = `
         <h1>${topic.title}</h1>
         <p class="summary">${topic.summary}</p>
         ${topic.inzWatch ? `<div class="inz-status" id="inz-status">Resmi kaynaklarla karşılaştırılıyor…</div>` : ""}
         ${visaCategoriesHtml}
         ${videosHtml}
+        ${questionFormHtml}
       `;
+
+      const askForm = document.getElementById("ask-form");
+      const askMsg = document.getElementById("ask-msg");
+      askForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        askMsg.textContent = "";
+        askMsg.className = "ask-msg";
+        const data = new FormData(askForm);
+        const name = data.get("name").trim();
+        const email = data.get("email").trim();
+        const question = data.get("question").trim();
+        const hp = data.get("hp").trim();
+
+        if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !question) {
+          askMsg.textContent = "Lütfen tüm alanları doldur.";
+          askMsg.classList.add("ask-msg--error");
+          return;
+        }
+
+        const btn = askForm.querySelector("button");
+        btn.disabled = true;
+        btn.textContent = "Gönderiliyor…";
+
+        try {
+          const res = await fetch("/api/questions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, question, topic: topic.title, hp }),
+          });
+          if (!res.ok) throw new Error("failed");
+          askForm.reset();
+          askMsg.textContent = "Sorun alındı, teşekkürler!";
+          askMsg.classList.add("ask-msg--ok");
+        } catch (err) {
+          askMsg.textContent = "Bir şeyler ters gitti, tekrar dener misin?";
+          askMsg.classList.add("ask-msg--error");
+        } finally {
+          btn.disabled = false;
+          btn.textContent = "Soruyu Gönder";
+        }
+      });
 
       if (topic.inzWatch) {
         fetch("/api/inz-status")

@@ -51,6 +51,7 @@
       if (!res.ok) throw new Error("request_failed");
       localStorage.setItem("zy_lead_ok", "1");
       localStorage.setItem("zy_lead_name", name);
+      localStorage.setItem("zy_lead_email", email);
       document.documentElement.style.overflow = "";
       overlay.remove();
     } catch (err) {
