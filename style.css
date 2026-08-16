@@ -56,7 +56,7 @@ header.site-header .container {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 62% 32%;
+  object-position: center;
   background: #0b1424;
 }
 
@@ -234,7 +234,7 @@ footer.site-footer {
   height: 76px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 62% 32%;
+  object-position: center;
   margin-bottom: 16px;
 }
 

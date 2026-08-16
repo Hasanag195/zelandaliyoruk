@@ -7,7 +7,7 @@
   overlay.className = "gate-overlay";
   overlay.innerHTML = `
     <div class="gate-card">
-      <img class="gate-logo" src="assets/logo.png" alt="zelandalıyoruk logo" />
+      <img class="gate-logo" src="assets/logo.jpg" alt="zelandalıyoruk logo" />
       <h1>zelandalıyoruk'a Hoş Geldin</h1>
       <p>Yeni Zelanda rehberine erişmeden önce birkaç bilgini bırakır mısın?</p>
       <form id="gate-form" novalidate>

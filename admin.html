@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>zelandalıyoruk — Kayıtlar</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .admin-wrap { padding: 40px 0; }
+    .admin-gate { max-width: 320px; margin: 80px auto; text-align: center; }
+    .admin-gate input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 10px; font-family: inherit; }
+    .admin-gate button { width: 100%; padding: 12px; border-radius: 10px; border: none; background: var(--primary); color: #fff; font-weight: 700; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+    th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    th { background: var(--border); font-weight: 700; }
+    .admin-meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+    .admin-err { color: #a3271d; font-size: 0.85rem; min-height: 1em; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo.jpg" alt="zelandalıyoruk logo" />
+        zelandalıyoruk
+      </a>
+    </div>
+  </header>
+
+  <div class="container admin-wrap">
+    <div id="admin-gate" class="admin-gate">
+      <h2>Kayıtları Görüntüle</h2>
+      <div class="admin-err" id="admin-err"></div>
+      <input type="password" id="admin-key" placeholder="Erişim anahtarı" />
+      <button id="admin-submit">Giriş</button>
+    </div>
+
+    <div id="admin-content" style="display:none">
+      <div class="admin-meta" id="admin-meta"></div>
+      <table>
+        <thead><tr><th>Ad Soyad</th><th>E-posta</th><th>Tarih</th></tr></thead>
+        <tbody id="admin-rows"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const gate = document.getElementById("admin-gate");
+    const content = document.getElementById("admin-content");
+    const err = document.getElementById("admin-err");
+
+    async function loadLeads(key) {
+      err.textContent = "";
+      const res = await fetch("/api/leads-list?key=" + encodeURIComponent(key));
+      if (res.status === 401) {
+        err.textContent = "Anahtar hatalı.";
+        return false;
+      }
+      if (!res.ok) {
+        err.textContent = "Kayıtlar yüklenemedi.";
+        return false;
+      }
+      const data = await res.json();
+      document.getElementById("admin-meta").textContent = `Toplam kayıt: ${data.count}`;
+      document.getElementById("admin-rows").innerHTML = data.leads
+        .map(
+          (l) => `<tr>
+            <td>${l.name}</td>
+            <td>${l.email}</td>
+            <td>${new Date(l.ts).toLocaleString("tr-TR")}</td>
+          </tr>`
+        )
+        .join("");
+      gate.style.display = "none";
+      content.style.display = "block";
+      return true;
+    }
+
+    document.getElementById("admin-submit").addEventListener("click", async () => {
+      const key = document.getElementById("admin-key").value.trim();
+      if (!key) return;
+      const ok = await loadLeads(key);
+      if (ok) sessionStorage.setItem("zy_admin_key", key);
+    });
+
+    const saved = sessionStorage.getItem("zy_admin_key");
+    if (saved) loadLeads(saved);
+  </script>
+</body>
+</html>

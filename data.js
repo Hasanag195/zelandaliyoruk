@@ -11,7 +11,7 @@ const TOPICS = [
     title: "Yeni Zelanda'ya Nasıl Gelinir",
     summary: "Yeni Zelanda'ya gelmenin yasal yolları: sponsorlu çalışma vizesi, öğrenci vizesi ve diğer seçenekler.",
     videos: [
-      // { id: "YouTube video ID", title: "Video başlığı" }
+      { id: "Z2fB2UyX0F4", title: "Yeni Zelanda'ya Nasıl Gelinir 6 Yasal Yol!" },
     ],
   },
   {
@@ -47,12 +47,18 @@ const TOPICS = [
     slug: "maas-vergi",
     title: "Maaş & Vergi Sistemi",
     summary: "Yeni Zelanda'da maaşlar, vergi sistemi ve çalışma hayatı hakkında gerçekler.",
-    videos: [],
+    videos: [
+      { id: "gZIgX_0Ny9g", title: "Yeni Zelanda'da Çalışma Hayatı Maaşlar ve Vergi Sistemi!" },
+    ],
   },
   {
     slug: "gunluk-hayat",
     title: "Günlük Hayat Gerçekleri",
     summary: "Yeni Zelanda'da yaşamın gündelik gerçekleri — kimsenin anlatmadığı detaylar.",
-    videos: [],
+    videos: [
+      { id: "-PftP3IlhOs", title: "Yeni Zelanda'da Hayat Nasıl? (Yeni Zelanda Gerçekleri)" },
+      { id: "q0rccS7Rdek", title: "Yeni Zelanda'da Ev Bulma: Gerçek Süreç ve Hatalar (1. Bölüm)" },
+      { id: "fGgNF-I6zYc", title: "Yeni Zelanda'da Ramazan Atmosferi (Türklerle Karşılaştık)" },
+    ],
   },
 ];
