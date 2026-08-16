@@ -71,11 +71,17 @@
     const content = document.getElementById("admin-content");
     const err = document.getElementById("admin-err");
 
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+      }[c]));
+    }
+
     async function loadAll(key) {
       err.textContent = "";
       const [leadsRes, questionsRes] = await Promise.all([
-        fetch("/api/leads-list?key=" + encodeURIComponent(key)),
-        fetch("/api/questions-list?key=" + encodeURIComponent(key)),
+        fetch("/api/leads-list", { headers: { "X-Admin-Key": key } }),
+        fetch("/api/questions-list", { headers: { "X-Admin-Key": key } }),
       ]);
 
       if (leadsRes.status === 401 || questionsRes.status === 401) {
@@ -92,9 +98,9 @@
       document.getElementById("leads-rows").innerHTML = leadsData.leads
         .map(
           (l) => `<tr>
-            <td>${l.name}</td>
-            <td>${l.email}</td>
-            <td>${new Date(l.ts).toLocaleString("tr-TR")}</td>
+            <td>${esc(l.name)}</td>
+            <td>${esc(l.email)}</td>
+            <td>${esc(new Date(l.ts).toLocaleString("tr-TR"))}</td>
           </tr>`
         )
         .join("");
@@ -104,11 +110,11 @@
       document.getElementById("questions-rows").innerHTML = questionsData.questions
         .map(
           (q) => `<tr>
-            <td>${q.name}</td>
-            <td>${q.email}</td>
-            <td>${q.topic || "-"}</td>
-            <td>${q.question}</td>
-            <td>${new Date(q.ts).toLocaleString("tr-TR")}</td>
+            <td>${esc(q.name)}</td>
+            <td>${esc(q.email)}</td>
+            <td>${esc(q.topic || "-")}</td>
+            <td>${esc(q.question)}</td>
+            <td>${esc(new Date(q.ts).toLocaleString("tr-TR"))}</td>
           </tr>`
         )
         .join("");

@@ -20,7 +20,13 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
+  let body;
+  try {
+    body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
+  } catch {
+    res.status(400).json({ ok: false, error: "invalid_json" });
+    return;
+  }
   const name = String(body.name || "").trim().slice(0, 120);
   const email = String(body.email || "").trim().slice(0, 200);
   const question = String(body.question || "").trim().slice(0, 2000);

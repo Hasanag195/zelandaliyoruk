@@ -90,8 +90,11 @@
             .join("")}</div>`
         : "";
 
-      const savedName = localStorage.getItem("zy_lead_name") || "";
-      const savedEmail = localStorage.getItem("zy_lead_email") || "";
+      const escAttr = (s) => String(s).replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+      }[c]));
+      const savedName = escAttr(localStorage.getItem("zy_lead_name") || "");
+      const savedEmail = escAttr(localStorage.getItem("zy_lead_email") || "");
 
       const questionFormHtml = `
         <div class="ask-box">
