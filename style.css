@@ -116,10 +116,15 @@ header.site-header .container {
 }
 
 .hero p {
-  max-width: 560px;
+  max-width: 720px;
   margin: 0 auto;
   color: var(--muted);
   font-size: 1.1rem;
+  white-space: normal;
+}
+
+@media (min-width: 640px) {
+  .hero p { white-space: nowrap; }
 }
 
 .topics {
