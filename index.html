@@ -41,6 +41,13 @@
     </div>
   </section>
 
+  <section class="videos">
+    <div class="container">
+      <h2>Videolar</h2>
+      <div class="video-list" id="video-list"></div>
+    </div>
+  </section>
+
   <section class="container" style="padding-bottom: 48px">
     <div class="ask-box" style="margin-top: 0">
       <h3>Aklında bir soru mu var?</h3>
@@ -89,6 +96,22 @@
         </a>
       `
     ).join("");
+
+    const videoList = document.getElementById("video-list");
+    const allVideos = TOPICS.flatMap((t) => t.videos.map((v) => ({ ...v, topicTitle: t.title })));
+    videoList.innerHTML = allVideos
+      .map(
+        (v) => `
+        <a class="video-row" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">
+          <span class="video-row-play">▶</span>
+          <span>
+            <span class="video-row-title">${v.title}</span>
+            <span class="video-row-topic">${v.topicTitle}</span>
+          </span>
+        </a>
+      `
+      )
+      .join("");
 
     const askForm = document.getElementById("ask-form");
     askForm.querySelector('input[name="name"]').value = localStorage.getItem("zy_lead_name") || "";
