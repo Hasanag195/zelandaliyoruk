@@ -86,10 +86,15 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    const ICONS = {
+      youtube: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>',
+      instagram: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>',
+      tiktok: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16.5 2h-3v13.6a3 3 0 1 1-2.2-2.9v-3.1a6.1 6.1 0 1 0 5.2 6V9.1a7.6 7.6 0 0 0 4.5 1.5V7.5a4.6 4.6 0 0 1-4.5-4.6V2Z"/></svg>',
+    };
     document.getElementById("social-links").innerHTML = `
-      <a href="${SITE.channelUrl}" target="_blank" rel="noopener">YouTube</a>
-      <a href="${SITE.instagramUrl}" target="_blank" rel="noopener">Instagram</a>
-      <a href="${SITE.tiktokUrl}" target="_blank" rel="noopener">TikTok</a>
+      <a href="${SITE.channelUrl}" target="_blank" rel="noopener">${ICONS.youtube}<span>YouTube</span></a>
+      <a href="${SITE.instagramUrl}" target="_blank" rel="noopener">${ICONS.instagram}<span>Instagram</span></a>
+      <a href="${SITE.tiktokUrl}" target="_blank" rel="noopener">${ICONS.tiktok}<span>TikTok</span></a>
     `;
 
     const grid = document.getElementById("topic-grid");

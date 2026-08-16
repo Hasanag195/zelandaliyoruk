@@ -95,6 +95,9 @@ header.site-header .container {
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
   color: var(--muted);
   transition: color 0.15s ease;
