@@ -17,7 +17,7 @@ const TOPICS = [
   {
     slug: "vize-sureclari",
     title: "Vize Türleri & Resmi Süreçler",
-    summary: "Yeni Zelanda vize kategorilerine genel bakış. Bu sayfa danışmanlık değildir — her kategori altındaki resmi bağlantıdan güncel koşulları mutlaka kontrol et.",
+    summary: "Yeni Zelanda vize kategorilerine genel bakış. Bu sayfa danışmanlık değildir, her kategori altındaki resmi bağlantıdan güncel koşulları mutlaka kontrol et.",
     inzWatch: true,
     visaCategories: [
       {
@@ -54,7 +54,7 @@ const TOPICS = [
   {
     slug: "gunluk-hayat",
     title: "Günlük Hayat Gerçekleri",
-    summary: "Yeni Zelanda'da yaşamın gündelik gerçekleri — kimsenin anlatmadığı detaylar.",
+    summary: "Yeni Zelanda'da yaşamın gündelik gerçekleri: kimsenin anlatmadığı detaylar.",
     videos: [
       { id: "-PftP3IlhOs", title: "Yeni Zelanda'da Hayat Nasıl? (Yeni Zelanda Gerçekleri)" },
       { id: "q0rccS7Rdek", title: "Yeni Zelanda'da Ev Bulma: Gerçek Süreç ve Hatalar (1. Bölüm)" },
@@ -64,7 +64,7 @@ const TOPICS = [
   {
     slug: "gezi-kesif",
     title: "Gezi & Keşif",
-    summary: "Yeni Zelanda'nın doğası ve gezilecek yerleri — kanaldaki keşif videoları.",
+    summary: "Yeni Zelanda'nın doğası ve gezilecek yerleri: kanaldaki keşif videoları.",
     videos: [
       { id: "C0Nbab1mtu8", title: "Yeni Zelanda Waitomo Mağaraları: Karanlığın İçindeki Işıklar!" },
       { id: "krkUb7Lgorg", title: "Yeni Zelanda'da Sessizliğin İçinde 🐦 | Katikati Bird Gardens" },

@@ -7,7 +7,7 @@
   <meta name="description" content="Yeni Zelanda'ya yolculuk, vize, maaş ve günlük hayat hakkında konu başlıklarıyla video rehberi." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="zelandaliyoruk" />
-  <meta property="og:title" content="zelandaliyoruk — Yeni Zelanda Rehberi" />
+  <meta property="og:title" content="zelandaliyoruk Yeni Zelanda Rehberi" />
   <meta property="og:description" content="Yeni Zelanda'ya yolculuk, vize, maaş ve günlük hayat hakkında konu başlıklarıyla video rehberi." />
   <meta property="og:image" content="https://zelandaliyoruk.com/assets/logo.jpg" />
   <meta name="twitter:card" content="summary" />
@@ -111,7 +111,7 @@
         </div>
       `;
 
-      const shareText = encodeURIComponent(`${topic.title} — zelandaliyoruk\n${location.href}`);
+      const shareText = encodeURIComponent(`${topic.title} (zelandaliyoruk)\n${location.href}`);
 
       detail.innerHTML = `
         <h1>${topic.title}</h1>
@@ -172,7 +172,7 @@
             if (!el) return;
             const checked = new Date(data.checkedAt).toLocaleDateString("tr-TR");
             el.textContent = data.anyChanged
-              ? `Immigration NZ sayfalarında değişiklik tespit edildi (son kontrol: ${checked}) — bu sayfadaki özet gözden geçiriliyor, en güncel bilgi için yukarıdaki resmi bağlantılara bakın.`
+              ? `Immigration NZ sayfalarında değişiklik tespit edildi (son kontrol: ${checked}). Bu sayfadaki özet gözden geçiriliyor, en güncel bilgi için yukarıdaki resmi bağlantılara bakın.`
               : `Immigration NZ sayfalarıyla karşılaştırıldı, önemli bir değişiklik tespit edilmedi (son kontrol: ${checked}).`;
             el.classList.add(data.anyChanged ? "inz-status--changed" : "inz-status--ok");
           })
