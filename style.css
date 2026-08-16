@@ -42,10 +42,21 @@ header.site-header .container {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.25rem;
   font-weight: 800;
   text-decoration: none;
   color: var(--primary-dark);
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #0b1424;
 }
 
 .social-links {
