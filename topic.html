@@ -9,7 +9,7 @@
   <meta property="og:site_name" content="zelandalıyoruk" />
   <meta property="og:title" content="zelandalıyoruk — Yeni Zelanda Rehberi" />
   <meta property="og:description" content="Yeni Zelanda'ya göç, vize, maaş ve günlük hayat hakkında konu başlıklarıyla video rehberi." />
-  <meta property="og:image" content="https://zelandaliyoruk.vercel.app/assets/logo.jpg" />
+  <meta property="og:image" content="https://zelandaliyoruk.com/assets/logo.jpg" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
   <link rel="stylesheet" href="style.css" />
@@ -42,6 +42,7 @@
     </div>
   </footer>
 
+  <script defer src="/_vercel/insights/script.js"></script>
   <script src="gate.js"></script>
   <script src="data.js"></script>
   <script>
@@ -107,9 +108,12 @@
         </div>
       `;
 
+      const shareText = encodeURIComponent(`${topic.title} — zelandalıyoruk\n${location.href}`);
+
       detail.innerHTML = `
         <h1>${topic.title}</h1>
         <p class="summary">${topic.summary}</p>
+        <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">📤 WhatsApp'ta Paylaş</a>
         ${topic.inzWatch ? `<div class="inz-status" id="inz-status">Resmi kaynaklarla karşılaştırılıyor…</div>` : ""}
         ${visaCategoriesHtml}
         ${videosHtml}

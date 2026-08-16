@@ -61,4 +61,13 @@ const TOPICS = [
       { id: "fGgNF-I6zYc", title: "Yeni Zelanda'da Ramazan Atmosferi (Türklerle Karşılaştık)" },
     ],
   },
+  {
+    slug: "gezi-kesif",
+    title: "Gezi & Keşif",
+    summary: "Yeni Zelanda'nın doğası ve gezilecek yerleri — kanaldaki keşif videoları.",
+    videos: [
+      { id: "C0Nbab1mtu8", title: "Yeni Zelanda Waitomo Mağaraları: Karanlığın İçindeki Işıklar!" },
+      { id: "krkUb7Lgorg", title: "Yeni Zelanda'da Sessizliğin İçinde 🐦 | Katikati Bird Gardens" },
+    ],
+  },
 ];

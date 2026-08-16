@@ -337,6 +337,21 @@ footer.site-footer {
 
 #welcome-start:hover { background: var(--primary-dark); }
 
+.share-btn {
+  display: inline-block;
+  margin-bottom: 28px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.share-btn:hover { border-color: var(--primary); }
+
 .visa-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

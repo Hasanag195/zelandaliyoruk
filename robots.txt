@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://zelandaliyoruk.vercel.app/sitemap.xml
+Sitemap: https://zelandaliyoruk.com/sitemap.xml
