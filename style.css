@@ -143,6 +143,18 @@ footer.site-footer {
   font-size: 0.9rem;
 }
 
+.disclaimer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.disclaimer strong {
+  color: var(--text);
+}
+
 /* Topic detail page */
 .back-link {
   display: inline-block;
