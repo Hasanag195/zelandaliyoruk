@@ -68,11 +68,44 @@
              <a href="${SITE.channelUrl}" target="_blank" rel="noopener">Kanalı ziyaret et &rarr;</a>
            </div>`;
 
+      const visaCategoriesHtml = topic.visaCategories
+        ? `<div class="visa-grid">${topic.visaCategories
+            .map(
+              (c) => `
+              <div class="visa-card">
+                <h3>${c.title}</h3>
+                <p>${c.description}</p>
+                <a href="${c.url}" target="_blank" rel="noopener">Resmi sayfa (immigration.govt.nz) &rarr;</a>
+              </div>`
+            )
+            .join("")}</div>`
+        : "";
+
       detail.innerHTML = `
         <h1>${topic.title}</h1>
         <p class="summary">${topic.summary}</p>
+        ${topic.inzWatch ? `<div class="inz-status" id="inz-status">Resmi kaynaklarla karşılaştırılıyor…</div>` : ""}
+        ${visaCategoriesHtml}
         ${videosHtml}
       `;
+
+      if (topic.inzWatch) {
+        fetch("/api/inz-status")
+          .then((r) => r.json())
+          .then((data) => {
+            const el = document.getElementById("inz-status");
+            if (!el) return;
+            const checked = new Date(data.checkedAt).toLocaleDateString("tr-TR");
+            el.textContent = data.anyChanged
+              ? `Immigration NZ sayfalarında değişiklik tespit edildi (son kontrol: ${checked}) — bu sayfadaki özet gözden geçiriliyor, en güncel bilgi için yukarıdaki resmi bağlantılara bakın.`
+              : `Immigration NZ sayfalarıyla karşılaştırıldı, önemli bir değişiklik tespit edilmedi (son kontrol: ${checked}).`;
+            el.classList.add(data.anyChanged ? "inz-status--changed" : "inz-status--ok");
+          })
+          .catch(() => {
+            const el = document.getElementById("inz-status");
+            if (el) el.remove();
+          });
+      }
     }
   </script>
 </body>

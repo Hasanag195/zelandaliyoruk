@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-08-16",
+  "pages": {
+    "work": { "label": "Çalışma Vizeleri", "url": "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/", "hash": "126dbb1173ecbe82" },
+    "study": { "label": "Öğrenci Vizeleri", "url": "https://www.immigration.govt.nz/study/study-visas/", "hash": "4d845f2a820b9e9b" },
+    "visit": { "label": "Ziyaretçi Vizeleri", "url": "https://www.immigration.govt.nz/visit/", "hash": "e5ca22b217ea5431" },
+    "live": { "label": "Oturum (Resident) Vizeleri", "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/", "hash": "560a99ec639aa3e9" }
+  }
+}

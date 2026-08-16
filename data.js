@@ -16,8 +16,31 @@ const TOPICS = [
   },
   {
     slug: "vize-sureclari",
-    title: "Vize & Resmi Süreçler",
-    summary: "Vize başvuru süreci, pasaport işlemleri ve resmi prosedürler hakkında genel bilgiler.",
+    title: "Vize Türleri & Resmi Süreçler",
+    summary: "Yeni Zelanda vize kategorilerine genel bakış. Bu sayfa danışmanlık değildir — her kategori altındaki resmi bağlantıdan güncel koşulları mutlaka kontrol et.",
+    inzWatch: true,
+    visaCategories: [
+      {
+        title: "Çalışma Vizeleri (Work)",
+        description: "İş teklifi ile sponsorlu çalışma vizesi, çalışma tatili (working holiday) vizesi ve yatırım/iş kurma vizeleri bu kategoride.",
+        url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/",
+      },
+      {
+        title: "Öğrenci Vizeleri (Study)",
+        description: "Yeni Zelanda'da bir eğitim kurumuna kayıtlı olarak okumak isteyenler için vize seçenekleri.",
+        url: "https://www.immigration.govt.nz/study/study-visas/",
+      },
+      {
+        title: "Ziyaretçi Vizeleri (Visit) & NZeTA",
+        description: "Turistik/aile ziyareti, iş amaçlı kısa ziyaretler ve vizesiz giriş yapabilen ülkeler için elektronik seyahat izni (NZeTA).",
+        url: "https://www.immigration.govt.nz/visit/",
+      },
+      {
+        title: "Oturum Vizeleri (Resident)",
+        description: "Nitelikli göçmen (skilled) yerleşim yolları, kalıcı oturum ve belirli Pasifik ülke vatandaşları için özel oturum vizeleri.",
+        url: "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/",
+      },
+    ],
     videos: [],
   },
   {

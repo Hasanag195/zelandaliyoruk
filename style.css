@@ -208,6 +208,59 @@ footer.site-footer {
   font-weight: 600;
 }
 
+.visa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.visa-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.visa-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  color: var(--primary-dark);
+}
+
+.visa-card p {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.visa-card a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.inz-status {
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  display: inline-block;
+  background: var(--border);
+  color: var(--muted);
+}
+
+.inz-status--ok {
+  background: #e4f3ec;
+  color: var(--primary-dark);
+}
+
+.inz-status--changed {
+  background: #fdecea;
+  color: #a3271d;
+}
+
 .empty-state {
   background: var(--surface);
   border: 1px dashed var(--border);
