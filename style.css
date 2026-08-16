@@ -208,6 +208,103 @@ footer.site-footer {
   font-weight: 600;
 }
 
+.gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(160deg, #0b1424, #123a2b 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gate-card {
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 36px 32px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.gate-logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 62% 32%;
+  margin-bottom: 16px;
+}
+
+.gate-card h1 {
+  font-size: 1.3rem;
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+}
+
+.gate-card > p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 20px;
+}
+
+#gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#gate-form input[type="text"],
+#gate-form input[type="email"] {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+#gate-form input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.gate-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+#gate-form button {
+  margin-top: 4px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+#gate-form button:hover { background: var(--primary-dark); }
+#gate-form button:disabled { opacity: 0.7; cursor: default; }
+
+.gate-error {
+  color: #a3271d;
+  font-size: 0.85rem;
+  min-height: 1em;
+}
+
+.gate-privacy {
+  margin: 16px 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
 .visa-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
