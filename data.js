@@ -45,6 +45,24 @@ const TOPICS = [
         ],
       },
       {
+        label: "Çalışma Vizesi Kategorileri (Immigration NZ'nin Tam Listesi)",
+        items: [
+          { label: "Akredite İşveren Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/accredited-employer-work-visa" },
+          { label: "Ülkeye Özel Çalışma Vizeleri (Çin, Japonya, Kore, Vietnam vb.)", url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/" },
+          { label: "Ev İçi Çalışan Vizesi (Diplomat Personeli)", url: "https://immigration.govt.nz/visas/domestic-staff-of-a-diplomat-work-visa" },
+          { label: "Sanatçı, Yetenek veya Özel Amaçlı Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/entertainers-work-visa" },
+          { label: "Balıkçı Mürettebatı Çalışma Vizesi", url: "https://immigration.govt.nz/visas/fishing-crew-work-visa" },
+          { label: "Partner Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/partner-of-a-new-zealander-work-visa" },
+          { label: "Dini Görevli Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/religious-worker-work-visa" },
+          { label: "Mevsimlik Çalışma Vizeleri (RSE)", url: "https://immigration.govt.nz/visas/recognised-seasonal-employer-limited-visa" },
+          { label: "Stajyer Çalışma Vizesi", url: "https://immigration.govt.nz/visas/student-and-trainee-work-visa" },
+          { label: "İş Değişim Programı Vizesi (Work Exchange)", url: "https://immigration.govt.nz/visas/work-exchange-scheme-work-visa" },
+          { label: "Sömürüye veya Kötü Muameleye Uğrayanlar İçin Çalışma Vizesi", url: "https://immigration.govt.nz/visas/migrant-exploitation-protection-work-visa" },
+          { label: "Eğitimi Bitirdikten Sonra Çalışma Vizesi", url: "https://immigration.govt.nz/visas/post-study-work-visa" },
+          { label: "Kendi İşinde Çalışma Vizesi (Yatırımcı)", url: "https://www.immigration.govt.nz/visas/business-investor-work-visa" },
+        ],
+      },
+      {
         label: "Genel Kategori Sayfaları (tüm alt seçenekler)",
         items: [
           { label: "Çalışma Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/" },
