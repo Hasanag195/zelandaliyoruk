@@ -62,6 +62,41 @@ const TOPICS = [
     ],
   },
   {
+    slug: "isci-haklari",
+    title: "İşçi Hakları",
+    summary: "Yeni Zelanda'da çalışma vizesiyle çalışırken haklarını ve işvereninin sorumluluklarını bil. Başlığa tıkla, altındaki konulardan resmi sayfaya git.",
+    accordion: {
+      label: "İşçi Hakları Konuları",
+      items: [
+        {
+          label: "Kurallar: Yurt Dışından Gelen Çalışan Olarak Haklarınız",
+          url: "https://www.immigration.govt.nz/work/worker-rights/your-rights-as-a-worker-from-overseas/",
+        },
+        {
+          label: "Çalışma Sorumluluğu: İşvereniniz AEWV'de Ne Yapmalı",
+          url: "https://www.immigration.govt.nz/work/worker-rights/what-your-employer-must-do-when-they-hire-you-on-an-aewv/",
+        },
+        {
+          label: "Çalışan Hakları ve Sorumlulukları",
+          url: "https://www.employment.govt.nz/starting-employment/rights-and-responsibilities/employee-rights-and-responsibilities",
+        },
+        {
+          label: "İhmaller: İş Yerinde Destek ve Sorun Bildirme",
+          url: "https://www.immigration.govt.nz/work/worker-rights/support-in-the-workplace/",
+        },
+        {
+          label: "Göçmen Sömürüsü",
+          url: "https://www.employment.govt.nz/resolving-problems/migrant-exploitation",
+        },
+        {
+          label: "Göçmen Sömürüsünden Korunma Çalışma Vizesi",
+          url: "https://www.immigration.govt.nz/visas/migrant-exploitation-protection-work-visa",
+        },
+      ],
+    },
+    videos: [],
+  },
+  {
     slug: "gezi-kesif",
     title: "Gezi & Keşif",
     summary: "Yeni Zelanda'nın doğası ve gezilecek yerleri: kanaldaki keşif videoları.",

@@ -119,6 +119,26 @@
         </div>
       `;
 
+      const accordionHtml = topic.accordion
+        ? `<div class="accordion">
+             <button class="accordion-toggle" id="accordion-toggle" type="button" aria-expanded="false">
+               <span>${topic.accordion.label}</span>
+               <span class="accordion-chevron">⌄</span>
+             </button>
+             <div class="accordion-panel" id="accordion-panel">
+               ${topic.accordion.items
+                 .map(
+                   (i) => `
+                   <a href="${i.url}" target="_blank" rel="noopener">
+                     <span>${i.label}</span>
+                     <span class="accordion-arrow">↗</span>
+                   </a>`
+                 )
+                 .join("")}
+             </div>
+           </div>`
+        : "";
+
       const shareText = encodeURIComponent(`${topic.title} (zelandaliyoruk)\n${location.href}`);
 
       detail.innerHTML = `
@@ -128,9 +148,20 @@
         <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">📤 WhatsApp'ta Paylaş</a>
         ${topic.inzWatch ? `<div class="inz-status" id="inz-status">Resmi kaynaklarla karşılaştırılıyor…</div>` : ""}
         ${visaCategoriesHtml}
+        ${accordionHtml}
         ${videosHtml}
         ${questionFormHtml}
       `;
+
+      const accToggle = document.getElementById("accordion-toggle");
+      if (accToggle) {
+        accToggle.addEventListener("click", () => {
+          const panel = document.getElementById("accordion-panel");
+          const isOpen = panel.classList.toggle("open");
+          accToggle.classList.toggle("open", isOpen);
+          accToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
 
       const askForm = document.getElementById("ask-form");
       const askMsg = document.getElementById("ask-msg");

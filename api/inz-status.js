@@ -9,7 +9,7 @@ function extractSignal(html) {
   return matches
     .map((m) => m[1].replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim())
     .filter(Boolean)
-    .filter((t) => !/travel disrupted|cookie/i.test(t));
+    .filter((t) => !/travel disrupted|cookie|planned upgrade|site preferences|statistics and analysis|^marketing$|functional cookies/i.test(t));
 }
 
 function hashOf(texts) {
