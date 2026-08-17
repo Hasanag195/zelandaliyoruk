@@ -509,43 +509,6 @@ footer.site-footer {
 
 .share-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
 
-.visa-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.visa-card {
-  flex: 1 1 240px;
-  max-width: 300px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow-sm);
-}
-
-.visa-card h3 {
-  margin: 0 0 9px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--primary-dark);
-}
-
-.visa-card p {
-  margin: 0 0 14px;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.visa-card a {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-decoration: none;
-}
-
 .inz-status {
   font-family: "Inter", sans-serif;
   font-size: 0.83rem;

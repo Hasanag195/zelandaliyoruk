@@ -85,19 +85,6 @@
              <a href="${SITE.channelUrl}" target="_blank" rel="noopener">Kanalı ziyaret et &rarr;</a>
            </div>`;
 
-      const visaCategoriesHtml = topic.visaCategories
-        ? `<div class="visa-grid">${topic.visaCategories
-            .map(
-              (c) => `
-              <div class="visa-card">
-                <h3>${c.title}</h3>
-                <p>${c.description}</p>
-                <a href="${c.url}" target="_blank" rel="noopener">Resmi sayfa (immigration.govt.nz) &rarr;</a>
-              </div>`
-            )
-            .join("")}</div>`
-        : "";
-
       const escAttr = (s) => String(s).replace(/[&<>"']/g, (c) => ({
         "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
       }[c]));
@@ -120,23 +107,28 @@
       `;
 
       const accordionHtml = topic.accordion
-        ? `<div class="accordion">
-             <button class="accordion-toggle" id="accordion-toggle" type="button" aria-expanded="false">
-               <span>${topic.accordion.label}</span>
-               <span class="accordion-chevron">⌄</span>
-             </button>
-             <div class="accordion-panel" id="accordion-panel">
-               ${topic.accordion.items
-                 .map(
-                   (i) => `
-                   <a href="${i.url}" target="_blank" rel="noopener">
-                     <span>${i.label}</span>
-                     <span class="accordion-arrow">↗</span>
-                   </a>`
-                 )
-                 .join("")}
-             </div>
-           </div>`
+        ? topic.accordion
+            .map(
+              (group, gi) => `
+              <div class="accordion">
+                <button class="accordion-toggle${group.open ? " open" : ""}" data-idx="${gi}" type="button" aria-expanded="${group.open ? "true" : "false"}">
+                  <span>${group.label}</span>
+                  <span class="accordion-chevron">⌄</span>
+                </button>
+                <div class="accordion-panel${group.open ? " open" : ""}" data-panel="${gi}">
+                  ${group.items
+                    .map(
+                      (i) => `
+                      <a href="${i.url}" target="_blank" rel="noopener">
+                        <span>${i.label}</span>
+                        <span class="accordion-arrow">↗</span>
+                      </a>`
+                    )
+                    .join("")}
+                </div>
+              </div>`
+            )
+            .join("")
         : "";
 
       const shareText = encodeURIComponent(`${topic.title} (zelandaliyoruk)\n${location.href}`);
@@ -147,21 +139,19 @@
         <p class="summary">${topic.summary}</p>
         <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">📤 WhatsApp'ta Paylaş</a>
         ${topic.inzWatch ? `<div class="inz-status" id="inz-status">Resmi kaynaklarla karşılaştırılıyor…</div>` : ""}
-        ${visaCategoriesHtml}
         ${accordionHtml}
         ${videosHtml}
         ${questionFormHtml}
       `;
 
-      const accToggle = document.getElementById("accordion-toggle");
-      if (accToggle) {
-        accToggle.addEventListener("click", () => {
-          const panel = document.getElementById("accordion-panel");
+      detail.querySelectorAll(".accordion-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const panel = detail.querySelector(`.accordion-panel[data-panel="${btn.dataset.idx}"]`);
           const isOpen = panel.classList.toggle("open");
-          accToggle.classList.toggle("open", isOpen);
-          accToggle.setAttribute("aria-expanded", String(isOpen));
+          btn.classList.toggle("open", isOpen);
+          btn.setAttribute("aria-expanded", String(isOpen));
         });
-      }
+      });
 
       const askForm = document.getElementById("ask-form");
       const askMsg = document.getElementById("ask-msg");

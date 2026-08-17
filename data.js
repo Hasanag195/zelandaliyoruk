@@ -17,28 +17,50 @@ const TOPICS = [
   {
     slug: "vize-sureclari",
     title: "Vize Türleri & Resmi Süreçler",
-    summary: "Yeni Zelanda vize kategorilerine genel bakış. Bu sayfa danışmanlık değildir, her kategori altındaki resmi bağlantıdan güncel koşulları mutlaka kontrol et.",
+    summary: "Türkiye'den Yeni Zelanda'ya gelmek için ihtiyacın olan resmi bilgiler tek yerde. Başlığa tıkla, doğrudan resmi kaynağa git. Bu sayfa danışmanlık değildir.",
     inzWatch: true,
-    visaCategories: [
+    accordion: [
       {
-        title: "Çalışma Vizeleri (Work)",
-        description: "İş teklifi ile sponsorlu çalışma vizesi, çalışma tatili (working holiday) vizesi ve yatırım/iş kurma vizeleri bu kategoride.",
-        url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/",
+        label: "🇹🇷 Türkiye'den Gelenler İçin Özel Bilgiler",
+        open: true,
+        items: [
+          {
+            label: "Türkiye Çalışma Tatili Vizesi (18-30 yaş arası için özel anlaşma)",
+            url: "https://www.immigration.govt.nz/visas/turkey-working-holiday-visa/",
+          },
+          {
+            label: "Türkiye vize muafiyeti listesinde değil: NZeTA yetmez, Ziyaretçi Vizesi gerekir",
+            url: "https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/visa-waiver-countries-and-territories/",
+          },
+        ],
       },
       {
-        title: "Öğrenci Vizeleri (Study)",
-        description: "Yeni Zelanda'da bir eğitim kurumuna kayıtlı olarak okumak isteyenler için vize seçenekleri.",
-        url: "https://www.immigration.govt.nz/study/study-visas/",
+        label: "En Çok Aranan Vize Türleri",
+        items: [
+          { label: "Ziyaretçi Vizesi (Visitor Visa)", url: "https://www.immigration.govt.nz/visas/visitor-visa/" },
+          { label: "Akredite İşveren Çalışma Vizesi (Accredited Employer Work Visa)", url: "https://www.immigration.govt.nz/visas/accredited-employer-work-visa/" },
+          { label: "Nitelikli Göçmen Kalıcı Oturum Vizesi (Skilled Migrant Category)", url: "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/" },
+          { label: "Öğrenci Vizesi (Fee Paying Student Visa)", url: "https://www.immigration.govt.nz/visas/fee-paying-student-visa/" },
+          { label: "Partner Vizesi (New Zealand vatandaşı/residenti ile)", url: "https://www.immigration.govt.nz/visas/partner-of-a-new-zealander-resident-visa/" },
+        ],
       },
       {
-        title: "Ziyaretçi Vizeleri (Visit) & NZeTA",
-        description: "Turistik/aile ziyareti, iş amaçlı kısa ziyaretler ve vizesiz giriş yapabilen ülkeler için elektronik seyahat izni (NZeTA).",
-        url: "https://www.immigration.govt.nz/visit/",
+        label: "Genel Kategori Sayfaları (tüm alt seçenekler)",
+        items: [
+          { label: "Çalışma Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/" },
+          { label: "Öğrenci Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/study/study-visas/" },
+          { label: "Ziyaretçi Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/visit/" },
+          { label: "Oturum Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/" },
+        ],
       },
       {
-        title: "Oturum Vizeleri (Resident)",
-        description: "Nitelikli göçmen (skilled) yerleşim yolları, kalıcı oturum ve belirli Pasifik ülke vatandaşları için özel oturum vizeleri.",
-        url: "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/",
+        label: "Başvuru İçin Hazırlık",
+        items: [
+          {
+            label: "Başvuruda İstenen Belgeler ve Kanıtlar",
+            url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/",
+          },
+        ],
       },
     ],
     videos: [],
@@ -65,35 +87,38 @@ const TOPICS = [
     slug: "isci-haklari",
     title: "İşçi Hakları",
     summary: "Yeni Zelanda'da çalışma vizesiyle çalışırken haklarını ve işvereninin sorumluluklarını bil. Başlığa tıkla, altındaki konulardan resmi sayfaya git.",
-    accordion: {
-      label: "İşçi Hakları Konuları",
-      items: [
-        {
-          label: "Kurallar: Yurt Dışından Gelen Çalışan Olarak Haklarınız",
-          url: "https://www.immigration.govt.nz/work/worker-rights/your-rights-as-a-worker-from-overseas/",
-        },
-        {
-          label: "Çalışma Sorumluluğu: İşvereniniz AEWV'de Ne Yapmalı",
-          url: "https://www.immigration.govt.nz/work/worker-rights/what-your-employer-must-do-when-they-hire-you-on-an-aewv/",
-        },
-        {
-          label: "Çalışan Hakları ve Sorumlulukları",
-          url: "https://www.employment.govt.nz/starting-employment/rights-and-responsibilities/employee-rights-and-responsibilities",
-        },
-        {
-          label: "İhmaller: İş Yerinde Destek ve Sorun Bildirme",
-          url: "https://www.immigration.govt.nz/work/worker-rights/support-in-the-workplace/",
-        },
-        {
-          label: "Göçmen Sömürüsü",
-          url: "https://www.employment.govt.nz/resolving-problems/migrant-exploitation",
-        },
-        {
-          label: "Göçmen Sömürüsünden Korunma Çalışma Vizesi",
-          url: "https://www.immigration.govt.nz/visas/migrant-exploitation-protection-work-visa",
-        },
-      ],
-    },
+    accordion: [
+      {
+        label: "İşçi Hakları Konuları",
+        open: true,
+        items: [
+          {
+            label: "Kurallar: Yurt Dışından Gelen Çalışan Olarak Haklarınız",
+            url: "https://www.immigration.govt.nz/work/worker-rights/your-rights-as-a-worker-from-overseas/",
+          },
+          {
+            label: "Çalışma Sorumluluğu: İşvereniniz AEWV'de Ne Yapmalı",
+            url: "https://www.immigration.govt.nz/work/worker-rights/what-your-employer-must-do-when-they-hire-you-on-an-aewv/",
+          },
+          {
+            label: "Çalışan Hakları ve Sorumlulukları",
+            url: "https://www.employment.govt.nz/starting-employment/rights-and-responsibilities/employee-rights-and-responsibilities",
+          },
+          {
+            label: "İhmaller: İş Yerinde Destek ve Sorun Bildirme",
+            url: "https://www.immigration.govt.nz/work/worker-rights/support-in-the-workplace/",
+          },
+          {
+            label: "Göçmen Sömürüsü",
+            url: "https://www.employment.govt.nz/resolving-problems/migrant-exploitation",
+          },
+          {
+            label: "Göçmen Sömürüsünden Korunma Çalışma Vizesi",
+            url: "https://www.immigration.govt.nz/visas/migrant-exploitation-protection-work-visa",
+          },
+        ],
+      },
+    ],
     videos: [],
   },
   {
