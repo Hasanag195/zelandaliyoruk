@@ -190,6 +190,24 @@ const TOPICS = [
         ],
       },
       {
+        label: "🚩 Belge ve Evrak Dolandırıcılıkları",
+        items: [
+          {
+            label: "\"Vize başvuru kağıdı\" diyerek vekaletname imzalatma tuzağı",
+            content: "Bazı dolandırıcılar, sana vize başvurusu için gerekli bir belgeymiş gibi göstererek aslında noter huzurunda vekaletname (power of attorney) imzalatıyor. Vekaletname, başka bir kişiye senin adına finansal veya hukuki işlem yapma yetkisi verir — vize başvurusuyla hiçbir ilgisi yoktur. İmzalamadan önce her belgenin ne olduğunu mutlaka anla; anlamadığın hiçbir kağıdı imzalama, gerekirse noterde bağımsız birine tercüme ettir.",
+          },
+          {
+            label: "İmzaladığın her belgenin bir kopyasını kendine sakla",
+            content: "Kim sunarsa sunsun, imzaladığın her belgenin (özellikle noter huzurunda imzalananların) bir kopyasını mutlaka kendine sakla. İleride bir sorun çıkarsa elinde kanıtın olur.",
+          },
+          {
+            label: "Vize başvurusunda gerçekten hangi belgeler istenir?",
+            content: "Immigration NZ'nin başvuru için istediği belge ve kanıtların tam listesi resmi sitede yayınlanır. Sana bunun dışında bir belge (özellikle noterde imzalanan bir vekaletname) isteyen biri varsa şüphelen.",
+            url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/",
+          },
+        ],
+      },
+      {
         label: "🚩 Sahte Web Siteleri ve Ödeme Dolandırıcılıkları",
         items: [
           {
