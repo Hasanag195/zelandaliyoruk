@@ -537,7 +537,28 @@ footer.site-footer {
 .video-list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 32px;
+}
+
+.video-group-title {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.video-group-title a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.video-group-title a:hover {
+  color: var(--accent);
+}
+
+.video-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .video-row {
@@ -580,13 +601,6 @@ footer.site-footer {
   color: var(--primary-dark);
 }
 
-.video-row-topic {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-top: 3px;
-  letter-spacing: 0.02em;
-}
 
 .share-btn {
   display: inline-flex;

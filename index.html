@@ -143,17 +143,23 @@
     ).join("");
 
     const videoList = document.getElementById("video-list");
-    const allVideos = TOPICS.flatMap((t) => t.videos.map((v) => ({ ...v, topicTitle: L(t.title) })));
-    videoList.innerHTML = allVideos
+    videoList.innerHTML = TOPICS.filter((t) => t.videos.length)
       .map(
-        (v) => `
-        <a class="video-row" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">
-          <span class="video-row-play">▶</span>
-          <span>
-            <span class="video-row-title">${v.title}</span>
-            <span class="video-row-topic">${v.topicTitle}</span>
-          </span>
-        </a>
+        (t) => `
+        <div class="video-group">
+          <h3 class="video-group-title"><a href="topic.html?t=${t.slug}">${L(t.title)}</a></h3>
+          <div class="video-group-list">
+            ${t.videos
+              .map(
+                (v) => `
+                <a class="video-row" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">
+                  <span class="video-row-play">▶</span>
+                  <span class="video-row-title">${v.title}</span>
+                </a>`
+              )
+              .join("")}
+          </div>
+        </div>
       `
       )
       .join("");
