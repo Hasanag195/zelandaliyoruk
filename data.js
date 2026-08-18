@@ -72,12 +72,19 @@ const TOPICS = [
         ],
       },
       {
-        label: "Başvuru İçin Hazırlık",
+        label: "Başvuru İçin Hazırlık: Belgeler ve Kanıtlar",
         items: [
-          {
-            label: "Başvuruda İstenen Belgeler ve Kanıtlar",
-            url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/",
-          },
+          { label: "Başvuruda İstenen Belgeler ve Kanıtlar (genel bakış)", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/" },
+          { label: "Destekleyici Belgelerin İngilizce Tercümesi", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/providing-english-translations-of-supporting-documents/" },
+          { label: "Sağlık Şartları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/health-requirements/" },
+          { label: "Ziyaret veya Çalışma İçin Gerçek Niyet Şartı", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/genuine-intentions-to-visit-or-work-in-new-zealand/" },
+          { label: "Eğitim İçin Gerçek Niyet Şartı", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/genuine-intentions-to-study-in-new-zealand/" },
+          { label: "Karakter Şartları, Üçüncü Taraf Kontrolleri ve Adli Sicil Kaydı", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/character-requirements-third-party-checks-and-police-certificates/" },
+          { label: "İngilizce Dil Şartları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/english-language-requirements/" },
+          { label: "Yatırımcı ve Emeklilik Vizeleri İçin Kabul Edilebilir Yatırımlar", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/acceptable-investments-for-investor-and-retirement-visas/" },
+          { label: "Öğrenci Bütçe/Fon Şartları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/student-fund-requirements/" },
+          { label: "Kimlik Bilgileri", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/identity-information/" },
+          { label: "Başvuruda Yanlış veya Yanıltıcı Bilgi Vermenin Sonuçları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/giving-false-or-misleading-information-in-your-application/" },
         ],
       },
     ],
@@ -186,24 +193,6 @@ const TOPICS = [
             label: "Danışman kullanmak zorunlu değildir; ama kullanacaksan lisanslı biri olsun",
             content: "Vize başvurunu kendin yapabilirsin. Yardım alacaksan mutlaka Yeni Zelanda'da lisanslı göçmenlik danışmanı (Licensed Immigration Adviser – LIA) veya sertifikalı bir avukat seç. Lisansını Immigration Advisers Authority (IAA) üzerinden doğrulayabilirsin.",
             url: "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/",
-          },
-        ],
-      },
-      {
-        label: "🚩 Belge ve Evrak Dolandırıcılıkları",
-        items: [
-          {
-            label: "\"Vize başvuru kağıdı\" diyerek vekaletname imzalatma tuzağı",
-            content: "Bazı dolandırıcılar, sana vize başvurusu için gerekli bir belgeymiş gibi göstererek aslında noter huzurunda vekaletname (power of attorney) imzalatıyor. Vekaletname, başka bir kişiye senin adına finansal veya hukuki işlem yapma yetkisi verir — vize başvurusuyla hiçbir ilgisi yoktur. İmzalamadan önce her belgenin ne olduğunu mutlaka anla; anlamadığın hiçbir kağıdı imzalama, gerekirse noterde bağımsız birine tercüme ettir.",
-          },
-          {
-            label: "İmzaladığın her belgenin bir kopyasını kendine sakla",
-            content: "Kim sunarsa sunsun, imzaladığın her belgenin (özellikle noter huzurunda imzalananların) bir kopyasını mutlaka kendine sakla. İleride bir sorun çıkarsa elinde kanıtın olur.",
-          },
-          {
-            label: "Vize başvurusunda gerçekten hangi belgeler istenir?",
-            content: "Immigration NZ'nin başvuru için istediği belge ve kanıtların tam listesi resmi sitede yayınlanır. Sana bunun dışında bir belge (özellikle noterde imzalanan bir vekaletname) isteyen biri varsa şüphelen.",
-            url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/",
           },
         ],
       },
