@@ -217,6 +217,7 @@ header.site-header .container {
   position: relative;
   flex: 1 1 270px;
   max-width: 310px;
+  min-height: 226px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -255,12 +256,20 @@ header.site-header .container {
   font-size: 1.18rem;
   font-weight: 600;
   color: var(--primary-dark);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .topic-card p {
   margin: 0 0 22px;
   color: var(--muted);
   font-size: 0.92rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .topic-card::after {
