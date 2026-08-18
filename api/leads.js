@@ -43,8 +43,6 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const record = JSON.stringify({ name, email, ts: new Date().toISOString() });
-
   try {
     let lastError = null;
     for (let attempt = 0; attempt < 3; attempt++) {
@@ -55,7 +53,30 @@ module.exports = async (req, res) => {
       }
       const current = await getRes.json();
       const currentContent = Buffer.from(current.content, "base64").toString("utf8");
-      const newContent = currentContent + (currentContent.endsWith("\n") || !currentContent ? "" : "\n") + record + "\n";
+
+      const records = currentContent
+        .split("\n")
+        .map((l) => l.trim())
+        .filter(Boolean)
+        .map((l) => {
+          try {
+            return JSON.parse(l);
+          } catch {
+            return null;
+          }
+        })
+        .filter(Boolean);
+
+      const emailLower = email.toLowerCase();
+      const existingIdx = records.findIndex((r) => String(r.email || "").toLowerCase() === emailLower);
+      const updatedRecord = { name, email, ts: new Date().toISOString() };
+      if (existingIdx >= 0) {
+        records[existingIdx] = updatedRecord;
+      } else {
+        records.push(updatedRecord);
+      }
+
+      const newContent = records.map((r) => JSON.stringify(r)).join("\n") + "\n";
 
       const putRes = await githubRequest(`contents/${LEADS_PATH}`, {
         method: "PUT",
