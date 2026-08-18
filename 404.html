@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
   <title>zelandaliyoruk Sayfa Bulunamadı</title>
-  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
-        <img class="brand-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/assets/logo.jpg" alt="zelandaliyoruk logo" />
         zelandaliyoruk
       </a>
       <div class="lang-switch" id="lang-switch"></div>
@@ -26,7 +26,7 @@
     <div class="container">
       <h1 id="nf-title"></h1>
       <p id="nf-desc"></p>
-      <p style="margin-top:24px"><a href="index.html" id="nf-back" style="color:var(--primary);font-weight:700;text-decoration:none"></a></p>
+      <p style="margin-top:24px"><a href="/" id="nf-back" style="color:var(--primary);font-weight:700;text-decoration:none"></a></p>
     </div>
   </section>
 
@@ -34,11 +34,11 @@
     <div class="container">&copy; <span id="year"></span> zelandaliyoruk</div>
   </footer>
 
-  <script src="i18n.js"></script>
+  <script src="/i18n.js"></script>
   <script>
     document.documentElement.lang = getLang();
     document.getElementById("year").textContent = new Date().getFullYear();
-    renderLangSwitch("lang-switch");
+    renderLangSwitch("lang-switch", { tr: "/", en: "/en/" });
     document.getElementById("nf-title").textContent = T("notFoundTitle");
     document.getElementById("nf-desc").textContent = T("notFoundDesc");
     document.getElementById("nf-back").textContent = T("backHome");

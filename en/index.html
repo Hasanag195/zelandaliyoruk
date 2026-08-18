@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>zelandaliyoruk Yeni Zelanda Rehberi</title>
-  <meta name="description" content="Yeni Zelanda'ya yolculuk, vize, maaş ve günlük hayat hakkında konu başlıklarıyla video rehberi." />
-  <link rel="canonical" href="https://zelandaliyoruk.com/" />
+  <title>zelandaliyoruk New Zealand Guide</title>
+  <meta name="description" content="A video guide to moving to New Zealand: visas, salary, and everyday life, organised by topic." />
+  <link rel="canonical" href="https://zelandaliyoruk.com/en/" />
   <link rel="alternate" hreflang="tr" href="https://zelandaliyoruk.com/" />
   <link rel="alternate" hreflang="en" href="https://zelandaliyoruk.com/en/" />
   <link rel="alternate" hreflang="x-default" href="https://zelandaliyoruk.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="zelandaliyoruk" />
-  <meta property="og:title" content="zelandaliyoruk Yeni Zelanda Rehberi" />
-  <meta property="og:description" content="Yeni Zelanda'ya yolculuk, vize, maaş ve günlük hayat hakkında konu başlıklarıyla video rehberi." />
+  <meta property="og:title" content="zelandaliyoruk New Zealand Guide" />
+  <meta property="og:description" content="A video guide to moving to New Zealand: visas, salary, and everyday life, organised by topic." />
   <meta property="og:image" content="https://zelandaliyoruk.com/assets/logo.jpg" />
-  <meta property="og:url" content="https://zelandaliyoruk.com/" />
+  <meta property="og:url" content="https://zelandaliyoruk.com/en/" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="/">
+      <a class="brand" href="/en/">
         <img class="brand-logo" src="/assets/logo.jpg" alt="zelandaliyoruk logo" />
         zelandaliyoruk
       </a>
@@ -44,7 +44,7 @@
   </section>
 
   <section class="container" style="padding-bottom: 8px">
-    <a href="/checklist.html" class="cta-banner" id="cta-link">
+    <a href="/en/checklist.html" class="cta-banner" id="cta-link">
       <div>
         <span class="eyebrow" style="color:#fff" id="cta-eyebrow"></span>
         <h3 id="cta-title"></h3>
@@ -98,11 +98,12 @@
   </footer>
 
   <script defer src="/_vercel/insights/script.js"></script>
+  <script>window.__FORCE_LANG = "en";</script>
   <script src="/i18n.js"></script>
   <script src="/gate.js"></script>
   <script src="/data.js"></script>
   <script>
-    const BASE = "";
+    const BASE = "/en";
     document.documentElement.lang = getLang();
     document.getElementById("year").textContent = new Date().getFullYear();
     renderLangSwitch("lang-switch", { tr: "/", en: "/en/" });
@@ -198,7 +199,7 @@
         const res = await fetch("/api/questions", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, question, topic: "Ana Sayfa (Genel)", hp }),
+          body: JSON.stringify({ name, email, question, topic: "Homepage (General)", hp }),
         });
         if (!res.ok) throw new Error("failed");
         askForm.reset();

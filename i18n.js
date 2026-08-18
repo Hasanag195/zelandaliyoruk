@@ -1,6 +1,9 @@
 // Dil yönetimi: TR/EN. localStorage'da saklanır, tüm sayfalarda data.js'ten önce yüklenir.
 (function () {
   function getLang() {
+    // /en/ sayfaları her zaman İngilizce render eder (SEO için sabit), diğer sayfalar
+    // localStorage'daki kullanıcı tercihini kullanır.
+    if (window.__FORCE_LANG) return window.__FORCE_LANG;
     return localStorage.getItem("zy_lang") || "tr";
   }
   function setLang(l) {
@@ -144,19 +147,18 @@
     return s;
   };
 
-  window.renderLangSwitch = function (containerId) {
+  // urls: { tr: "/index.html", en: "/en/index.html" } — sayfanın diğer dildeki gerçek adresi.
+  // Gerçek <a href> linkleri kullanır (SEO/crawler dostu), tıklanınca tercih de hatırlanır.
+  window.renderLangSwitch = function (containerId, urls) {
     const el = document.getElementById(containerId);
-    if (!el) return;
+    if (!el || !urls) return;
     const lang = getLang();
     el.innerHTML = `
-      <button type="button" class="lang-btn${lang === "tr" ? " active" : ""}" data-lang="tr">TR</button>
-      <button type="button" class="lang-btn${lang === "en" ? " active" : ""}" data-lang="en">EN</button>
+      <a href="${urls.tr}" class="lang-btn${lang === "tr" ? " active" : ""}" data-lang="tr">TR</a>
+      <a href="${urls.en}" class="lang-btn${lang === "en" ? " active" : ""}" data-lang="en">EN</a>
     `;
-    el.querySelectorAll(".lang-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        setLang(btn.dataset.lang);
-        location.reload();
-      });
+    el.querySelectorAll(".lang-btn").forEach((a) => {
+      a.addEventListener("click", () => setLang(a.dataset.lang));
     });
   };
 })();
