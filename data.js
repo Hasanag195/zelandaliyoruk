@@ -184,8 +184,8 @@ const TOPICS = [
           },
           {
             label: "Danışman kullanmak zorunlu değildir; ama kullanacaksan lisanslı biri olsun",
-            content: "Vize başvurunu kendin yapabilirsin. Yardım alacaksan mutlaka Yeni Zelanda'da lisanslı göçmenlik danışmanı (Licensed Immigration Adviser – LIA) veya sertifikalı bir avukat seç. Lisans sorgulamak için: immigration.govt.nz/tools/immigration-adviser-search",
-            url: "https://www.immigration.govt.nz/tools/immigration-adviser-search",
+            content: "Vize başvurunu kendin yapabilirsin. Yardım alacaksan mutlaka Yeni Zelanda'da lisanslı göçmenlik danışmanı (Licensed Immigration Adviser – LIA) veya sertifikalı bir avukat seç. Lisansını Immigration Advisers Authority (IAA) üzerinden doğrulayabilirsin.",
+            url: "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/",
           },
         ],
       },
