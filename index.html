@@ -26,23 +26,26 @@
         <img class="brand-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
         zelandaliyoruk
       </a>
-      <nav class="social-links" id="social-links"></nav>
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <nav class="social-links" id="social-links"></nav>
+        <div class="lang-switch" id="lang-switch"></div>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1>Yeni Zelanda'ya Yolculuk Rehberi</h1>
-      <p>Vize süreçlerinden günlük hayata, konu başlığına göre derlenmiş video rehberi.</p>
+      <h1 id="hero-title"></h1>
+      <p id="hero-subtitle"></p>
     </div>
   </section>
 
   <section class="container" style="padding-bottom: 8px">
     <a href="checklist.html" class="cta-banner">
       <div>
-        <span class="eyebrow" style="color:#fff">Ücretsiz Kaynak</span>
-        <h3>Yeni Zelanda'ya Yolculuk Checklist'i</h3>
-        <p>Hazırlıktan ilk haftaya, işaretleyerek takip edebileceğin adım adım liste.</p>
+        <span class="eyebrow" style="color:#fff" id="cta-eyebrow"></span>
+        <h3 id="cta-title"></h3>
+        <p id="cta-subtitle"></p>
       </div>
       <span class="cta-banner-arrow">→</span>
     </a>
@@ -50,30 +53,30 @@
 
   <section class="topics">
     <div class="container">
-      <span class="eyebrow">Rehber</span>
-      <h2>Konu Başlıkları</h2>
+      <span class="eyebrow" id="topics-eyebrow"></span>
+      <h2 id="topics-heading"></h2>
       <div class="topic-grid" id="topic-grid"></div>
     </div>
   </section>
 
   <section class="videos">
     <div class="container">
-      <span class="eyebrow">İzle</span>
-      <h2>Videolar</h2>
+      <span class="eyebrow" id="videos-eyebrow"></span>
+      <h2 id="videos-heading"></h2>
       <div class="video-list" id="video-list"></div>
     </div>
   </section>
 
   <section class="container" style="padding-bottom: 48px">
     <div class="ask-box" style="margin-top: 0">
-      <h3>Aklında bir soru mu var?</h3>
-      <p>Hangi konuyla ilgili olursa olsun sorunu bırak, gelecek videolarda cevaplayayım. Yorum alanı değildir, cevaplar burada değil kanalda gelir.</p>
+      <h3 id="ask-title"></h3>
+      <p id="ask-desc"></p>
       <form id="ask-form" novalidate>
-        <input type="text" name="name" placeholder="Ad Soyad" required />
-        <input type="email" name="email" placeholder="E-posta" required />
-        <textarea name="question" placeholder="Sorunu yaz…" rows="3" required></textarea>
+        <input type="text" name="name" id="ask-name" required />
+        <input type="email" name="email" id="ask-email" required />
+        <textarea name="question" id="ask-question" rows="3" required></textarea>
         <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
-        <button type="submit">Soruyu Gönder</button>
+        <button type="submit" id="ask-submit"></button>
         <div class="ask-msg" id="ask-msg"></div>
       </form>
     </div>
@@ -81,7 +84,7 @@
 
   <div class="disclaimer">
     <div class="container">
-      <strong>Yasal Uyarı:</strong> Bu sitede ve zelandaliyoruk YouTube/Instagram/TikTok hesaplarında paylaşılan içerikler tamamen kişisel deneyim ve bilgi paylaşımı amaçlıdır; hukuki, mali, vergi veya göçmenlik danışmanlığı niteliği taşımaz. Herhangi bir danışmanlık hizmeti sunulmamaktadır. Vize, oturum izni, vergi veya hukuki konularda karar almadan önce mutlaka lisanslı bir göçmenlik danışmanı, avukat veya ilgili resmi kurumlara danışınız. Bu sitedeki bilgilerin kullanımından doğabilecek hiçbir sonuçtan sorumluluk kabul edilmez.
+      <strong id="disclaimer-label"></strong> <span id="disclaimer-text"></span>
     </div>
   </div>
 
@@ -92,10 +95,31 @@
   </footer>
 
   <script defer src="/_vercel/insights/script.js"></script>
+  <script src="i18n.js"></script>
   <script src="gate.js"></script>
   <script src="data.js"></script>
   <script>
+    document.documentElement.lang = getLang();
     document.getElementById("year").textContent = new Date().getFullYear();
+    renderLangSwitch("lang-switch");
+
+    document.getElementById("hero-title").textContent = T("heroTitle");
+    document.getElementById("hero-subtitle").textContent = T("heroSubtitle");
+    document.getElementById("cta-eyebrow").textContent = T("ctaEyebrow");
+    document.getElementById("cta-title").textContent = T("ctaTitle");
+    document.getElementById("cta-subtitle").textContent = T("ctaSubtitle");
+    document.getElementById("topics-eyebrow").textContent = T("topicsEyebrow");
+    document.getElementById("topics-heading").textContent = T("topicsHeading");
+    document.getElementById("videos-eyebrow").textContent = T("videosEyebrow");
+    document.getElementById("videos-heading").textContent = T("videosHeading");
+    document.getElementById("ask-title").textContent = T("askTitle");
+    document.getElementById("ask-desc").textContent = T("askDesc");
+    document.getElementById("ask-name").placeholder = T("askNamePh");
+    document.getElementById("ask-email").placeholder = T("askEmailPh");
+    document.getElementById("ask-question").placeholder = T("askQuestionPh");
+    document.getElementById("ask-submit").textContent = T("askSubmit");
+    document.getElementById("disclaimer-label").textContent = T("disclaimerLabel");
+    document.getElementById("disclaimer-text").textContent = T("disclaimer");
 
     const ICONS = {
       youtube: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>',
@@ -112,14 +136,14 @@
     grid.innerHTML = TOPICS.map(
       (t) => `
         <a class="topic-card" href="topic.html?t=${t.slug}">
-          <h3>${t.title}</h3>
-          <p>${t.summary}</p>
+          <h3>${L(t.title)}</h3>
+          <p>${L(t.summary)}</p>
         </a>
       `
     ).join("");
 
     const videoList = document.getElementById("video-list");
-    const allVideos = TOPICS.flatMap((t) => t.videos.map((v) => ({ ...v, topicTitle: t.title })));
+    const allVideos = TOPICS.flatMap((t) => t.videos.map((v) => ({ ...v, topicTitle: L(t.title) })));
     videoList.innerHTML = allVideos
       .map(
         (v) => `
@@ -150,14 +174,14 @@
       const hp = data.get("hp").trim();
 
       if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !question) {
-        askMsg.textContent = "Lütfen tüm alanları doldur.";
+        askMsg.textContent = T("askValidation");
         askMsg.classList.add("ask-msg--error");
         return;
       }
 
       const btn = askForm.querySelector("button");
       btn.disabled = true;
-      btn.textContent = "Gönderiliyor…";
+      btn.textContent = T("askSending");
 
       try {
         const res = await fetch("/api/questions", {
@@ -167,14 +191,14 @@
         });
         if (!res.ok) throw new Error("failed");
         askForm.reset();
-        askMsg.textContent = "Sorun alındı, teşekkürler!";
+        askMsg.textContent = T("askOk");
         askMsg.classList.add("ask-msg--ok");
       } catch (err) {
-        askMsg.textContent = "Bir şeyler ters gitti, tekrar dener misin?";
+        askMsg.textContent = T("askErr");
         askMsg.classList.add("ask-msg--error");
       } finally {
         btn.disabled = false;
-        btn.textContent = "Soruyu Gönder";
+        btn.textContent = T("askSubmit");
       }
     });
   </script>

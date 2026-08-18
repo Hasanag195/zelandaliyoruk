@@ -10,15 +10,12 @@
     overlay.innerHTML = `
       <div class="gate-card">
         <img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
-        <h1>Hoş Geldin${name ? ", " + name.split(" ")[0] : ""} 👋</h1>
-        <p>zelandaliyoruk rehberinde şunları bulacaksın:</p>
+        <h1>${T("welcomeHi")}${name ? ", " + name.split(" ")[0] : ""} 👋</h1>
+        <p>${T("welcomeDesc")}</p>
         <ul class="welcome-list">
-          <li>🛂 Vize Türleri &amp; Resmi Süreçler</li>
-          <li>✈️ Yeni Zelanda'ya Nasıl Gelinir</li>
-          <li>💰 Maaş &amp; Vergi Sistemi</li>
-          <li>🏡 Günlük Hayat Gerçekleri</li>
+          ${T("welcomeList").map((li) => `<li>${li}</li>`).join("")}
         </ul>
-        <button id="welcome-start" type="button">Keşfetmeye Başla</button>
+        <button id="welcome-start" type="button">${T("welcomeStart")}</button>
       </div>
     `;
     document.body.appendChild(overlay);
@@ -42,16 +39,16 @@
   overlay.innerHTML = `
     <div class="gate-card">
       <img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
-      <h1>zelandaliyoruk'a Hoş Geldin</h1>
-      <p>Yeni Zelanda rehberine erişmeden önce birkaç bilgini bırakır mısın?</p>
+      <h1>${T("gateTitle")}</h1>
+      <p>${T("gateDesc")}</p>
       <form id="gate-form" novalidate>
-        <input type="text" name="name" placeholder="Ad Soyad" autocomplete="name" required />
-        <input type="email" name="email" placeholder="E-posta" autocomplete="email" required />
+        <input type="text" name="name" placeholder="${T("gateNamePh")}" autocomplete="name" required />
+        <input type="email" name="email" placeholder="${T("gateEmailPh")}" autocomplete="email" required />
         <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
-        <button type="submit">Devam Et</button>
+        <button type="submit">${T("gateSubmit")}</button>
         <div class="gate-error" id="gate-error"></div>
       </form>
-      <p class="gate-privacy">E-posta adresin yalnızca bu proje hakkında bilgilendirme için kullanılır, üçüncü taraflarla paylaşılmaz.</p>
+      <p class="gate-privacy">${T("gatePrivacy")}</p>
     </div>
   `;
   document.body.appendChild(overlay);
@@ -69,12 +66,12 @@
     const hp = data.get("hp").trim();
 
     if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errorEl.textContent = "Lütfen ad soyad ve geçerli bir e-posta gir.";
+      errorEl.textContent = T("gateValidation");
       return;
     }
 
     btn.disabled = true;
-    btn.textContent = "Gönderiliyor…";
+    btn.textContent = T("gateSending");
 
     try {
       const res = await fetch("/api/leads", {
@@ -90,9 +87,9 @@
       showWelcome();
       if (!document.querySelector(".gate-overlay")) document.documentElement.style.overflow = "";
     } catch (err) {
-      errorEl.textContent = "Bir şeyler ters gitti, lütfen tekrar dene.";
+      errorEl.textContent = T("gateErr");
       btn.disabled = false;
-      btn.textContent = "Devam Et";
+      btn.textContent = T("gateSubmit");
     }
   });
 })();

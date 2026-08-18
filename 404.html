@@ -18,19 +18,30 @@
         <img class="brand-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
         zelandaliyoruk
       </a>
+      <div class="lang-switch" id="lang-switch"></div>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1>Sayfa Bulunamadı (404)</h1>
-      <p>Aradığın sayfa taşınmış ya da hiç var olmamış olabilir.</p>
-      <p style="margin-top:24px"><a href="index.html" style="color:var(--primary);font-weight:700;text-decoration:none">&larr; Ana sayfaya dön</a></p>
+      <h1 id="nf-title"></h1>
+      <p id="nf-desc"></p>
+      <p style="margin-top:24px"><a href="index.html" id="nf-back" style="color:var(--primary);font-weight:700;text-decoration:none"></a></p>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container">&copy; 2026 zelandaliyoruk</div>
+    <div class="container">&copy; <span id="year"></span> zelandaliyoruk</div>
   </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    document.documentElement.lang = getLang();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderLangSwitch("lang-switch");
+    document.getElementById("nf-title").textContent = T("notFoundTitle");
+    document.getElementById("nf-desc").textContent = T("notFoundDesc");
+    document.getElementById("nf-back").textContent = T("backHome");
+  </script>
 </body>
 </html>

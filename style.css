@@ -105,6 +105,33 @@ header.site-header .container {
 
 .social-links a:hover { color: var(--accent); }
 
+.lang-switch {
+  display: flex;
+  gap: 2px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.lang-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
 .hero {
   padding: 88px 0 64px;
   text-align: center;

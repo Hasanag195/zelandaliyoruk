@@ -24,18 +24,21 @@
         <img class="brand-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
         zelandaliyoruk
       </a>
-      <nav class="social-links" id="social-links"></nav>
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <nav class="social-links" id="social-links"></nav>
+        <div class="lang-switch" id="lang-switch"></div>
+      </div>
     </div>
   </header>
 
   <div class="container">
-    <a class="back-link" href="index.html">&larr; Tüm konular</a>
+    <a class="back-link" href="index.html" id="back-link"></a>
     <section class="topic-detail" id="topic-detail"></section>
   </div>
 
   <div class="disclaimer">
     <div class="container">
-      <strong>Yasal Uyarı:</strong> Bu sitede ve zelandaliyoruk YouTube/Instagram/TikTok hesaplarında paylaşılan içerikler tamamen kişisel deneyim ve bilgi paylaşımı amaçlıdır; hukuki, mali, vergi veya göçmenlik danışmanlığı niteliği taşımaz. Herhangi bir danışmanlık hizmeti sunulmamaktadır. Vize, oturum izni, vergi veya hukuki konularda karar almadan önce mutlaka lisanslı bir göçmenlik danışmanı, avukat veya ilgili resmi kurumlara danışınız. Bu sitedeki bilgilerin kullanımından doğabilecek hiçbir sonuçtan sorumluluk kabul edilmez.
+      <strong id="disclaimer-label"></strong> <span id="disclaimer-text"></span>
     </div>
   </div>
 
@@ -46,10 +49,16 @@
   </footer>
 
   <script defer src="/_vercel/insights/script.js"></script>
+  <script src="i18n.js"></script>
   <script src="gate.js"></script>
   <script src="data.js"></script>
   <script>
+    document.documentElement.lang = getLang();
     document.getElementById("year").textContent = new Date().getFullYear();
+    renderLangSwitch("lang-switch");
+    document.getElementById("back-link").textContent = T("backToTopics");
+    document.getElementById("disclaimer-label").textContent = T("disclaimerLabel");
+    document.getElementById("disclaimer-text").textContent = T("disclaimer");
 
     const ICONS = {
       youtube: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>',
@@ -68,8 +77,10 @@
     const detail = document.getElementById("topic-detail");
 
     if (!topic) {
-      detail.innerHTML = `<div class="empty-state"><p>Konu bulunamadı.</p></div>`;
+      detail.innerHTML = `<div class="empty-state"><p>${T("notFound")}</p></div>`;
     } else {
+      document.title = `${L(topic.title)} — zelandaliyoruk`;
+
       const videosHtml = topic.videos.length
         ? `<div class="video-grid">${topic.videos
             .map(
@@ -81,8 +92,8 @@
             )
             .join("")}</div>`
         : `<div class="empty-state">
-             <p>Bu konu için video yakında eklenecek.</p>
-             <a href="${SITE.channelUrl}" target="_blank" rel="noopener">Kanalı ziyaret et &rarr;</a>
+             <p>${T("videoComingSoon")}</p>
+             <a href="${SITE.channelUrl}" target="_blank" rel="noopener">${T("visitChannel")}</a>
            </div>`;
 
       const escAttr = (s) => String(s).replace(/[&<>"']/g, (c) => ({
@@ -93,14 +104,14 @@
 
       const questionFormHtml = `
         <div class="ask-box">
-          <h3>Bu konuyla ilgili sorun mu var?</h3>
-          <p>Sorunu bırak, gelecek videolarda cevaplayayım. Yorum alanı değildir, cevaplar burada değil kanalda gelir.</p>
+          <h3>${T("askTitle")}</h3>
+          <p>${T("askDesc")}</p>
           <form id="ask-form" novalidate>
-            <input type="text" name="name" placeholder="Ad Soyad" value="${savedName}" required />
-            <input type="email" name="email" placeholder="E-posta" value="${savedEmail}" required />
-            <textarea name="question" placeholder="Sorunu yaz…" rows="3" required></textarea>
+            <input type="text" name="name" placeholder="${T("askNamePh")}" value="${savedName}" required />
+            <input type="email" name="email" placeholder="${T("askEmailPh")}" value="${savedEmail}" required />
+            <textarea name="question" placeholder="${T("askQuestionPh")}" rows="3" required></textarea>
             <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
-            <button type="submit">Soruyu Gönder</button>
+            <button type="submit">${T("askSubmit")}</button>
             <div class="ask-msg" id="ask-msg"></div>
           </form>
         </div>
@@ -112,35 +123,37 @@
               (group, gi) => `
               <div class="accordion">
                 <button class="accordion-toggle${group.open ? " open" : ""}" data-idx="${gi}" type="button" aria-expanded="${group.open ? "true" : "false"}">
-                  <span>${group.label}</span>
+                  <span>${L(group.label)}</span>
                   <span class="accordion-chevron">⌄</span>
                 </button>
                 <div class="accordion-panel${group.open ? " open" : ""}" data-panel="${gi}">
                   ${group.items
                     .map((i) => {
-                      if (i.url && i.content) {
+                      const label = L(i.label);
+                      const content = i.content ? L(i.content) : null;
+                      if (i.url && content) {
                         return `
                       <div class="accordion-item accordion-item--info">
-                        <p class="accordion-item-label">${i.label}</p>
-                        <p class="accordion-item-content">${i.content}</p>
-                        <a href="${i.url}" target="_blank" rel="noopener" class="accordion-item-link">Resmi sayfaya git <span class="accordion-arrow">↗</span></a>
+                        <p class="accordion-item-label">${label}</p>
+                        <p class="accordion-item-content">${content}</p>
+                        <a href="${i.url}" target="_blank" rel="noopener" class="accordion-item-link">${T("officialLink")} <span class="accordion-arrow">↗</span></a>
                       </div>`;
                       } else if (i.url) {
                         return `
                       <a href="${i.url}" target="_blank" rel="noopener">
-                        <span>${i.label}</span>
+                        <span>${label}</span>
                         <span class="accordion-arrow">↗</span>
                       </a>`;
-                      } else if (i.content) {
+                      } else if (content) {
                         return `
                       <div class="accordion-item accordion-item--info">
-                        <p class="accordion-item-label">${i.label}</p>
-                        <p class="accordion-item-content">${i.content}</p>
+                        <p class="accordion-item-label">${label}</p>
+                        <p class="accordion-item-content">${content}</p>
                       </div>`;
                       } else {
                         return `
                       <div class="accordion-item">
-                        <span>${i.label}</span>
+                        <span>${label}</span>
                       </div>`;
                       }
                     })
@@ -151,14 +164,14 @@
             .join("")
         : "";
 
-      const shareText = encodeURIComponent(`${topic.title} (zelandaliyoruk)\n${location.href}`);
+      const shareText = encodeURIComponent(`${L(topic.title)} (zelandaliyoruk)\n${location.href}`);
 
       detail.innerHTML = `
-        <span class="eyebrow">Rehber</span>
-        <h1>${topic.title}</h1>
-        <p class="summary">${topic.summary}</p>
-        <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">📤 WhatsApp'ta Paylaş</a>
-        ${topic.inzWatch ? `<div class="inz-status" id="inz-status">Resmi kaynaklarla karşılaştırılıyor…</div>` : ""}
+        <span class="eyebrow">${T("topicsEyebrow")}</span>
+        <h1>${L(topic.title)}</h1>
+        <p class="summary">${L(topic.summary)}</p>
+        <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">${T("shareBtn")}</a>
+        ${topic.inzWatch ? `<div class="inz-status" id="inz-status">${T("inzChecking")}</div>` : ""}
         ${accordionHtml}
         ${videosHtml}
         ${questionFormHtml}
@@ -186,31 +199,31 @@
         const hp = data.get("hp").trim();
 
         if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !question) {
-          askMsg.textContent = "Lütfen tüm alanları doldur.";
+          askMsg.textContent = T("askValidation");
           askMsg.classList.add("ask-msg--error");
           return;
         }
 
         const btn = askForm.querySelector("button");
         btn.disabled = true;
-        btn.textContent = "Gönderiliyor…";
+        btn.textContent = T("askSending");
 
         try {
           const res = await fetch("/api/questions", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, question, topic: topic.title, hp }),
+            body: JSON.stringify({ name, email, question, topic: L(topic.title), hp }),
           });
           if (!res.ok) throw new Error("failed");
           askForm.reset();
-          askMsg.textContent = "Sorun alındı, teşekkürler!";
+          askMsg.textContent = T("askOk");
           askMsg.classList.add("ask-msg--ok");
         } catch (err) {
-          askMsg.textContent = "Bir şeyler ters gitti, tekrar dener misin?";
+          askMsg.textContent = T("askErr");
           askMsg.classList.add("ask-msg--error");
         } finally {
           btn.disabled = false;
-          btn.textContent = "Soruyu Gönder";
+          btn.textContent = T("askSubmit");
         }
       });
 
@@ -220,10 +233,8 @@
           .then((data) => {
             const el = document.getElementById("inz-status");
             if (!el) return;
-            const checked = new Date(data.checkedAt).toLocaleDateString("tr-TR");
-            el.textContent = data.anyChanged
-              ? `Immigration NZ sayfalarında değişiklik tespit edildi (son kontrol: ${checked}). Bu sayfadaki özet gözden geçiriliyor, en güncel bilgi için yukarıdaki resmi bağlantılara bakın.`
-              : `Immigration NZ sayfalarıyla karşılaştırıldı, önemli bir değişiklik tespit edilmedi (son kontrol: ${checked}).`;
+            const checked = new Date(data.checkedAt).toLocaleDateString(getLang() === "en" ? "en-NZ" : "tr-TR");
+            el.textContent = Tf(data.anyChanged ? "inzChanged" : "inzOk", { d: checked });
             el.classList.add(data.anyChanged ? "inz-status--changed" : "inz-status--ok");
           })
           .catch(() => {

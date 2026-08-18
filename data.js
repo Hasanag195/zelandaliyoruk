@@ -1,4 +1,5 @@
 // Site içeriğinin tek kaynağı: yeni konu başlığı eklemek için buraya bir obje eklemen yeterli.
+// Çevrilebilir metinler { tr, en } formatında; L() fonksiyonu (i18n.js) mevcut dile göre seçer.
 const SITE = {
   channelUrl: "https://www.youtube.com/@zelandalıyoruk",
   instagramUrl: "https://www.instagram.com/zelandaliyoruk",
@@ -8,83 +9,95 @@ const SITE = {
 const TOPICS = [
   {
     slug: "nasil-gelinir",
-    title: "Yeni Zelanda'ya Nasıl Gelinir",
-    summary: "Yeni Zelanda'ya gelmenin yasal yolları: sponsorlu çalışma vizesi, öğrenci vizesi ve diğer seçenekler.",
+    title: { tr: "Yeni Zelanda'ya Nasıl Gelinir", en: "How to Come to New Zealand" },
+    summary: {
+      tr: "Yeni Zelanda'ya gelmenin yasal yolları: sponsorlu çalışma vizesi, öğrenci vizesi ve diğer seçenekler.",
+      en: "Legal ways to come to New Zealand: sponsored work visa, student visa and other options.",
+    },
     videos: [
       { id: "Z2fB2UyX0F4", title: "Yeni Zelanda'ya Nasıl Gelinir 6 Yasal Yol!" },
     ],
   },
   {
     slug: "vize-sureclari",
-    title: "Vize Türleri & Resmi Süreçler",
-    summary: "Türkiye'den Yeni Zelanda'ya gelmek için ihtiyacın olan resmi bilgiler tek yerde. Başlığa tıkla, doğrudan resmi kaynağa git. Bu sayfa danışmanlık değildir.",
+    title: { tr: "Vize Türleri & Resmi Süreçler", en: "Visa Types & Official Processes" },
+    summary: {
+      tr: "Türkiye'den Yeni Zelanda'ya gelmek için ihtiyacın olan resmi bilgiler tek yerde. Başlığa tıkla, doğrudan resmi kaynağa git. Bu sayfa danışmanlık değildir.",
+      en: "Everything official you need to come to New Zealand from Turkey, in one place. Click a heading to go straight to the official source. This page is not advice.",
+    },
     inzWatch: true,
     accordion: [
       {
-        label: "🇹🇷 Türkiye'den Gelenler İçin Özel Bilgiler",
+        label: { tr: "🇹🇷 Türkiye'den Gelenler İçin Özel Bilgiler", en: "🇹🇷 Special Information for People from Turkey" },
         open: true,
         items: [
           {
-            label: "Türkiye Çalışma Tatili Vizesi (18-30 yaş arası için özel anlaşma)",
+            label: {
+              tr: "Türkiye Çalışma Tatili Vizesi (18-30 yaş arası için özel anlaşma)",
+              en: "Turkey Working Holiday Visa (special agreement for ages 18-30)",
+            },
             url: "https://www.immigration.govt.nz/visas/turkey-working-holiday-visa/",
           },
           {
-            label: "Türkiye vize muafiyeti listesinde değil: NZeTA yetmez, Ziyaretçi Vizesi gerekir",
+            label: {
+              tr: "Türkiye vize muafiyeti listesinde değil: NZeTA yetmez, Ziyaretçi Vizesi gerekir",
+              en: "Turkey is not on the visa waiver list: NZeTA is not enough, a Visitor Visa is required",
+            },
             url: "https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/visa-waiver-countries-and-territories/",
           },
         ],
       },
       {
-        label: "En Çok Aranan Vize Türleri",
+        label: { tr: "En Çok Aranan Vize Türleri", en: "Most Searched Visa Types" },
         items: [
-          { label: "Ziyaretçi Vizesi (Visitor Visa)", url: "https://www.immigration.govt.nz/visas/visitor-visa/" },
-          { label: "Akredite İşveren Çalışma Vizesi (Accredited Employer Work Visa)", url: "https://www.immigration.govt.nz/visas/accredited-employer-work-visa/" },
-          { label: "Nitelikli Göçmen Kalıcı Oturum Vizesi (Skilled Migrant Category)", url: "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/" },
-          { label: "Öğrenci Vizesi (Fee Paying Student Visa)", url: "https://www.immigration.govt.nz/visas/fee-paying-student-visa/" },
-          { label: "Partner Vizesi (New Zealand vatandaşı/residenti ile)", url: "https://www.immigration.govt.nz/visas/partner-of-a-new-zealander-resident-visa/" },
+          { label: { tr: "Ziyaretçi Vizesi (Visitor Visa)", en: "Visitor Visa" }, url: "https://www.immigration.govt.nz/visas/visitor-visa/" },
+          { label: { tr: "Akredite İşveren Çalışma Vizesi (Accredited Employer Work Visa)", en: "Accredited Employer Work Visa" }, url: "https://www.immigration.govt.nz/visas/accredited-employer-work-visa/" },
+          { label: { tr: "Nitelikli Göçmen Kalıcı Oturum Vizesi (Skilled Migrant Category)", en: "Skilled Migrant Category Resident Visa" }, url: "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/" },
+          { label: { tr: "Öğrenci Vizesi (Fee Paying Student Visa)", en: "Fee Paying Student Visa" }, url: "https://www.immigration.govt.nz/visas/fee-paying-student-visa/" },
+          { label: { tr: "Partner Vizesi (New Zealand vatandaşı/residenti ile)", en: "Partner Visa (with a New Zealand citizen/resident)" }, url: "https://www.immigration.govt.nz/visas/partner-of-a-new-zealander-resident-visa/" },
         ],
       },
       {
-        label: "Çalışma Vizesi Kategorileri (Immigration NZ'nin Tam Listesi)",
+        label: { tr: "Çalışma Vizesi Kategorileri (Immigration NZ'nin Tam Listesi)", en: "Work Visa Categories (Immigration NZ's Full List)" },
         items: [
-          { label: "Akredite İşveren Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/accredited-employer-work-visa" },
-          { label: "Ülkeye Özel Çalışma Vizeleri (Çin, Japonya, Kore, Vietnam vb.)", url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/" },
-          { label: "Ev İçi Çalışan Vizesi (Diplomat Personeli)", url: "https://immigration.govt.nz/visas/domestic-staff-of-a-diplomat-work-visa" },
-          { label: "Sanatçı, Yetenek veya Özel Amaçlı Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/entertainers-work-visa" },
-          { label: "Balıkçı Mürettebatı Çalışma Vizesi", url: "https://immigration.govt.nz/visas/fishing-crew-work-visa" },
-          { label: "Partner Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/partner-of-a-new-zealander-work-visa" },
-          { label: "Dini Görevli Çalışma Vizeleri", url: "https://immigration.govt.nz/visas/religious-worker-work-visa" },
-          { label: "Mevsimlik Çalışma Vizeleri (RSE)", url: "https://immigration.govt.nz/visas/recognised-seasonal-employer-limited-visa" },
-          { label: "Stajyer Çalışma Vizesi", url: "https://immigration.govt.nz/visas/student-and-trainee-work-visa" },
-          { label: "İş Değişim Programı Vizesi (Work Exchange)", url: "https://immigration.govt.nz/visas/work-exchange-scheme-work-visa" },
-          { label: "Sömürüye veya Kötü Muameleye Uğrayanlar İçin Çalışma Vizesi", url: "https://immigration.govt.nz/visas/migrant-exploitation-protection-work-visa" },
-          { label: "Eğitimi Bitirdikten Sonra Çalışma Vizesi", url: "https://immigration.govt.nz/visas/post-study-work-visa" },
-          { label: "Kendi İşinde Çalışma Vizesi (Yatırımcı)", url: "https://www.immigration.govt.nz/visas/business-investor-work-visa" },
+          { label: { tr: "Akredite İşveren Çalışma Vizeleri", en: "Accredited employer work visas" }, url: "https://immigration.govt.nz/visas/accredited-employer-work-visa" },
+          { label: { tr: "Ülkeye Özel Çalışma Vizeleri (Çin, Japonya, Kore, Vietnam vb.)", en: "Country-specific work visas (China, Japan, Korea, Vietnam etc.)" }, url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/" },
+          { label: { tr: "Ev İçi Çalışan Vizesi (Diplomat Personeli)", en: "Domestic worker visa (diplomatic staff)" }, url: "https://immigration.govt.nz/visas/domestic-staff-of-a-diplomat-work-visa" },
+          { label: { tr: "Sanatçı, Yetenek veya Özel Amaçlı Çalışma Vizeleri", en: "Entertainers, talent or specific purpose work visas" }, url: "https://immigration.govt.nz/visas/entertainers-work-visa" },
+          { label: { tr: "Balıkçı Mürettebatı Çalışma Vizesi", en: "Fishing worker visa" }, url: "https://immigration.govt.nz/visas/fishing-crew-work-visa" },
+          { label: { tr: "Partner Çalışma Vizeleri", en: "Partner work visas" }, url: "https://immigration.govt.nz/visas/partner-of-a-new-zealander-work-visa" },
+          { label: { tr: "Dini Görevli Çalışma Vizeleri", en: "Religious worker visas" }, url: "https://immigration.govt.nz/visas/religious-worker-work-visa" },
+          { label: { tr: "Mevsimlik Çalışma Vizeleri (RSE)", en: "Seasonal work visas (RSE)" }, url: "https://immigration.govt.nz/visas/recognised-seasonal-employer-limited-visa" },
+          { label: { tr: "Stajyer Çalışma Vizesi", en: "Trainee work visa" }, url: "https://immigration.govt.nz/visas/student-and-trainee-work-visa" },
+          { label: { tr: "İş Değişim Programı Vizesi (Work Exchange)", en: "Work exchange visa" }, url: "https://immigration.govt.nz/visas/work-exchange-scheme-work-visa" },
+          { label: { tr: "Sömürüye veya Kötü Muameleye Uğrayanlar İçin Çalışma Vizesi", en: "Work visa for people who have been exploited or mistreated" }, url: "https://immigration.govt.nz/visas/migrant-exploitation-protection-work-visa" },
+          { label: { tr: "Eğitimi Bitirdikten Sonra Çalışma Vizesi", en: "Working after you finish study" }, url: "https://immigration.govt.nz/visas/post-study-work-visa" },
+          { label: { tr: "Kendi İşinde Çalışma Vizesi (Yatırımcı)", en: "Working in your own business (investor)" }, url: "https://www.immigration.govt.nz/visas/business-investor-work-visa" },
         ],
       },
       {
-        label: "Genel Kategori Sayfaları (tüm alt seçenekler)",
+        label: { tr: "Genel Kategori Sayfaları (tüm alt seçenekler)", en: "General Category Pages (all sub-options)" },
         items: [
-          { label: "Çalışma Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/" },
-          { label: "Öğrenci Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/study/study-visas/" },
-          { label: "Ziyaretçi Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/visit/" },
-          { label: "Oturum Vizeleri: tüm seçenekler", url: "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/" },
+          { label: { tr: "Çalışma Vizeleri: tüm seçenekler", en: "Work visas: all options" }, url: "https://www.immigration.govt.nz/work/visas-for-working-in-new-zealand/" },
+          { label: { tr: "Öğrenci Vizeleri: tüm seçenekler", en: "Student visas: all options" }, url: "https://www.immigration.govt.nz/study/study-visas/" },
+          { label: { tr: "Ziyaretçi Vizeleri: tüm seçenekler", en: "Visitor visas: all options" }, url: "https://www.immigration.govt.nz/visit/" },
+          { label: { tr: "Oturum Vizeleri: tüm seçenekler", en: "Resident visas: all options" }, url: "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/" },
         ],
       },
       {
-        label: "Başvuru İçin Hazırlık: Belgeler ve Kanıtlar",
+        label: { tr: "Başvuru İçin Hazırlık: Belgeler ve Kanıtlar", en: "Preparing to Apply: Documents & Evidence" },
         items: [
-          { label: "Başvuruda İstenen Belgeler ve Kanıtlar (genel bakış)", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/" },
-          { label: "Destekleyici Belgelerin İngilizce Tercümesi", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/providing-english-translations-of-supporting-documents/" },
-          { label: "Sağlık Şartları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/health-requirements/" },
-          { label: "Ziyaret veya Çalışma İçin Gerçek Niyet Şartı", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/genuine-intentions-to-visit-or-work-in-new-zealand/" },
-          { label: "Eğitim İçin Gerçek Niyet Şartı", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/genuine-intentions-to-study-in-new-zealand/" },
-          { label: "Karakter Şartları, Üçüncü Taraf Kontrolleri ve Adli Sicil Kaydı", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/character-requirements-third-party-checks-and-police-certificates/" },
-          { label: "İngilizce Dil Şartları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/english-language-requirements/" },
-          { label: "Yatırımcı ve Emeklilik Vizeleri İçin Kabul Edilebilir Yatırımlar", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/acceptable-investments-for-investor-and-retirement-visas/" },
-          { label: "Öğrenci Bütçe/Fon Şartları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/student-fund-requirements/" },
-          { label: "Kimlik Bilgileri", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/identity-information/" },
-          { label: "Başvuruda Yanlış veya Yanıltıcı Bilgi Vermenin Sonuçları", url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/giving-false-or-misleading-information-in-your-application/" },
+          { label: { tr: "Başvuruda İstenen Belgeler ve Kanıtlar (genel bakış)", en: "Evidence and documents required (overview)" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/" },
+          { label: { tr: "Destekleyici Belgelerin İngilizce Tercümesi", en: "Providing English translations of supporting documents" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/providing-english-translations-of-supporting-documents/" },
+          { label: { tr: "Sağlık Şartları", en: "Health requirements" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/health-requirements/" },
+          { label: { tr: "Ziyaret veya Çalışma İçin Gerçek Niyet Şartı", en: "Genuine intentions to visit or work in New Zealand" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/genuine-intentions-to-visit-or-work-in-new-zealand/" },
+          { label: { tr: "Eğitim İçin Gerçek Niyet Şartı", en: "Genuine intentions to study in New Zealand" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/genuine-intentions-to-study-in-new-zealand/" },
+          { label: { tr: "Karakter Şartları, Üçüncü Taraf Kontrolleri ve Adli Sicil Kaydı", en: "Character requirements, third party checks and police certificates" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/character-requirements-third-party-checks-and-police-certificates/" },
+          { label: { tr: "İngilizce Dil Şartları", en: "English language requirements" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/english-language-requirements/" },
+          { label: { tr: "Yatırımcı ve Emeklilik Vizeleri İçin Kabul Edilebilir Yatırımlar", en: "Acceptable investments for investor and retirement visas" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/acceptable-investments-for-investor-and-retirement-visas/" },
+          { label: { tr: "Öğrenci Bütçe/Fon Şartları", en: "Student fund requirements" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/student-fund-requirements/" },
+          { label: { tr: "Kimlik Bilgileri", en: "Identity information" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/identity-information/" },
+          { label: { tr: "Başvuruda Yanlış veya Yanıltıcı Bilgi Vermenin Sonuçları", en: "Giving false or misleading information in your application" }, url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/giving-false-or-misleading-information-in-your-application/" },
         ],
       },
     ],
@@ -92,16 +105,22 @@ const TOPICS = [
   },
   {
     slug: "maas-vergi",
-    title: "Maaş & Vergi Sistemi",
-    summary: "Yeni Zelanda'da maaşlar, vergi sistemi ve çalışma hayatı hakkında gerçekler.",
+    title: { tr: "Maaş & Vergi Sistemi", en: "Salary & Tax System" },
+    summary: {
+      tr: "Yeni Zelanda'da maaşlar, vergi sistemi ve çalışma hayatı hakkında gerçekler.",
+      en: "The realities of salaries, the tax system and working life in New Zealand.",
+    },
     videos: [
       { id: "gZIgX_0Ny9g", title: "Yeni Zelanda'da Çalışma Hayatı Maaşlar ve Vergi Sistemi!" },
     ],
   },
   {
     slug: "gunluk-hayat",
-    title: "Günlük Hayat Gerçekleri",
-    summary: "Yeni Zelanda'da yaşamın gündelik gerçekleri: kimsenin anlatmadığı detaylar.",
+    title: { tr: "Günlük Hayat Gerçekleri", en: "Everyday Life Realities" },
+    summary: {
+      tr: "Yeni Zelanda'da yaşamın gündelik gerçekleri: kimsenin anlatmadığı detaylar.",
+      en: "The everyday realities of life in New Zealand: the details nobody tells you.",
+    },
     videos: [
       { id: "-PftP3IlhOs", title: "Yeni Zelanda'da Hayat Nasıl? (Yeni Zelanda Gerçekleri)" },
       { id: "q0rccS7Rdek", title: "Yeni Zelanda'da Ev Bulma: Gerçek Süreç ve Hatalar (1. Bölüm)" },
@@ -110,35 +129,38 @@ const TOPICS = [
   },
   {
     slug: "isci-haklari",
-    title: "İşçi Hakları",
-    summary: "Yeni Zelanda'da çalışma vizesiyle çalışırken haklarını ve işvereninin sorumluluklarını bil. Başlığa tıkla, altındaki konulardan resmi sayfaya git.",
+    title: { tr: "İşçi Hakları", en: "Worker Rights" },
+    summary: {
+      tr: "Yeni Zelanda'da çalışma vizesiyle çalışırken haklarını ve işvereninin sorumluluklarını bil. Başlığa tıkla, altındaki konulardan resmi sayfaya git.",
+      en: "Know your rights and your employer's responsibilities while working in New Zealand on a work visa. Click the heading, then any topic to go to the official page.",
+    },
     accordion: [
       {
-        label: "İşçi Hakları Konuları",
+        label: { tr: "İşçi Hakları Konuları", en: "Worker Rights Topics" },
         open: true,
         items: [
           {
-            label: "Kurallar: Yurt Dışından Gelen Çalışan Olarak Haklarınız",
+            label: { tr: "Kurallar: Yurt Dışından Gelen Çalışan Olarak Haklarınız", en: "Rules: Your Rights as a Worker from Overseas" },
             url: "https://www.immigration.govt.nz/work/worker-rights/your-rights-as-a-worker-from-overseas/",
           },
           {
-            label: "Çalışma Sorumluluğu: İşvereniniz AEWV'de Ne Yapmalı",
+            label: { tr: "Çalışma Sorumluluğu: İşvereniniz AEWV'de Ne Yapmalı", en: "Employer Responsibility: What Your Employer Must Do on an AEWV" },
             url: "https://www.immigration.govt.nz/work/worker-rights/what-your-employer-must-do-when-they-hire-you-on-an-aewv/",
           },
           {
-            label: "Çalışan Hakları ve Sorumlulukları",
+            label: { tr: "Çalışan Hakları ve Sorumlulukları", en: "Employee Rights and Responsibilities" },
             url: "https://www.employment.govt.nz/starting-employment/rights-and-responsibilities/employee-rights-and-responsibilities",
           },
           {
-            label: "İhmaller: İş Yerinde Destek ve Sorun Bildirme",
+            label: { tr: "İhmaller: İş Yerinde Destek ve Sorun Bildirme", en: "Problems: Support in the Workplace and Reporting Issues" },
             url: "https://www.immigration.govt.nz/work/worker-rights/support-in-the-workplace/",
           },
           {
-            label: "Göçmen Sömürüsü",
+            label: { tr: "Göçmen Sömürüsü", en: "Migrant Exploitation" },
             url: "https://www.employment.govt.nz/resolving-problems/migrant-exploitation",
           },
           {
-            label: "Göçmen Sömürüsünden Korunma Çalışma Vizesi",
+            label: { tr: "Göçmen Sömürüsünden Korunma Çalışma Vizesi", en: "Migrant Exploitation Protection Work Visa" },
             url: "https://www.immigration.govt.nz/visas/migrant-exploitation-protection-work-visa",
           },
         ],
@@ -148,8 +170,11 @@ const TOPICS = [
   },
   {
     slug: "gezi-kesif",
-    title: "Gezi & Keşif",
-    summary: "Yeni Zelanda'nın doğası ve gezilecek yerleri: kanaldaki keşif videoları.",
+    title: { tr: "Gezi & Keşif", en: "Travel & Exploration" },
+    summary: {
+      tr: "Yeni Zelanda'nın doğası ve gezilecek yerleri: kanaldaki keşif videoları.",
+      en: "New Zealand's nature and places to visit: exploration videos from the channel.",
+    },
     videos: [
       { id: "C0Nbab1mtu8", title: "Yeni Zelanda Waitomo Mağaraları: Karanlığın İçindeki Işıklar!" },
       { id: "krkUb7Lgorg", title: "Yeni Zelanda'da Sessizliğin İçinde 🐦 | Katikati Bird Gardens" },
@@ -157,72 +182,105 @@ const TOPICS = [
   },
   {
     slug: "dolandiriciliklardan-korunma",
-    title: "Yeni Zelanda'da Dolandırılmamak İçin Rehber",
-    summary: "Göçmenlik dolandırıcılığı Yeni Zelanda'da gerçek bir tehdit. İş teklifi, vize vaadi veya danışman seçiminde dikkat etmen gereken temel noktalar burada.",
+    title: { tr: "Yeni Zelanda'da Dolandırılmamak İçin Rehber", en: "Guide to Avoiding Scams in New Zealand" },
+    summary: {
+      tr: "Göçmenlik dolandırıcılığı Yeni Zelanda'da gerçek bir tehdit. İş teklifi, vize vaadi veya danışman seçiminde dikkat etmen gereken temel noktalar burada.",
+      en: "Immigration scams are a real threat in New Zealand. Here are the key things to watch for with job offers, visa promises, or choosing an adviser.",
+    },
     accordion: [
       {
-        label: "🚩 İş İlanları ve İşveren Dolandırıcılıkları",
+        label: { tr: "🚩 İş İlanları ve İşveren Dolandırıcılıkları", en: "🚩 Job Listing and Employer Scams" },
         open: true,
         items: [
           {
-            label: "İş için ücret veya komisyon istenmesi yasadışıdır",
-            content: "Yeni Zelanda'da işverenler, bir iş teklifi karşılığında senden hiçbir şekilde ücret, komisyon veya 'yerleştirme bedeli' alamaz. Böyle bir talepte bulunan biri varsa büyük ihtimalle bir dolandırıcıyla karşı karşıyasın.",
+            label: { tr: "İş için ücret veya komisyon istenmesi yasadışıdır", en: "Asking for a fee or commission for a job is illegal" },
+            content: {
+              tr: "Yeni Zelanda'da işverenler, bir iş teklifi karşılığında senden hiçbir şekilde ücret, komisyon veya 'yerleştirme bedeli' alamaz. Böyle bir talepte bulunan biri varsa büyük ihtimalle bir dolandırıcıyla karşı karşıyasın.",
+              en: "In New Zealand, employers cannot legally charge you a fee, commission, or 'placement charge' in exchange for a job offer. If someone asks for this, you're most likely dealing with a scammer.",
+            },
           },
           {
-            label: "\"Bağlantılarım var, başvurunu hızlandırırım\" tuzağı",
-            content: "Immigration New Zealand hiçbir kişiye veya ajansa öncelikli işlem yetkisi tanımaz. \"İçeride adamım var\" ya da \"sistemi bilirim, vizeni hızlandırırım\" diyen biriyse ya yalan söylüyor ya da dolandırıcı.",
+            label: { tr: "\"Bağlantılarım var, başvurunu hızlandırırım\" tuzağı", en: "The \"I have connections, I'll speed up your application\" trap" },
+            content: {
+              tr: "Immigration New Zealand hiçbir kişiye veya ajansa öncelikli işlem yetkisi tanımaz. \"İçeride adamım var\" ya da \"sistemi bilirim, vizeni hızlandırırım\" diyen biriyse ya yalan söylüyor ya da dolandırıcı.",
+              en: "Immigration New Zealand does not give any person or agency priority-processing authority. Anyone who says \"I have a contact inside\" or \"I know the system, I'll fast-track your visa\" is either lying or scamming you.",
+            },
           },
           {
-            label: "Konaklama dahil 'paket' tekliflere dikkat",
-            content: "Bazı dolandırıcılar iş + konaklama paketleri sunarak fahiş konaklama ücreti keser. İşverenin konaklama sağlaması mümkündür; ancak bu ücretin piyasa rayicini aşmaması ve maaşından kesintinin şeffaf olması gerekir. Şüpheli teklifleri doğrulamadan kabul etme.",
+            label: { tr: "Konaklama dahil 'paket' tekliflere dikkat", en: "Be careful with 'package' offers that include accommodation" },
+            content: {
+              tr: "Bazı dolandırıcılar iş + konaklama paketleri sunarak fahiş konaklama ücreti keser. İşverenin konaklama sağlaması mümkündür; ancak bu ücretin piyasa rayicini aşmaması ve maaşından kesintinin şeffaf olması gerekir. Şüpheli teklifleri doğrulamadan kabul etme.",
+              en: "Some scammers offer job + accommodation packages and then charge excessive accommodation fees. An employer can provide accommodation, but the cost must not exceed market rate and any deduction from your pay must be transparent. Don't accept suspicious offers without verifying them.",
+            },
           },
         ],
       },
       {
-        label: "🚩 Danışman ve Acente Dolandırıcılıkları",
+        label: { tr: "🚩 Danışman ve Acente Dolandırıcılıkları", en: "🚩 Adviser and Agent Scams" },
         items: [
           {
-            label: "Sana yalan söylemeni isteyen danışmandan uzak dur",
-            content: "Başvuru formunda gerçek dışı bilgi vermenizi ya da belge sahte göstermenizi isteyen bir göçmenlik danışmanı veya acentesiyle çalışmak hem sana hem onlara ciddi hukuki sonuçlar doğurur. Bu yasa dışıdır.",
+            label: { tr: "Sana yalan söylemeni isteyen danışmandan uzak dur", en: "Stay away from an adviser who asks you to lie" },
+            content: {
+              tr: "Başvuru formunda gerçek dışı bilgi vermenizi ya da belge sahte göstermenizi isteyen bir göçmenlik danışmanı veya acentesiyle çalışmak hem sana hem onlara ciddi hukuki sonuçlar doğurur. Bu yasa dışıdır.",
+              en: "Working with an immigration adviser or agent who asks you to give false information on your application, or to falsify documents, carries serious legal consequences for both you and them. This is illegal.",
+            },
           },
           {
-            label: "Oturum izni garantisi vaat edenler",
-            content: "Hiçbir danışman ya da acente sana residence (kalıcı oturum izni) garantisi veremez. Böyle bir vaat eden biri kötü niyetle hareket ediyordur; para ödersen kaybetme ihtimalin yüksektir.",
+            label: { tr: "Oturum izni garantisi vaat edenler", en: "Anyone who guarantees you residence" },
+            content: {
+              tr: "Hiçbir danışman ya da acente sana residence (kalıcı oturum izni) garantisi veremez. Böyle bir vaat eden biri kötü niyetle hareket ediyordur; para ödersen kaybetme ihtimalin yüksektir.",
+              en: "No adviser or agent can guarantee you residence. Anyone who makes this promise is acting in bad faith — if you pay them, you're likely to lose your money.",
+            },
           },
           {
-            label: "Danışman kullanmak zorunlu değildir; ama kullanacaksan lisanslı biri olsun",
-            content: "Vize başvurunu kendin yapabilirsin. Yardım alacaksan mutlaka Yeni Zelanda'da lisanslı göçmenlik danışmanı (Licensed Immigration Adviser – LIA) veya sertifikalı bir avukat seç. Lisansını Immigration Advisers Authority (IAA) üzerinden doğrulayabilirsin.",
+            label: { tr: "Danışman kullanmak zorunlu değildir; ama kullanacaksan lisanslı biri olsun", en: "Using an adviser isn't mandatory, but if you do, make sure they're licensed" },
+            content: {
+              tr: "Vize başvurunu kendin yapabilirsin. Yardım alacaksan mutlaka Yeni Zelanda'da lisanslı göçmenlik danışmanı (Licensed Immigration Adviser – LIA) veya sertifikalı bir avukat seç. Lisansını Immigration Advisers Authority (IAA) üzerinden doğrulayabilirsin.",
+              en: "You can apply for your visa yourself. If you want help, always choose a Licensed Immigration Adviser (LIA) or a qualified lawyer in New Zealand. You can verify their licence through the Immigration Advisers Authority (IAA).",
+            },
             url: "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/",
           },
         ],
       },
       {
-        label: "🚩 Sahte Web Siteleri ve Ödeme Dolandırıcılıkları",
+        label: { tr: "🚩 Sahte Web Siteleri ve Ödeme Dolandırıcılıkları", en: "🚩 Fake Websites and Payment Scams" },
         items: [
           {
-            label: "Resmi Immigration NZ adresi nedir?",
-            content: "Immigration New Zealand'a ait her resmi sayfa mutlaka \".immigration.govt.nz\" ile biter. Başka alan adları kullanan siteler sahte olabilir; e-posta adreslerine de dikkat et.",
+            label: { tr: "Resmi Immigration NZ adresi nedir?", en: "What is the official Immigration NZ address?" },
+            content: {
+              tr: "Immigration New Zealand'a ait her resmi sayfa mutlaka \".immigration.govt.nz\" ile biter. Başka alan adları kullanan siteler sahte olabilir; e-posta adreslerine de dikkat et.",
+              en: "Every official Immigration New Zealand page ends in \".immigration.govt.nz\". Sites using other domains may be fake — pay attention to email addresses too.",
+            },
           },
           {
-            label: "Banka havalesiyle ödeme isteği asla resmi değildir",
-            content: "Vize başvurusu, sağlık muayenesi veya herhangi bir resmi işlem için senden banka hesabına havale istenmesi kesinlikle resmi bir süreç değildir. Resmi ödemeler yalnızca Immigration NZ'nin kendi sistemi üzerinden kredi/banka kartıyla veya onaylı klinikler aracılığıyla yapılır.",
+            label: { tr: "Banka havalesiyle ödeme isteği asla resmi değildir", en: "A request for bank transfer payment is never official" },
+            content: {
+              tr: "Vize başvurusu, sağlık muayenesi veya herhangi bir resmi işlem için senden banka hesabına havale istenmesi kesinlikle resmi bir süreç değildir. Resmi ödemeler yalnızca Immigration NZ'nin kendi sistemi üzerinden kredi/banka kartıyla veya onaylı klinikler aracılığıyla yapılır.",
+              en: "Being asked to transfer money to a bank account for a visa application, medical exam, or any official process is never a legitimate procedure. Official payments are only made through Immigration NZ's own system by credit/debit card, or through approved clinics.",
+            },
           },
         ],
       },
       {
-        label: "✅ Haklarını Bil, Doğrudan Başvur",
+        label: { tr: "✅ Haklarını Bil, Doğrudan Başvur", en: "✅ Know Your Rights, Apply Directly" },
         items: [
           {
-            label: "Göçmenler de yerel çalışanlarla aynı haklara sahiptir",
-            content: "Yeni Zelanda'da çalışma vizesiyle çalışan göçmenler; asgari ücret, ücretli yıllık izin, hastalık izni ve diğer temel işçi hakları bakımından Yeni Zelandalı çalışanlarla eşit haklara sahiptir. Haklarını kimse elinden alamaz.",
+            label: { tr: "Göçmenler de yerel çalışanlarla aynı haklara sahiptir", en: "Migrants have the same rights as local workers" },
+            content: {
+              tr: "Yeni Zelanda'da çalışma vizesiyle çalışan göçmenler; asgari ücret, ücretli yıllık izin, hastalık izni ve diğer temel işçi hakları bakımından Yeni Zelandalı çalışanlarla eşit haklara sahiptir. Haklarını kimse elinden alamaz.",
+              en: "Migrants working in New Zealand on a work visa have the same rights as New Zealand workers when it comes to minimum wage, paid annual leave, sick leave, and other basic employment rights. Nobody can take these rights away from you.",
+            },
           },
           {
-            label: "Şüpheleniyorsan doğrudan yetkililere başvur",
-            content: "Dolandırıldığını veya şüpheli bir durumla karşılaştığını düşünüyorsan Immigration New Zealand ile doğrudan iletişime geç ya da consumerprotection.govt.nz/scams adresinden bildiri yap.",
+            label: { tr: "Şüpheleniyorsan doğrudan yetkililere başvur", en: "If you suspect something, go straight to the authorities" },
+            content: {
+              tr: "Dolandırıldığını veya şüpheli bir durumla karşılaştığını düşünüyorsan Immigration New Zealand ile doğrudan iletişime geç ya da consumerprotection.govt.nz/scams adresinden bildiri yap.",
+              en: "If you think you've been scammed or have encountered something suspicious, contact Immigration New Zealand directly, or report it at consumerprotection.govt.nz/scams.",
+            },
             url: "https://www.consumerprotection.govt.nz/scams",
           },
           {
-            label: "📎 Kaynak: Immigration New Zealand – Göçmenlik Dolandırıcılıklarından Korunma",
+            label: { tr: "📎 Kaynak: Immigration New Zealand – Göçmenlik Dolandırıcılıklarından Korunma", en: "📎 Source: Immigration New Zealand – Protecting Yourself from Immigration Scams" },
             url: "https://www.immigration.govt.nz/work/protecting-yourself-from-immigration-scams/",
           },
         ],
