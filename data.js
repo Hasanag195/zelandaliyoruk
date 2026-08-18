@@ -148,4 +148,79 @@ const TOPICS = [
       { id: "krkUb7Lgorg", title: "Yeni Zelanda'da Sessizliğin İçinde 🐦 | Katikati Bird Gardens" },
     ],
   },
+  {
+    slug: "dolandiriciliklardan-korunma",
+    title: "Yeni Zelanda'da Dolandırılmamak İçin Rehber",
+    summary: "Göçmenlik dolandırıcılığı Yeni Zelanda'da gerçek bir tehdit. İş teklifi, vize vaadi veya danışman seçiminde dikkat etmen gereken temel noktalar burada.",
+    accordion: [
+      {
+        label: "🚩 İş İlanları ve İşveren Dolandırıcılıkları",
+        open: true,
+        items: [
+          {
+            label: "İş için ücret veya komisyon istenmesi yasadışıdır",
+            content: "Yeni Zelanda'da işverenler, bir iş teklifi karşılığında senden hiçbir şekilde ücret, komisyon veya 'yerleştirme bedeli' alamaz. Böyle bir talepte bulunan biri varsa büyük ihtimalle bir dolandırıcıyla karşı karşıyasın.",
+          },
+          {
+            label: "\"Bağlantılarım var, başvurunu hızlandırırım\" tuzağı",
+            content: "Immigration New Zealand hiçbir kişiye veya ajansa öncelikli işlem yetkisi tanımaz. \"İçeride adamım var\" ya da \"sistemi bilirim, vizeni hızlandırırım\" diyen biriyse ya yalan söylüyor ya da dolandırıcı.",
+          },
+          {
+            label: "Konaklama dahil 'paket' tekliflere dikkat",
+            content: "Bazı dolandırıcılar iş + konaklama paketleri sunarak fahiş konaklama ücreti keser. İşverenin konaklama sağlaması mümkündür; ancak bu ücretin piyasa rayicini aşmaması ve maaşından kesintinin şeffaf olması gerekir. Şüpheli teklifleri doğrulamadan kabul etme.",
+          },
+        ],
+      },
+      {
+        label: "🚩 Danışman ve Acente Dolandırıcılıkları",
+        items: [
+          {
+            label: "Sana yalan söylemeni isteyen danışmandan uzak dur",
+            content: "Başvuru formunda gerçek dışı bilgi vermenizi ya da belge sahte göstermenizi isteyen bir göçmenlik danışmanı veya acentesiyle çalışmak hem sana hem onlara ciddi hukuki sonuçlar doğurur. Bu yasa dışıdır.",
+          },
+          {
+            label: "Oturum izni garantisi vaat edenler",
+            content: "Hiçbir danışman ya da acente sana residence (kalıcı oturum izni) garantisi veremez. Böyle bir vaat eden biri kötü niyetle hareket ediyordur; para ödersen kaybetme ihtimalin yüksektir.",
+          },
+          {
+            label: "Danışman kullanmak zorunlu değildir; ama kullanacaksan lisanslı biri olsun",
+            content: "Vize başvurunu kendin yapabilirsin. Yardım alacaksan mutlaka Yeni Zelanda'da lisanslı göçmenlik danışmanı (Licensed Immigration Adviser – LIA) veya sertifikalı bir avukat seç. Lisans sorgulamak için: immigration.govt.nz/tools/immigration-adviser-search",
+            url: "https://www.immigration.govt.nz/tools/immigration-adviser-search",
+          },
+        ],
+      },
+      {
+        label: "🚩 Sahte Web Siteleri ve Ödeme Dolandırıcılıkları",
+        items: [
+          {
+            label: "Resmi Immigration NZ adresi nedir?",
+            content: "Immigration New Zealand'a ait her resmi sayfa mutlaka \".immigration.govt.nz\" ile biter. Başka alan adları kullanan siteler sahte olabilir; e-posta adreslerine de dikkat et.",
+          },
+          {
+            label: "Banka havalesiyle ödeme isteği asla resmi değildir",
+            content: "Vize başvurusu, sağlık muayenesi veya herhangi bir resmi işlem için senden banka hesabına havale istenmesi kesinlikle resmi bir süreç değildir. Resmi ödemeler yalnızca Immigration NZ'nin kendi sistemi üzerinden kredi/banka kartıyla veya onaylı klinikler aracılığıyla yapılır.",
+          },
+        ],
+      },
+      {
+        label: "✅ Haklarını Bil, Doğrudan Başvur",
+        items: [
+          {
+            label: "Göçmenler de yerel çalışanlarla aynı haklara sahiptir",
+            content: "Yeni Zelanda'da çalışma vizesiyle çalışan göçmenler; asgari ücret, ücretli yıllık izin, hastalık izni ve diğer temel işçi hakları bakımından Yeni Zelandalı çalışanlarla eşit haklara sahiptir. Haklarını kimse elinden alamaz.",
+          },
+          {
+            label: "Şüpheleniyorsan doğrudan yetkililere başvur",
+            content: "Dolandırıldığını veya şüpheli bir durumla karşılaştığını düşünüyorsan Immigration New Zealand ile doğrudan iletişime geç ya da consumerprotection.govt.nz/scams adresinden bildiri yap.",
+            url: "https://www.consumerprotection.govt.nz/scams",
+          },
+          {
+            label: "📎 Kaynak: Immigration New Zealand – Göçmenlik Dolandırıcılıklarından Korunma",
+            url: "https://www.immigration.govt.nz/work/protecting-yourself-from-immigration-scams/",
+          },
+        ],
+      },
+    ],
+    videos: [],
+  },
 ];

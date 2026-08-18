@@ -117,13 +117,33 @@
                 </button>
                 <div class="accordion-panel${group.open ? " open" : ""}" data-panel="${gi}">
                   ${group.items
-                    .map(
-                      (i) => `
+                    .map((i) => {
+                      if (i.url && i.content) {
+                        return `
+                      <div class="accordion-item accordion-item--info">
+                        <p class="accordion-item-label">${i.label}</p>
+                        <p class="accordion-item-content">${i.content}</p>
+                        <a href="${i.url}" target="_blank" rel="noopener" class="accordion-item-link">Resmi sayfaya git <span class="accordion-arrow">↗</span></a>
+                      </div>`;
+                      } else if (i.url) {
+                        return `
                       <a href="${i.url}" target="_blank" rel="noopener">
                         <span>${i.label}</span>
                         <span class="accordion-arrow">↗</span>
-                      </a>`
-                    )
+                      </a>`;
+                      } else if (i.content) {
+                        return `
+                      <div class="accordion-item accordion-item--info">
+                        <p class="accordion-item-label">${i.label}</p>
+                        <p class="accordion-item-content">${i.content}</p>
+                      </div>`;
+                      } else {
+                        return `
+                      <div class="accordion-item">
+                        <span>${i.label}</span>
+                      </div>`;
+                      }
+                    })
                     .join("")}
                 </div>
               </div>`

@@ -577,7 +577,7 @@ footer.site-footer {
 }
 
 .accordion-panel.open {
-  max-height: 600px;
+  max-height: 2000px;
   border-top: 1px solid var(--border);
 }
 
@@ -605,6 +605,44 @@ footer.site-footer {
   flex: none;
   color: var(--accent);
   font-size: 1rem;
+}
+
+/* Info-style accordion items (content + optional link, no external URL as row) */
+.accordion-item {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion-item:last-child { border-bottom: none; }
+
+.accordion-item--info .accordion-item-label {
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin: 0 0 6px;
+}
+
+.accordion-item--info .accordion-item-content {
+  font-size: 0.9rem;
+  color: var(--text-muted, var(--text));
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.accordion-item--info .accordion-item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.accordion-item--info .accordion-item-link:hover {
+  border-bottom-color: var(--accent);
 }
 
 .ask-box {
