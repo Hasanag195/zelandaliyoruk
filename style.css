@@ -130,6 +130,44 @@ header.site-header .container {
   .hero p { white-space: nowrap; }
 }
 
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 24px 0 8px;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-banner h3 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.cta-banner p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-banner-arrow {
+  flex: none;
+  font-size: 1.6rem;
+  color: var(--accent-soft);
+}
+
 .topics {
   padding: 8px 0 80px;
 }

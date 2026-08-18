@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>zelandaliyoruk Taşınma Checklist'i</title>
+  <meta name="description" content="Türkiye'den Yeni Zelanda'ya taşınmak için adım adım checklist: vize öncesi hazırlık, başvuru, gelmeden önce, ilk hafta ve iş bulma." />
+  <link rel="canonical" href="https://zelandaliyoruk.com/checklist.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="zelandaliyoruk" />
+  <meta property="og:title" content="Yeni Zelanda'ya Taşınma Checklist'i" />
+  <meta property="og:description" content="Türkiye'den Yeni Zelanda'ya taşınmak için adım adım checklist." />
+  <meta property="og:image" content="https://zelandaliyoruk.com/assets/logo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cl-header { text-align: center; padding: 56px 0 8px; }
+    .cl-progress-wrap { max-width: 480px; margin: 0 auto 8px; }
+    .cl-progress-bar { height: 10px; border-radius: 999px; background: var(--border); overflow: hidden; }
+    .cl-progress-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.25s ease; }
+    .cl-progress-text { text-align: center; font-size: 0.85rem; color: var(--muted); margin: 8px 0 0; }
+    .cl-actions { display: flex; justify-content: center; gap: 10px; margin: 20px 0 40px; flex-wrap: wrap; }
+    .cl-btn { padding: 11px 22px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; cursor: pointer; text-decoration: none; box-shadow: var(--shadow-sm); }
+    .cl-btn:hover { border-color: var(--accent); }
+    .cl-btn--primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .cl-btn--primary:hover { background: var(--primary-dark); }
+    .cl-section { margin-bottom: 40px; }
+    .cl-section h2 { font-size: 1.3rem; font-weight: 600; color: var(--primary-dark); margin: 0 0 4px; }
+    .cl-section .cl-desc { color: var(--muted); font-size: 0.9rem; margin: 0 0 16px; }
+    .cl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow-sm); }
+    .cl-item input[type="checkbox"] { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--primary); flex: none; cursor: pointer; }
+    .cl-item label { flex: 1; font-size: 0.94rem; line-height: 1.5; cursor: pointer; }
+    .cl-item.checked label { color: var(--muted); text-decoration: line-through; }
+    .cl-item a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .cl-item a:hover { text-decoration: underline; }
+
+    @media print {
+      .site-header, .disclaimer, .site-footer, .cl-actions, #ask-inline, .gate-overlay { display: none !important; }
+      body { background: #fff; }
+      .cl-item { box-shadow: none; border: 1px solid #ccc; }
+      .cl-progress-wrap { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
+        zelandaliyoruk
+      </a>
+      <nav class="social-links" id="social-links"></nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <a class="back-link" href="index.html">&larr; Tüm konular</a>
+
+    <div class="cl-header">
+      <span class="eyebrow">Ücretsiz Kaynak</span>
+      <h1>Yeni Zelanda'ya Taşınma Checklist'i</h1>
+      <p style="max-width:560px;margin:12px auto 0;color:var(--muted)">Türkiye'den Yeni Zelanda'ya taşınmanın her aşaması, işaretleyerek takip edebileceğin bir listede. Tarayıcında kalıcı olarak kaydedilir.</p>
+    </div>
+
+    <div class="cl-progress-wrap">
+      <div class="cl-progress-bar"><div class="cl-progress-fill" id="cl-progress-fill"></div></div>
+      <p class="cl-progress-text" id="cl-progress-text">0 / 0 tamamlandı</p>
+    </div>
+
+    <div class="cl-actions">
+      <button class="cl-btn cl-btn--primary" onclick="window.print()">🖨️ Yazdır / PDF Olarak Kaydet</button>
+      <button class="cl-btn" id="cl-reset">Listeyi Sıfırla</button>
+    </div>
+
+    <div id="cl-sections"></div>
+  </div>
+
+  <div class="disclaimer">
+    <div class="container">
+      <strong>Yasal Uyarı:</strong> Bu sitede ve zelandaliyoruk YouTube/Instagram/TikTok hesaplarında paylaşılan içerikler tamamen kişisel deneyim ve bilgi paylaşımı amaçlıdır; hukuki, mali, vergi veya göçmenlik danışmanlığı niteliği taşımaz. Herhangi bir danışmanlık hizmeti sunulmamaktadır. Vize, oturum izni, vergi veya hukuki konularda karar almadan önce mutlaka lisanslı bir göçmenlik danışmanı, avukat veya ilgili resmi kurumlara danışınız. Bu sitedeki bilgilerin kullanımından doğabilecek hiçbir sonuçtan sorumluluk kabul edilmez.
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      &copy; <span id="year"></span> zelandaliyoruk
+    </div>
+  </footer>
+
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="gate.js"></script>
+  <script src="data.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const ICONS = {
+      youtube: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>',
+      instagram: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>',
+      tiktok: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16.5 2h-3v13.6a3 3 0 1 1-2.2-2.9v-3.1a6.1 6.1 0 1 0 5.2 6V9.1a7.6 7.6 0 0 0 4.5 1.5V7.5a4.6 4.6 0 0 1-4.5-4.6V2Z"/></svg>',
+    };
+    document.getElementById("social-links").innerHTML = `
+      <a href="${SITE.channelUrl}" target="_blank" rel="noopener">${ICONS.youtube}<span>YouTube</span></a>
+      <a href="${SITE.instagramUrl}" target="_blank" rel="noopener">${ICONS.instagram}<span>Instagram</span></a>
+      <a href="${SITE.tiktokUrl}" target="_blank" rel="noopener">${ICONS.tiktok}<span>TikTok</span></a>
+    `;
+
+    const CHECKLIST = [
+      {
+        title: "1. Türkiye'de Hazırlık",
+        desc: "Başvurudan önce halletmen gerekenler.",
+        items: [
+          { t: "Pasaportunun geçerlilik süresini kontrol et (en az 6 ay kalmış olmalı)" },
+          { t: "Hangi vize türünün sana uygun olduğuna karar ver", link: ["Vize Türleri sayfası", "topic.html?t=vize-sureclari"] },
+          { t: "Türkiye Çalışma Tatili Vizesi için yaş uygunluğunu kontrol et (18-30 yaş arası)", link: ["resmi sayfa", "https://www.immigration.govt.nz/visas/turkey-working-holiday-visa/"] },
+          { t: "Sağlık sigortası araştır (bazı vize türlerinde istenir)" },
+          { t: "Adli sicil kaydını (police certificate) çıkart" },
+          { t: "Diploma / mesleki belgelerinin İngilizce tercümesi ve denklik durumunu araştır" },
+        ],
+      },
+      {
+        title: "2. Vize Başvurusu",
+        desc: "Başvuru sürecinde dikkat edilmesi gerekenler.",
+        items: [
+          { t: "Başvuru için gerekli belge ve kanıtları hazırla", link: ["belge listesi", "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/"] },
+          { t: "Başvuruyu yalnızca Immigration NZ'nin resmi sitesi üzerinden yap" },
+          { t: "\"Bağlantım var, hızlandırırım\" diyen kimseye güvenme — böyle bir yetki kimsede yoktur", link: ["dolandırıcılık rehberi", "topic.html?t=dolandiriciliklardan-korunma"] },
+          { t: "Danışman kullanacaksan mutlaka lisansını doğrula", link: ["IAA lisans doğrulama", "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/"] },
+          { t: "Ücretleri sadece resmi sistem üzerinden öde — banka havalesi isteyen biri dolandırıcıdır" },
+        ],
+      },
+      {
+        title: "3. Gelmeden Önce",
+        desc: "Uçuş öncesi son hazırlıklar.",
+        items: [
+          { t: "Uçak bileti ve ilk birkaç gecelik konaklama ayarla" },
+          { t: "Yeni Zelanda'da banka hesabı açma sürecini araştır" },
+          { t: "IRD numarası (vergi numarası) başvurusu için bilgi topla" },
+          { t: "Eşyalarını göndermek istiyorsan kargo/nakliye seçeneklerini karşılaştır" },
+          { t: "Yerel telefon hattı / SIM kart seçeneklerine bak" },
+        ],
+      },
+      {
+        title: "4. İlk Hafta",
+        desc: "Yeni Zelanda'ya vardığında yapılacaklar.",
+        items: [
+          { t: "IRD numarası başvurusu yap" },
+          { t: "Banka hesabı aç" },
+          { t: "Geçici konaklama ayarla, kalıcı ev arayışına başla" },
+          { t: "Yerel SIM kart al" },
+        ],
+      },
+      {
+        title: "5. İş Bulma",
+        desc: "Çalışmaya başlamadan önce ve sonrasında.",
+        items: [
+          { t: "Vizenin çalışma koşullarını (saat sınırı, işveren bağımlılığı vb.) kontrol et" },
+          { t: "İşe alım karşılığı senden ücret isteyen işveren yasa dışı iş yapıyordur, uzak dur" },
+          { t: "Seek.co.nz gibi platformlarda iş ara" },
+          { t: "İşe başladığında haklarını bil", link: ["İşçi Hakları sayfası", "topic.html?t=isci-haklari"] },
+        ],
+      },
+      {
+        title: "6. Uzun Vadeli",
+        desc: "Yerleşme sürecinin devamı.",
+        items: [
+          { t: "Vize süren bitmeden önce uzatma/geçiş planını netleştir" },
+          { t: "Oturum izni (residence) yollarını araştır", link: ["Vize Türleri sayfası", "topic.html?t=vize-sureclari"] },
+        ],
+      },
+    ];
+
+    const STORAGE_KEY = "zy_checklist_v1";
+    const state = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+
+    function save() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function updateProgress() {
+      const all = document.querySelectorAll(".cl-item input[type=checkbox]");
+      const checked = document.querySelectorAll(".cl-item input[type=checkbox]:checked");
+      const pct = all.length ? Math.round((checked.length / all.length) * 100) : 0;
+      document.getElementById("cl-progress-fill").style.width = pct + "%";
+      document.getElementById("cl-progress-text").textContent = `${checked.length} / ${all.length} tamamlandı`;
+    }
+
+    const sectionsEl = document.getElementById("cl-sections");
+    sectionsEl.innerHTML = CHECKLIST.map((section, si) => `
+      <div class="cl-section">
+        <h2>${section.title}</h2>
+        <p class="cl-desc">${section.desc}</p>
+        <ul class="cl-list">
+          ${section.items
+            .map((item, ii) => {
+              const id = `cl-${si}-${ii}`;
+              const linkHtml = item.link
+                ? ` — <a href="${item.link[1]}" target="_blank" rel="noopener">${item.link[0]} &rarr;</a>`
+                : "";
+              return `
+                <li class="cl-item" id="wrap-${id}">
+                  <input type="checkbox" id="${id}" />
+                  <label for="${id}">${item.t}${linkHtml}</label>
+                </li>`;
+            })
+            .join("")}
+        </ul>
+      </div>
+    `).join("");
+
+    document.querySelectorAll(".cl-item input[type=checkbox]").forEach((cb) => {
+      const key = cb.id;
+      cb.checked = !!state[key];
+      cb.closest(".cl-item").classList.toggle("checked", cb.checked);
+      cb.addEventListener("change", () => {
+        state[key] = cb.checked;
+        save();
+        cb.closest(".cl-item").classList.toggle("checked", cb.checked);
+        updateProgress();
+      });
+    });
+    updateProgress();
+
+    document.getElementById("cl-reset").addEventListener("click", () => {
+      if (!confirm("Tüm işaretleri sıfırlamak istediğine emin misin?")) return;
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    });
+  </script>
+</body>
+</html>
