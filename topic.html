@@ -108,7 +108,7 @@
             .map(
               (v) => `
               <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/${v.id}" title="${v.title}" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/${v.id}" title="${v.title}" loading="lazy" allowfullscreen></iframe>
                 <div class="video-title">${v.title}</div>
               </div>`
             )
@@ -117,6 +117,25 @@
              <p>${T("videoComingSoon")}</p>
              <a href="${SITE.channelUrl}" target="_blank" rel="noopener">${T("visitChannel")}</a>
            </div>`;
+
+      if (topic.videos.length) {
+        const videoSchema = document.createElement("script");
+        videoSchema.type = "application/ld+json";
+        videoSchema.textContent = JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": topic.videos.map((v) => ({
+            "@type": "VideoObject",
+            name: v.title,
+            description: Tf("videoSchemaDesc", { title: v.title }),
+            thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+            uploadDate: v.uploadDate,
+            duration: v.duration,
+            embedUrl: `https://www.youtube.com/embed/${v.id}`,
+            contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+          })),
+        });
+        document.head.appendChild(videoSchema);
+      }
 
       const escAttr = (s) => String(s).replace(/[&<>"']/g, (c) => ({
         "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
