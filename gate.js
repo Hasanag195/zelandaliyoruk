@@ -1,4 +1,13 @@
 (function () {
+  function otherLangUrls() {
+    const path = location.pathname;
+    const qs = location.search || "";
+    if (path.startsWith("/en/")) {
+      return { tr: (path.replace(/^\/en/, "") || "/") + qs, en: path + qs };
+    }
+    return { tr: path + qs, en: "/en" + (path === "/" ? "/" : path) + qs };
+  }
+
   function showWelcome() {
     if (localStorage.getItem("zy_welcome_seen") === "1") return;
 
@@ -38,6 +47,7 @@
   overlay.className = "gate-overlay";
   overlay.innerHTML = `
     <div class="gate-card">
+      <div class="lang-switch" id="gate-lang-switch" style="margin: 0 auto 16px; width: fit-content;"></div>
       <img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
       <h1>${T("gateTitle")}</h1>
       <p>${T("gateDesc")}</p>
@@ -52,6 +62,7 @@
     </div>
   `;
   document.body.appendChild(overlay);
+  renderLangSwitch("gate-lang-switch", otherLangUrls());
 
   const form = overlay.querySelector("#gate-form");
   const errorEl = overlay.querySelector("#gate-error");
