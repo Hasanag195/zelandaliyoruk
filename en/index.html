@@ -146,7 +146,13 @@
           <p>${L(t.summary)}</p>
         </a>
       `
-    ).join("");
+    ).join("") + `
+      <a class="topic-card topic-card--locked" href="/concierge.html">
+        <span class="topic-card-lock">🔒</span>
+        <h3>${T("ccCardTitle")} <span class="premium-badge">${T("ccPremium")}</span></h3>
+        <p>${T("ccCardDesc")}</p>
+      </a>
+    `;
 
     const videoList = document.getElementById("video-list");
     videoList.innerHTML = TOPICS.filter((t) => t.videos.length)
