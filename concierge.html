@@ -33,44 +33,45 @@
         <img class="brand-logo" src="/assets/logo.jpg" alt="zelandaliyoruk logo" />
         zelandaliyoruk
       </a>
+      <div class="lang-switch" id="lang-switch"></div>
     </div>
   </header>
 
   <div class="container">
-    <a class="back-link" href="/">&larr; Tüm konular</a>
+    <a class="back-link" href="/" id="back-link"></a>
 
     <div id="cc-locked" class="cc-lock-wrap">
       <div class="cc-lock-icon">🔒</div>
-      <span class="eyebrow">Premium</span>
-      <h1>Settlement Concierge</h1>
-      <p style="color:var(--muted);margin-bottom:24px">Working Holiday ve yeni gelenler için yerleşim destek hizmeti hazırlanıyor. Detaylar şimdilik yalnızca ekip tarafından görüntülenebilir.</p>
+      <span class="eyebrow" id="cc-premium-label"></span>
+      <h1 id="cc-locked-title"></h1>
+      <p style="color:var(--muted);margin-bottom:24px" id="cc-locked-desc"></p>
       <div class="cc-err" id="cc-err"></div>
-      <input type="password" id="cc-key" placeholder="Erişim anahtarı" />
-      <button id="cc-unlock">Görüntüle</button>
+      <input type="password" id="cc-key" />
+      <button id="cc-unlock"></button>
 
       <div class="cc-interest">
-        <p style="color:var(--muted);font-size:0.9rem;margin-bottom:14px">Bu hizmet başlayınca haberdar olmak ister misin?</p>
-        <button id="cc-interested">İlgileniyorum</button>
+        <p style="color:var(--muted);font-size:0.9rem;margin-bottom:14px" id="cc-interest-prompt"></p>
+        <button id="cc-interested"></button>
         <div class="ask-msg" id="cc-interest-msg" style="margin-top:10px"></div>
       </div>
     </div>
 
     <div id="cc-content" style="display:none; padding: 40px 0 72px; max-width: 720px; margin: 0 auto;">
       <span class="cc-status-badge" id="cc-status"></span>
-      <span class="eyebrow">Önizleme (Sadece Sen)</span>
+      <span class="eyebrow" id="cc-preview-label"></span>
       <h1 id="cc-title" style="color:var(--primary-dark)"></h1>
       <p id="cc-subtitle" style="color:var(--muted);margin-bottom:32px"></p>
 
-      <h2 style="font-size:1.2rem;color:var(--primary-dark);margin-bottom:16px">Paketler</h2>
+      <h2 style="font-size:1.2rem;color:var(--primary-dark);margin-bottom:16px" id="cc-packages-label"></h2>
       <div id="cc-packages"></div>
 
-      <h2 style="font-size:1.2rem;color:var(--primary-dark);margin:32px 0 16px">Ek Modüller</h2>
+      <h2 style="font-size:1.2rem;color:var(--primary-dark);margin:32px 0 16px" id="cc-addons-label"></h2>
       <div id="cc-addons"></div>
 
       <p style="font-size:0.85rem;color:var(--muted);margin-top:24px" id="cc-scope-note"></p>
 
       <div class="disclaimer" style="margin-top:32px;border-radius:var(--radius);border:1px solid var(--border);padding:20px">
-        <strong>Yasal Uyarı:</strong> <span id="cc-disclaimer"></span>
+        <strong id="cc-disclaimer-label"></strong> <span id="cc-disclaimer"></span>
       </div>
     </div>
   </div>
@@ -79,8 +80,22 @@
     <div class="container">&copy; <span id="year"></span> zelandaliyoruk</div>
   </footer>
 
+  <script src="/i18n.js"></script>
   <script>
+    document.documentElement.lang = getLang();
     document.getElementById("year").textContent = new Date().getFullYear();
+    renderLangSwitch("lang-switch", { tr: "/concierge.html", en: "/concierge.html" });
+
+    document.getElementById("back-link").textContent = T("backToTopics");
+    document.getElementById("cc-premium-label").textContent = T("ccPremium");
+    document.getElementById("cc-locked-title").textContent = T("ccLockedTitle");
+    document.getElementById("cc-locked-desc").textContent = T("ccLockedDesc");
+    document.getElementById("cc-key").placeholder = T("ccKeyPh");
+    document.getElementById("cc-unlock").textContent = T("ccUnlock");
+    document.getElementById("cc-interest-prompt").textContent = T("ccInterestPrompt");
+    document.getElementById("cc-interested").textContent = T("ccInterestBtn");
+    document.getElementById("cc-preview-label").textContent = T("ccPreviewLabel");
+    document.getElementById("cc-disclaimer-label").textContent = T("disclaimerLabel");
 
     const lockedEl = document.getElementById("cc-locked");
     const contentEl = document.getElementById("cc-content");
@@ -88,13 +103,13 @@
 
     async function unlock(key) {
       errEl.textContent = "";
-      const res = await fetch("/api/concierge-content?key=" + encodeURIComponent(key));
+      const res = await fetch(`/api/concierge-content?key=${encodeURIComponent(key)}&lang=${getLang()}`);
       if (res.status === 401) {
-        errEl.textContent = "Anahtar hatalı.";
+        errEl.textContent = T("ccKeyErr");
         return false;
       }
       if (!res.ok) {
-        errEl.textContent = "Yüklenemedi.";
+        errEl.textContent = T("ccLoadErr");
         return false;
       }
       const data = await res.json();
@@ -103,6 +118,8 @@
       document.getElementById("cc-status").textContent = c.status;
       document.getElementById("cc-title").textContent = c.title;
       document.getElementById("cc-subtitle").textContent = c.subtitle;
+      document.getElementById("cc-packages-label").textContent = c.packagesLabel;
+      document.getElementById("cc-addons-label").textContent = c.addonsLabel;
       document.getElementById("cc-scope-note").textContent = c.scopeNote;
       document.getElementById("cc-disclaimer").textContent = c.disclaimer;
 
@@ -147,12 +164,12 @@
       const name = localStorage.getItem("zy_lead_name") || "";
       const email = localStorage.getItem("zy_lead_email") || "";
       if (!name || !email) {
-        msgEl.textContent = "Önce ana sayfadan e-postanı bırakman gerekiyor.";
+        msgEl.textContent = T("ccInterestNeedEmail");
         msgEl.style.color = "#a3271d";
         return;
       }
       btn.disabled = true;
-      btn.textContent = "Gönderiliyor…";
+      btn.textContent = T("ccInterestSending");
       try {
         const res = await fetch("/api/questions", {
           method: "POST",
@@ -165,14 +182,14 @@
           }),
         });
         if (!res.ok) throw new Error("failed");
-        msgEl.textContent = "Kaydedildi, teşekkürler!";
+        msgEl.textContent = T("ccInterestSent");
         msgEl.style.color = "var(--primary-dark)";
-        btn.textContent = "İlgileniyorum ✓";
+        btn.textContent = T("ccInterestBtnDone");
       } catch {
-        msgEl.textContent = "Bir şeyler ters gitti, tekrar dener misin?";
+        msgEl.textContent = T("ccInterestErr");
         msgEl.style.color = "#a3271d";
         btn.disabled = false;
-        btn.textContent = "İlgileniyorum";
+        btn.textContent = T("ccInterestBtn");
       }
     });
 
