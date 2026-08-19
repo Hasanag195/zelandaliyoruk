@@ -109,7 +109,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      &copy; <span id="year"></span> zelandaliyoruk · <a id="footer-privacy-link"></a>
+      &copy; <span id="year"></span> zelandaliyoruk · <a id="footer-privacy-link"></a> · <a id="footer-terms-link"></a>
     </div>
   </footer>
 
@@ -124,6 +124,8 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("footer-privacy-link").href = "/en/privacy.html";
     document.getElementById("footer-privacy-link").textContent = T("footerPrivacy");
+    document.getElementById("footer-terms-link").href = "/en/terms.html";
+    document.getElementById("footer-terms-link").textContent = T("footerTerms");
     renderLangSwitch("lang-switch", { tr: "/", en: "/en/" });
     document.getElementById("cta-link").href = `${BASE}/checklist.html`;
 
@@ -164,13 +166,7 @@
           <p>${L(t.summary)}</p>
         </a>
       `
-    ).join("") + `
-      <a class="topic-card topic-card--locked" href="/concierge.html">
-        <span class="topic-card-lock">🔒</span>
-        <h3>${T("ccCardTitle")} <span class="premium-badge">${T("ccPremium")}</span></h3>
-        <p>${T("ccCardDesc")}</p>
-      </a>
-    `;
+    ).join("");
 
     const videoList = document.getElementById("video-list");
     videoList.innerHTML = TOPICS.filter((t) => t.videos.length)

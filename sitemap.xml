@@ -100,4 +100,14 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://zelandaliyoruk.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://zelandaliyoruk.com/en/privacy.html" />
   </url>
+  <url>
+    <loc>https://zelandaliyoruk.com/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zelandaliyoruk.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zelandaliyoruk.com/en/terms.html" />
+  </url>
+  <url>
+    <loc>https://zelandaliyoruk.com/en/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zelandaliyoruk.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zelandaliyoruk.com/en/terms.html" />
+  </url>
 </urlset>
