@@ -145,7 +145,13 @@
           <p>${L(t.summary)}</p>
         </a>
       `
-    ).join("");
+    ).join("") + `
+      <a class="topic-card topic-card--locked" href="/concierge.html">
+        <span class="topic-card-lock">🔒</span>
+        <h3>Settlement Concierge <span class="premium-badge">Premium</span></h3>
+        <p>Yeni gelenler için yerleşim destek hizmeti — çok yakında.</p>
+      </a>
+    `;
 
     const videoList = document.getElementById("video-list");
     videoList.innerHTML = TOPICS.filter((t) => t.videos.length)

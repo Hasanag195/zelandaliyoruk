@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Settlement Concierge — zelandaliyoruk</title>
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .cc-lock-wrap { max-width: 460px; margin: 100px auto; text-align: center; }
+    .cc-lock-icon { font-size: 3rem; margin-bottom: 16px; }
+    .cc-lock-wrap input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 10px; font-family: inherit; }
+    .cc-lock-wrap button { width: 100%; padding: 12px; border-radius: 10px; border: none; background: var(--primary); color: #fff; font-weight: 700; cursor: pointer; }
+    .cc-err { color: #a3271d; font-size: 0.85rem; min-height: 1em; margin-bottom: 8px; }
+    .cc-interest { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .cc-interest button { padding: 10px 22px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--primary-dark); font-weight: 700; cursor: pointer; }
+    .cc-interest button:hover { border-color: var(--accent); }
+    .cc-package { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 18px; box-shadow: var(--shadow-sm); }
+    .cc-package h3 { margin: 0 0 4px; color: var(--primary-dark); }
+    .cc-package .cc-price { color: var(--accent); font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
+    .cc-package .cc-duration { color: var(--muted); font-size: 0.85rem; margin-bottom: 10px; }
+    .cc-status-badge { display: inline-block; background: #fbe4e0; color: #8f2a1c; font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 999px; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/assets/logo.jpg" alt="zelandaliyoruk logo" />
+        zelandaliyoruk
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <a class="back-link" href="/">&larr; Tüm konular</a>
+
+    <div id="cc-locked" class="cc-lock-wrap">
+      <div class="cc-lock-icon">🔒</div>
+      <span class="eyebrow">Premium</span>
+      <h1>Settlement Concierge</h1>
+      <p style="color:var(--muted);margin-bottom:24px">Working Holiday ve yeni gelenler için yerleşim destek hizmeti hazırlanıyor. Detaylar şimdilik yalnızca ekip tarafından görüntülenebilir.</p>
+      <div class="cc-err" id="cc-err"></div>
+      <input type="password" id="cc-key" placeholder="Erişim anahtarı" />
+      <button id="cc-unlock">Görüntüle</button>
+
+      <div class="cc-interest">
+        <p style="color:var(--muted);font-size:0.9rem;margin-bottom:14px">Bu hizmet başlayınca haberdar olmak ister misin?</p>
+        <button id="cc-interested">İlgileniyorum</button>
+        <div class="ask-msg" id="cc-interest-msg" style="margin-top:10px"></div>
+      </div>
+    </div>
+
+    <div id="cc-content" style="display:none; padding: 40px 0 72px; max-width: 720px; margin: 0 auto;">
+      <span class="cc-status-badge" id="cc-status"></span>
+      <span class="eyebrow">Önizleme (Sadece Sen)</span>
+      <h1 id="cc-title" style="color:var(--primary-dark)"></h1>
+      <p id="cc-subtitle" style="color:var(--muted);margin-bottom:32px"></p>
+
+      <h2 style="font-size:1.2rem;color:var(--primary-dark);margin-bottom:16px">Paketler</h2>
+      <div id="cc-packages"></div>
+
+      <h2 style="font-size:1.2rem;color:var(--primary-dark);margin:32px 0 16px">Ek Modüller</h2>
+      <div id="cc-addons"></div>
+
+      <p style="font-size:0.85rem;color:var(--muted);margin-top:24px" id="cc-scope-note"></p>
+
+      <div class="disclaimer" style="margin-top:32px;border-radius:var(--radius);border:1px solid var(--border);padding:20px">
+        <strong>Yasal Uyarı:</strong> <span id="cc-disclaimer"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">&copy; <span id="year"></span> zelandaliyoruk</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const lockedEl = document.getElementById("cc-locked");
+    const contentEl = document.getElementById("cc-content");
+    const errEl = document.getElementById("cc-err");
+
+    async function unlock(key) {
+      errEl.textContent = "";
+      const res = await fetch("/api/concierge-content?key=" + encodeURIComponent(key));
+      if (res.status === 401) {
+        errEl.textContent = "Anahtar hatalı.";
+        return false;
+      }
+      if (!res.ok) {
+        errEl.textContent = "Yüklenemedi.";
+        return false;
+      }
+      const data = await res.json();
+      const c = data.content;
+
+      document.getElementById("cc-status").textContent = c.status;
+      document.getElementById("cc-title").textContent = c.title;
+      document.getElementById("cc-subtitle").textContent = c.subtitle;
+      document.getElementById("cc-scope-note").textContent = c.scopeNote;
+      document.getElementById("cc-disclaimer").textContent = c.disclaimer;
+
+      document.getElementById("cc-packages").innerHTML = c.packages
+        .map(
+          (p) => `
+          <div class="cc-package">
+            <h3>${p.name}</h3>
+            <div class="cc-price">${p.price}</div>
+            <div class="cc-duration">${p.duration}</div>
+            <p style="color:var(--text);font-size:0.92rem;margin:0">${p.scope}</p>
+          </div>`
+        )
+        .join("");
+
+      document.getElementById("cc-addons").innerHTML = c.addons
+        .map(
+          (a) => `
+          <div class="cc-package">
+            <h3>${a.name}</h3>
+            <div class="cc-price">${a.price}</div>
+            <p style="color:var(--text);font-size:0.92rem;margin:0">${a.scope}</p>
+          </div>`
+        )
+        .join("");
+
+      lockedEl.style.display = "none";
+      contentEl.style.display = "block";
+      return true;
+    }
+
+    document.getElementById("cc-unlock").addEventListener("click", async () => {
+      const key = document.getElementById("cc-key").value.trim();
+      if (!key) return;
+      const ok = await unlock(key);
+      if (ok) sessionStorage.setItem("zy_concierge_key", key);
+    });
+
+    document.getElementById("cc-interested").addEventListener("click", async () => {
+      const btn = document.getElementById("cc-interested");
+      const msgEl = document.getElementById("cc-interest-msg");
+      const name = localStorage.getItem("zy_lead_name") || "";
+      const email = localStorage.getItem("zy_lead_email") || "";
+      if (!name || !email) {
+        msgEl.textContent = "Önce ana sayfadan e-postanı bırakman gerekiyor.";
+        msgEl.style.color = "#a3271d";
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = "Gönderiliyor…";
+      try {
+        const res = await fetch("/api/questions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            question: "Settlement Concierge hizmeti başladığında haberdar edilmek istiyorum.",
+            topic: "Settlement Concierge - İlgi Kaydı",
+          }),
+        });
+        if (!res.ok) throw new Error("failed");
+        msgEl.textContent = "Kaydedildi, teşekkürler!";
+        msgEl.style.color = "var(--primary-dark)";
+        btn.textContent = "İlgileniyorum ✓";
+      } catch {
+        msgEl.textContent = "Bir şeyler ters gitti, tekrar dener misin?";
+        msgEl.style.color = "#a3271d";
+        btn.disabled = false;
+        btn.textContent = "İlgileniyorum";
+      }
+    });
+
+    const saved = sessionStorage.getItem("zy_concierge_key");
+    if (saved) unlock(saved);
+  </script>
+</body>
+</html>
