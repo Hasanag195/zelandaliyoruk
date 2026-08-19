@@ -12,6 +12,8 @@
   <meta property="og:image" content="https://zelandaliyoruk.com/assets/logo.jpg" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+  <meta name="theme-color" content="#0c4a30" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -167,9 +169,12 @@
           <h3>${T("askTitle")}</h3>
           <p>${T("askDesc")}</p>
           <form id="ask-form" novalidate>
-            <input type="text" name="name" placeholder="${T("askNamePh")}" value="${savedName}" required />
-            <input type="email" name="email" placeholder="${T("askEmailPh")}" value="${savedEmail}" required />
-            <textarea name="question" placeholder="${T("askQuestionPh")}" rows="3" required></textarea>
+            <label class="sr-only" for="ask-name">${T("askNamePh")}</label>
+            <input type="text" id="ask-name" name="name" placeholder="${T("askNamePh")}" value="${savedName}" required />
+            <label class="sr-only" for="ask-email">${T("askEmailPh")}</label>
+            <input type="email" id="ask-email" name="email" placeholder="${T("askEmailPh")}" value="${savedEmail}" required />
+            <label class="sr-only" for="ask-question">${T("askQuestionPh")}</label>
+            <textarea id="ask-question" name="question" placeholder="${T("askQuestionPh")}" rows="3" required></textarea>
             <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
             <button type="submit">${T("askSubmit")}</button>
             <div class="ask-msg" id="ask-msg" aria-live="polite"></div>
