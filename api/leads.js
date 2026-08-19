@@ -31,6 +31,7 @@ module.exports = async (req, res) => {
   const name = String(body.name || "").trim().slice(0, 120);
   const email = String(body.email || "").trim().slice(0, 200);
   const hp = String(body.hp || "").trim();
+  const consent = body.consent === true;
 
   if (hp) {
     // Honeypot dolu = muhtemelen bot, sessizce başarı dön.
@@ -38,7 +39,7 @@ module.exports = async (req, res) => {
     return;
   }
 
-  if (!name || !EMAIL_RE.test(email)) {
+  if (!name || !EMAIL_RE.test(email) || !consent) {
     res.status(400).json({ ok: false, error: "invalid_input" });
     return;
   }
@@ -69,7 +70,7 @@ module.exports = async (req, res) => {
 
       const emailLower = email.toLowerCase();
       const existingIdx = records.findIndex((r) => String(r.email || "").toLowerCase() === emailLower);
-      const updatedRecord = { name, email, ts: new Date().toISOString() };
+      const updatedRecord = { name, email, ts: new Date().toISOString(), consentAt: new Date().toISOString() };
       if (existingIdx >= 0) {
         records[existingIdx] = updatedRecord;
       } else {

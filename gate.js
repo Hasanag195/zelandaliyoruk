@@ -55,6 +55,10 @@
         <input type="text" name="name" placeholder="${T("gateNamePh")}" autocomplete="name" required />
         <input type="email" name="email" placeholder="${T("gateEmailPh")}" autocomplete="email" required />
         <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
+        <label class="gate-consent">
+          <input type="checkbox" name="consent" id="gate-consent" required />
+          <span>${T("gateConsentPre")}<a href="${getLang() === "en" ? "/en/privacy.html" : "/privacy.html"}" target="_blank" rel="noopener">${T("gateConsentLink")}</a>${T("gateConsentPost")}</span>
+        </label>
         <button type="submit">${T("gateSubmit")}</button>
         <div class="gate-error" id="gate-error"></div>
       </form>
@@ -75,9 +79,14 @@
     const name = data.get("name").trim();
     const email = data.get("email").trim();
     const hp = data.get("hp").trim();
+    const consent = data.get("consent") === "on";
 
     if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       errorEl.textContent = T("gateValidation");
+      return;
+    }
+    if (!consent) {
+      errorEl.textContent = T("gateConsentErr");
       return;
     }
 
@@ -88,7 +97,7 @@
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, hp }),
+        body: JSON.stringify({ name, email, hp, consent }),
       });
       if (!res.ok) throw new Error("request_failed");
       localStorage.setItem("zy_lead_ok", "1");

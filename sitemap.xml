@@ -90,4 +90,14 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://zelandaliyoruk.com/topic.html?t=dolandiriciliklardan-korunma" />
     <xhtml:link rel="alternate" hreflang="en" href="https://zelandaliyoruk.com/en/topic.html?t=dolandiriciliklardan-korunma" />
   </url>
+  <url>
+    <loc>https://zelandaliyoruk.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zelandaliyoruk.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zelandaliyoruk.com/en/privacy.html" />
+  </url>
+  <url>
+    <loc>https://zelandaliyoruk.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zelandaliyoruk.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zelandaliyoruk.com/en/privacy.html" />
+  </url>
 </urlset>
