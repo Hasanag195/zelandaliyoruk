@@ -49,7 +49,7 @@
       notFound: "Konu bulunamadı.",
       shareBtn: "📤 WhatsApp'ta Paylaş",
       officialLink: "Resmi sayfaya git",
-      gateTitle: "zelandaliyoruk'a Hoş Geldin",
+      gateTitle: "zelandaliyoruk Hoş Geldin",
       gateDesc: "Yeni Zelanda rehberine erişmeden önce birkaç bilgini bırakır mısın?",
       gateNamePh: "Ad Soyad",
       gateEmailPh: "E-posta",
