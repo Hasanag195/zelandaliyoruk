@@ -76,7 +76,7 @@
       clTitle: "Yeni Zelanda'ya Yolculuk Checklist'i",
       clDesc: "Türkiye'den Yeni Zelanda'ya uzanan yolculuğunun her adımını kendi hızında işaretleyerek takip edebilirsin. İlerlemen tarayıcında otomatik olarak saklanır.",
       ccCardTitle: "Settlement Concierge",
-      ccCardDesc: "Yeni gelenler için yerleşim destek hizmeti — çok yakında.",
+      ccCardDesc: "Yeni gelenler için yerleşim destek hizmeti. Çok yakında.",
       ccPremium: "Premium",
       ccLockedTitle: "Settlement Concierge",
       ccLockedDesc: "Working Holiday ve yeni gelenler için yerleşim destek hizmeti hazırlanıyor. Detaylar şimdilik yalnızca ekip tarafından görüntülenebilir.",
@@ -105,7 +105,7 @@
       ctaTitle: "New Zealand Journey Checklist",
       ctaSubtitle: "A step-by-step list you can tick off, from preparation to your first week.",
       askTitle: "Got a question?",
-      askDesc: "Leave your question about any topic and I'll answer it in a future video. This isn't a comment section — the answer comes on the channel, not here.",
+      askDesc: "Leave your question about any topic and I'll answer it in a future video. This isn't a comment section: the answer comes on the channel, not here.",
       askNamePh: "Full name",
       askEmailPh: "Email",
       askQuestionPh: "Write your question…",
@@ -135,7 +135,7 @@
       welcomeStart: "Start Exploring",
       welcomeList: ["🛂 Visa Types & Official Processes", "✈️ How to Come to New Zealand", "💰 Salary & Tax System", "🏡 Everyday Life Realities"],
       inzChecking: "Comparing with official sources…",
-      inzChanged: "A change was detected on Immigration NZ's pages (last checked: {d}). This page's summary is being reviewed — check the official links above for the latest information.",
+      inzChanged: "A change was detected on Immigration NZ's pages (last checked: {d}). This page's summary is being reviewed, check the official links above for the latest information.",
       inzOk: "Compared with Immigration NZ's pages, no significant change detected (last checked: {d}).",
       notFoundTitle: "Page Not Found (404)",
       notFoundDesc: "The page you're looking for may have moved or never existed.",
@@ -148,7 +148,7 @@
       clTitle: "New Zealand Journey Checklist",
       clDesc: "You can tick off every step of your journey from Turkey to New Zealand at your own pace. Your progress is saved automatically in your browser.",
       ccCardTitle: "Settlement Concierge",
-      ccCardDesc: "A settlement support service for newcomers — coming soon.",
+      ccCardDesc: "A settlement support service for newcomers. Coming soon.",
       ccPremium: "Premium",
       ccLockedTitle: "Settlement Concierge",
       ccLockedDesc: "A settlement support service for Working Holiday makers and newcomers is in the works. Details are visible to the team only for now.",
@@ -181,7 +181,7 @@
     return s;
   };
 
-  // urls: { tr: "/index.html", en: "/en/index.html" } — sayfanın diğer dildeki gerçek adresi.
+  // urls: { tr: "/index.html", en: "/en/index.html" }: sayfanın diğer dildeki gerçek adresi.
   // Gerçek <a href> linkleri kullanır (SEO/crawler dostu), tıklanınca tercih de hatırlanır.
   window.renderLangSwitch = function (containerId, urls) {
     const el = document.getElementById(containerId);

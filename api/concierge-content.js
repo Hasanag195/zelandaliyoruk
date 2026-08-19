@@ -6,19 +6,19 @@ const CONTENT = {
     addonsLabel: "Ek Modüller",
     packages: [
       {
-        name: "Starter — 'İlk Adım'",
+        name: "Starter: 'İlk Adım'",
         duration: "1 hafta destek",
         price: "$149 NZD",
         scope: "Havalimanı sonrası yönlendirme rehberi (PDF), IRD/banka/SIM adım adım kılavuz, 1x 30dk online görüşme",
       },
       {
-        name: "Premium — 'Yerleşim Paketi'",
+        name: "Premium: 'Yerleşim Paketi'",
         duration: "30 gün destek",
         price: "$399 NZD",
         scope: "Starter + barınma arama koordinasyonu (Trade Me/Flatmates ilan filtreleme), CV/cover letter düzenleme, 3x görüşme",
       },
       {
-        name: "Ultimate VIP — 'Tam Kapsam'",
+        name: "Ultimate VIP: 'Tam Kapsam'",
         duration: "90 gün destek",
         price: "$799 NZD",
         scope: "Premium + havalimanı karşılama koordinasyonu, ilk hafta günlük WhatsApp desteği, mülakat provası, ikinci el araç kontrol rehberliği",
@@ -32,7 +32,7 @@ const CONTENT = {
     disclaimer:
       "NZ Welcome & Settlement Concierge, lisanslı bir Immigration Adviser (IAA) veya işe yerleştirme acentesi değildir. Sunulan hizmetler; barınma koordinasyonu, idari kurulum rehberliği ve iş arama mentorluğundan ibarettir. Vize kategorisi, başvuru stratejisi veya oturum izni ile ilgili kararlar için müşteri, lisanslı bir Immigration Adviser'a veya avukata yönlendirilir. Şirket, iş bulma veya vize onayı garantisi vermez.",
     disclaimerLabel: "Yasal Uyarı:",
-    status: "Henüz canlı değil — şirket kaydı ve hukuki onay süreci tamamlanmadan hizmet satışa açılmayacak.",
+    status: "Henüz canlı değil. Şirket kaydı ve hukuki onay süreci tamamlanmadan hizmet satışa açılmayacak.",
   },
   en: {
     title: "NZ Welcome & Settlement Concierge",
@@ -41,19 +41,19 @@ const CONTENT = {
     addonsLabel: "Add-on Modules",
     packages: [
       {
-        name: "Starter — 'First Step'",
+        name: "Starter: 'First Step'",
         duration: "1 week support",
         price: "$149 NZD",
         scope: "Post-arrival orientation guide (PDF), step-by-step IRD/bank/SIM setup guide, 1x 30min online call",
       },
       {
-        name: "Premium — 'Settlement Package'",
+        name: "Premium: 'Settlement Package'",
         duration: "30 days support",
         price: "$399 NZD",
         scope: "Starter + accommodation search coordination (Trade Me/Flatmates listing filtering), CV/cover letter editing, 3x calls",
       },
       {
-        name: "Ultimate VIP — 'Full Coverage'",
+        name: "Ultimate VIP: 'Full Coverage'",
         duration: "90 days support",
         price: "$799 NZD",
         scope: "Premium + airport pickup coordination, daily WhatsApp support in the first week, mock interview, used-car inspection guidance",
@@ -67,7 +67,7 @@ const CONTENT = {
     disclaimer:
       "NZ Welcome & Settlement Concierge is not a licensed Immigration Adviser (IAA) or a recruitment agency. The services provided consist of accommodation coordination, administrative setup guidance, and job-search mentoring. For decisions about visa category, application strategy, or residence, clients are referred to a licensed Immigration Adviser or lawyer. The company does not guarantee employment or visa approval.",
     disclaimerLabel: "Disclaimer:",
-    status: "Not yet live — the service will not open for sale until company registration and legal review are complete.",
+    status: "Not yet live. The service will not open for sale until company registration and legal review are complete.",
   },
 };
 

@@ -18,9 +18,9 @@ const CHECKLIST = {
       items: [
         { t: "Başvuru için gerekli belge ve kanıtları hazırla", link: ["belge listesi", "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/"] },
         { t: "Başvuruyu yalnızca Immigration NZ'nin resmi sitesi üzerinden yap" },
-        { t: "\"Bağlantım var, hızlandırırım\" diyen kimseye güvenme — böyle bir yetki kimsede yoktur", link: ["dolandırıcılık rehberi", "topic.html?t=dolandiriciliklardan-korunma"] },
+        { t: "\"Bağlantım var, hızlandırırım\" diyen kimseye güvenme, böyle bir yetki kimsede yoktur", link: ["dolandırıcılık rehberi", "topic.html?t=dolandiriciliklardan-korunma"] },
         { t: "Danışman kullanacaksan mutlaka lisansını doğrula", link: ["IAA lisans doğrulama", "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/"] },
-        { t: "Ücretleri sadece resmi sistem üzerinden öde — banka havalesi isteyen biri dolandırıcıdır" },
+        { t: "Ücretleri sadece resmi sistem üzerinden öde. Banka havalesi isteyen biri dolandırıcıdır" },
       ],
     },
     {
@@ -82,9 +82,9 @@ const CHECKLIST = {
       items: [
         { t: "Prepare the documents and evidence required for your application", link: ["document list", "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/"] },
         { t: "Only apply through Immigration NZ's official website" },
-        { t: "Don't trust anyone who says \"I have connections, I'll speed it up\" — no one has that authority", link: ["scam prevention guide", "topic.html?t=dolandiriciliklardan-korunma"] },
+        { t: "Don't trust anyone who says \"I have connections, I'll speed it up\", no one has that authority", link: ["scam prevention guide", "topic.html?t=dolandiriciliklardan-korunma"] },
         { t: "If you use an adviser, always verify their licence", link: ["IAA licence check", "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/"] },
-        { t: "Only pay fees through the official system — anyone asking for a bank transfer is a scammer" },
+        { t: "Only pay fees through the official system. Anyone asking for a bank transfer is a scammer" },
       ],
     },
     {
@@ -113,7 +113,7 @@ const CHECKLIST = {
       desc: "Before and after you start working.",
       items: [
         { t: "Check your visa's work conditions (hour limits, employer restrictions etc.)" },
-        { t: "Any employer who asks you for money in exchange for hiring you is acting illegally — stay away" },
+        { t: "Any employer who asks you for money in exchange for hiring you is acting illegally. Stay away" },
         { t: "Look for jobs on platforms like Seek.co.nz" },
         { t: "Know your rights once you start working", link: ["Worker Rights page", "topic.html?t=isci-haklari"] },
       ],

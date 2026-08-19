@@ -99,7 +99,7 @@
     if (!topic) {
       detail.innerHTML = `<div class="empty-state"><p>${T("notFound")}</p></div>`;
     } else {
-      document.title = `${L(topic.title)} — zelandaliyoruk`;
+      document.title = `${L(topic.title)} | zelandaliyoruk`;
 
       const videosHtml = topic.videos.length
         ? `<div class="video-grid">${topic.videos

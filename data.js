@@ -16,7 +16,7 @@ const TOPICS = [
     },
     intro: {
       tr: "Türkiye'den Yeni Zelanda'ya gelmek isteyenler için en sık sorulan soru budur: hangi yol yasal ve gerçekçi? Bu sayfada çalışma tatili vizesinden öğrenci vizesine, sponsorlu iş vizesinden partner vizesine kadar Yeni Zelanda'ya gelmenin farklı yasal yollarını videolarla ve resmi kaynaklarla birlikte bulabilirsin. Amaç seni yönlendirmek değil, hangi seçeneklerin var olduğunu net şekilde göstermek.",
-      en: "For anyone thinking about moving from Turkey to New Zealand, the first question is always the same: which path is legal and realistic? On this page you'll find the different legal ways to come to New Zealand — from the working holiday visa to student visas, sponsored work visas to partner visas — explained through videos and linked directly to official sources. The goal isn't to tell you what to do, but to show you clearly what your options are.",
+      en: "For anyone thinking about moving from Turkey to New Zealand, the first question is always the same: which path is legal and realistic? On this page you'll find the different legal ways to come to New Zealand, from the working holiday visa to student visas, sponsored work visas to partner visas, explained through videos and linked directly to official sources. The goal isn't to tell you what to do, but to show you clearly what your options are.",
     },
     videos: [
       { id: "Z2fB2UyX0F4", title: "Yeni Zelanda'ya Nasıl Gelinir 6 Yasal Yol!" },
@@ -30,8 +30,8 @@ const TOPICS = [
       en: "Everything official you need to come to New Zealand from Turkey, in one place. Click a heading to go straight to the official source. This page is not advice.",
     },
     intro: {
-      tr: "Yeni Zelanda vize sistemi, özellikle Türkiye'den başvuranlar için kafa karıştırıcı olabilir: onlarca vize kategorisi, her biri farklı şartlara sahip. Bu sayfa kendi yorumumuzu eklemeden, doğrudan Immigration New Zealand'ın güncel sayfalarına bağlanan bir rehber niteliğinde — Türkiye'ye özel çalışma tatili anlaşmasından tutun, en çok aranan vize türlerine ve başvuru için gereken belgelere kadar.",
-      en: "New Zealand's visa system can feel overwhelming, especially for applicants coming from Turkey — dozens of categories, each with its own requirements. This page works as a guide without adding our own interpretation, linking straight to Immigration New Zealand's current pages — from the special Turkey working holiday agreement to the most searched visa types and the documents required to apply.",
+      tr: "Yeni Zelanda vize sistemi, özellikle Türkiye'den başvuranlar için kafa karıştırıcı olabilir: onlarca vize kategorisi, her biri farklı şartlara sahip. Bu sayfa kendi yorumumuzu eklemeden, doğrudan Immigration New Zealand'ın güncel sayfalarına bağlanan bir rehber niteliğinde: Türkiye'ye özel çalışma tatili anlaşmasından tutun, en çok aranan vize türlerine ve başvuru için gereken belgelere kadar.",
+      en: "New Zealand's visa system can feel overwhelming, especially for applicants coming from Turkey: dozens of categories, each with its own requirements. This page works as a guide without adding our own interpretation, linking straight to Immigration New Zealand's current pages, from the special Turkey working holiday agreement to the most searched visa types and the documents required to apply.",
     },
     inzWatch: true,
     accordion: [
@@ -135,7 +135,7 @@ const TOPICS = [
     },
     intro: {
       tr: "Vize ve maaş kadar önemli ama çok daha az konuşulan bir konu var: Yeni Zelanda'da günlük hayat gerçekten nasıl? Ev bulmaktan markete, kültürel farklardan beklenmedik zorluklara kadar, kimsenin sosyal medyada göstermediği ama herkesin bir noktada karşılaştığı gerçekleri bu sayfada bulabilirsin.",
-      en: "As important as visas and salaries, but far less talked about: what is everyday life in New Zealand actually like? From finding a home to grocery shopping, cultural differences to unexpected challenges — this page covers the realities nobody shows on social media but everyone eventually runs into.",
+      en: "As important as visas and salaries, but far less talked about: what is everyday life in New Zealand actually like? From finding a home to grocery shopping, cultural differences to unexpected challenges, this page covers the realities nobody shows on social media but everyone eventually runs into.",
     },
     videos: [
       { id: "-PftP3IlhOs", title: "Yeni Zelanda'da Hayat Nasıl? (Yeni Zelanda Gerçekleri)" },
@@ -151,8 +151,8 @@ const TOPICS = [
       en: "Know your rights and your employer's responsibilities while working in New Zealand on a work visa. Click the heading, then any topic to go to the official page.",
     },
     intro: {
-      tr: "Çalışma vizesiyle Yeni Zelanda'da çalışmaya başladığında, işverenin sana karşı yasal sorumlulukları var — ve senin de bilmen gereken haklar var. Bu sayfa, göçmen işçilerin haklarını ve olası sorun durumlarında nereye başvurulacağını doğrudan resmi kaynaklarla anlatıyor.",
-      en: "Once you start working in New Zealand on a work visa, your employer has legal responsibilities toward you — and there are rights you should know about. This page explains migrant workers' rights and where to turn if something goes wrong, linking directly to official sources.",
+      tr: "Çalışma vizesiyle Yeni Zelanda'da çalışmaya başladığında, işverenin sana karşı yasal sorumlulukları var, ve senin de bilmen gereken haklar var. Bu sayfa, göçmen işçilerin haklarını ve olası sorun durumlarında nereye başvurulacağını doğrudan resmi kaynaklarla anlatıyor.",
+      en: "Once you start working in New Zealand on a work visa, your employer has legal responsibilities toward you, and there are rights you should know about. This page explains migrant workers' rights and where to turn if something goes wrong, linking directly to official sources.",
     },
     accordion: [
       {
@@ -196,8 +196,8 @@ const TOPICS = [
       en: "New Zealand's nature and places to visit: exploration videos from the channel.",
     },
     intro: {
-      tr: "Yeni Zelanda sadece vize ve iş süreçlerinden ibaret değil — dünyanın en etkileyici doğal manzaralarından bazılarına da ev sahipliği yapıyor. Bu sayfada kanaldaki gezi ve keşif videolarını bulabilir, ülkenin bu tarafını da tanıyabilirsin.",
-      en: "New Zealand isn't just about visas and work — it's also home to some of the most striking natural landscapes in the world. This page brings together the channel's travel and exploration videos, so you can get to know this side of the country too.",
+      tr: "Yeni Zelanda sadece vize ve iş süreçlerinden ibaret değil, dünyanın en etkileyici doğal manzaralarından bazılarına da ev sahipliği yapıyor. Bu sayfada kanaldaki gezi ve keşif videolarını bulabilir, ülkenin bu tarafını da tanıyabilirsin.",
+      en: "New Zealand isn't just about visas and work, it's also home to some of the most striking natural landscapes in the world. This page brings together the channel's travel and exploration videos, so you can get to know this side of the country too.",
     },
     videos: [
       { id: "C0Nbab1mtu8", title: "Yeni Zelanda Waitomo Mağaraları: Karanlığın İçindeki Işıklar!" },
@@ -257,7 +257,7 @@ const TOPICS = [
             label: { tr: "Oturum izni garantisi vaat edenler", en: "Anyone who guarantees you residence" },
             content: {
               tr: "Hiçbir danışman ya da acente sana residence (kalıcı oturum izni) garantisi veremez. Böyle bir vaat eden biri kötü niyetle hareket ediyordur; para ödersen kaybetme ihtimalin yüksektir.",
-              en: "No adviser or agent can guarantee you residence. Anyone who makes this promise is acting in bad faith — if you pay them, you're likely to lose your money.",
+              en: "No adviser or agent can guarantee you residence. Anyone who makes this promise is acting in bad faith. If you pay them, you're likely to lose your money.",
             },
           },
           {
@@ -277,7 +277,7 @@ const TOPICS = [
             label: { tr: "Resmi Immigration NZ adresi nedir?", en: "What is the official Immigration NZ address?" },
             content: {
               tr: "Immigration New Zealand'a ait her resmi sayfa mutlaka \".immigration.govt.nz\" ile biter. Başka alan adları kullanan siteler sahte olabilir; e-posta adreslerine de dikkat et.",
-              en: "Every official Immigration New Zealand page ends in \".immigration.govt.nz\". Sites using other domains may be fake — pay attention to email addresses too.",
+              en: "Every official Immigration New Zealand page ends in \".immigration.govt.nz\". Sites using other domains may be fake. Pay attention to email addresses too.",
             },
           },
           {
