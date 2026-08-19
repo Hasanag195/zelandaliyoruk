@@ -191,6 +191,7 @@
         <span class="eyebrow">${T("topicsEyebrow")}</span>
         <h1>${L(topic.title)}</h1>
         <p class="summary">${L(topic.summary)}</p>
+        ${topic.intro ? `<p class="topic-intro">${L(topic.intro)}</p>` : ""}
         <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">${T("shareBtn")}</a>
         ${topic.inzWatch ? `<div class="inz-status" id="inz-status">${T("inzChecking")}</div>` : ""}
         ${accordionHtml}
