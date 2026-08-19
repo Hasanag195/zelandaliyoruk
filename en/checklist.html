@@ -156,7 +156,7 @@
               const id = `cl-${si}-${ii}`;
               const linkHref = item.link && item.link[1].startsWith("http") ? item.link[1] : `${BASE}/${item.link ? item.link[1] : ""}`;
               const linkHtml = item.link
-                ? ` — <a href="${linkHref}" target="_blank" rel="noopener">${item.link[0]} &rarr;</a>`
+                ? ` · <a href="${linkHref}" target="_blank" rel="noopener">${item.link[0]} &rarr;</a>`
                 : "";
               return `
                 <li class="cl-item" id="wrap-${id}">
