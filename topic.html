@@ -171,7 +171,7 @@
             <textarea name="question" placeholder="${T("askQuestionPh")}" rows="3" required></textarea>
             <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
             <button type="submit">${T("askSubmit")}</button>
-            <div class="ask-msg" id="ask-msg"></div>
+            <div class="ask-msg" id="ask-msg" aria-live="polite"></div>
           </form>
         </div>
       `;
@@ -225,6 +225,19 @@
 
       const shareText = encodeURIComponent(`${L(topic.title)} (zelandaliyoruk)\n${location.href}`);
 
+      const relatedHtml = topic.related && topic.related.length
+        ? `<div class="related-topics">
+            <h2 class="related-topics-title">${T("relatedTopicsHeading")}</h2>
+            <div class="related-topics-grid">
+              ${topic.related
+                .map((slug) => TOPICS.find((t) => t.slug === slug))
+                .filter(Boolean)
+                .map((t) => `<a class="related-topic-card" href="${BASE}/topic.html?t=${t.slug}">${L(t.title)}</a>`)
+                .join("")}
+            </div>
+          </div>`
+        : "";
+
       detail.innerHTML = `
         <span class="eyebrow">${T("topicsEyebrow")}</span>
         <h1>${L(topic.title)}</h1>
@@ -234,6 +247,7 @@
         ${topic.inzWatch ? `<div class="inz-status" id="inz-status">${T("inzChecking")}</div>` : ""}
         ${accordionHtml}
         ${videosHtml}
+        ${relatedHtml}
         ${questionFormHtml}
       `;
 
