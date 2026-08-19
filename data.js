@@ -19,7 +19,7 @@ const TOPICS = [
       en: "For anyone thinking about moving from Turkey to New Zealand, the first question is always the same: which path is legal and realistic? On this page you'll find the different legal ways to come to New Zealand, from the working holiday visa to student visas, sponsored work visas to partner visas, explained through videos and linked directly to official sources. The goal isn't to tell you what to do, but to show you clearly what your options are.",
     },
     videos: [
-      { id: "Z2fB2UyX0F4", title: "Yeni Zelanda'ya Nasıl Gelinir 6 Yasal Yol!" },
+      { id: "Z2fB2UyX0F4", title: "Yeni Zelanda'ya Nasıl Gelinir 6 Yasal Yol!", uploadDate: "2026-02-24T04:49:21-08:00", duration: "PT8M45S" },
     ],
   },
   {
@@ -123,7 +123,7 @@ const TOPICS = [
       en: "How much do people actually earn in New Zealand, how does the tax system work, and how different is your take-home pay from what you expect? This page offers a realistic look at salaries and taxes in New Zealand, from the perspective of someone who moved there from Turkey.",
     },
     videos: [
-      { id: "gZIgX_0Ny9g", title: "Yeni Zelanda'da Çalışma Hayatı Maaşlar ve Vergi Sistemi!" },
+      { id: "gZIgX_0Ny9g", title: "Yeni Zelanda'da Çalışma Hayatı Maaşlar ve Vergi Sistemi!", uploadDate: "2026-01-21T04:10:27-08:00", duration: "PT4M37S" },
     ],
   },
   {
@@ -138,9 +138,9 @@ const TOPICS = [
       en: "As important as visas and salaries, but far less talked about: what is everyday life in New Zealand actually like? From finding a home to grocery shopping, cultural differences to unexpected challenges, this page covers the realities nobody shows on social media but everyone eventually runs into.",
     },
     videos: [
-      { id: "-PftP3IlhOs", title: "Yeni Zelanda'da Hayat Nasıl? (Yeni Zelanda Gerçekleri)" },
-      { id: "q0rccS7Rdek", title: "Yeni Zelanda'da Ev Bulma: Gerçek Süreç ve Hatalar (1. Bölüm)" },
-      { id: "fGgNF-I6zYc", title: "Yeni Zelanda'da Ramazan Atmosferi (Türklerle Karşılaştık)" },
+      { id: "-PftP3IlhOs", title: "Yeni Zelanda'da Hayat Nasıl? (Yeni Zelanda Gerçekleri)", uploadDate: "2026-01-16T09:30:00-08:00", duration: "PT17M59S" },
+      { id: "q0rccS7Rdek", title: "Yeni Zelanda'da Ev Bulma: Gerçek Süreç ve Hatalar (1. Bölüm)", uploadDate: "2026-03-13T06:40:21-07:00", duration: "PT4M11S" },
+      { id: "fGgNF-I6zYc", title: "Yeni Zelanda'da Ramazan Atmosferi (Türklerle Karşılaştık)", uploadDate: "2026-02-16T19:45:08-08:00", duration: "PT7M20S" },
     ],
   },
   {
@@ -200,8 +200,8 @@ const TOPICS = [
       en: "New Zealand isn't just about visas and work, it's also home to some of the most striking natural landscapes in the world. This page brings together the channel's travel and exploration videos, so you can get to know this side of the country too.",
     },
     videos: [
-      { id: "C0Nbab1mtu8", title: "Yeni Zelanda Waitomo Mağaraları: Karanlığın İçindeki Işıklar!" },
-      { id: "krkUb7Lgorg", title: "Yeni Zelanda'da Sessizliğin İçinde 🐦 | Katikati Bird Gardens" },
+      { id: "C0Nbab1mtu8", title: "Yeni Zelanda Waitomo Mağaraları: Karanlığın İçindeki Işıklar!", uploadDate: "2026-02-07T13:38:46-08:00", duration: "PT6M23S" },
+      { id: "krkUb7Lgorg", title: "Yeni Zelanda'da Sessizliğin İçinde 🐦 | Katikati Bird Gardens", uploadDate: "2026-02-22T06:22:15-08:00", duration: "PT5M34S" },
     ],
   },
   {
