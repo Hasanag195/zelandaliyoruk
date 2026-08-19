@@ -99,6 +99,7 @@
       ccInterestErr: "Bir şeyler ters gitti, tekrar dener misin?",
       ccPreviewLabel: "Önizleme (Sadece Sen)",
       videoSchemaDesc: "{title}: zelandaliyoruk YouTube kanalından Yeni Zelanda rehberi videosu.",
+      relatedTopicsHeading: "İlgili Konular",
     },
     en: {
       backToTopics: "← All topics",
@@ -178,6 +179,7 @@
       ccInterestErr: "Something went wrong, want to try again?",
       ccPreviewLabel: "Preview (You Only)",
       videoSchemaDesc: "{title}: a New Zealand guide video from the zelandaliyoruk YouTube channel.",
+      relatedTopicsHeading: "Related Topics",
     },
   };
 

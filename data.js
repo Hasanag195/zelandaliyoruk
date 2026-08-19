@@ -21,6 +21,7 @@ const TOPICS = [
     videos: [
       { id: "Z2fB2UyX0F4", title: "Yeni Zelanda'ya Nasıl Gelinir 6 Yasal Yol!", uploadDate: "2026-02-24T04:49:21-08:00", duration: "PT8M45S" },
     ],
+    related: ["vize-sureclari", "maas-vergi", "gunluk-hayat"],
   },
   {
     slug: "vize-sureclari",
@@ -110,6 +111,7 @@ const TOPICS = [
       },
     ],
     videos: [],
+    related: ["nasil-gelinir", "isci-haklari", "dolandiriciliklardan-korunma"],
   },
   {
     slug: "maas-vergi",
@@ -125,6 +127,7 @@ const TOPICS = [
     videos: [
       { id: "gZIgX_0Ny9g", title: "Yeni Zelanda'da Çalışma Hayatı Maaşlar ve Vergi Sistemi!", uploadDate: "2026-01-21T04:10:27-08:00", duration: "PT4M37S" },
     ],
+    related: ["isci-haklari", "gunluk-hayat", "vize-sureclari"],
   },
   {
     slug: "gunluk-hayat",
@@ -142,6 +145,7 @@ const TOPICS = [
       { id: "q0rccS7Rdek", title: "Yeni Zelanda'da Ev Bulma: Gerçek Süreç ve Hatalar (1. Bölüm)", uploadDate: "2026-03-13T06:40:21-07:00", duration: "PT4M11S" },
       { id: "fGgNF-I6zYc", title: "Yeni Zelanda'da Ramazan Atmosferi (Türklerle Karşılaştık)", uploadDate: "2026-02-16T19:45:08-08:00", duration: "PT7M20S" },
     ],
+    related: ["maas-vergi", "gezi-kesif", "isci-haklari"],
   },
   {
     slug: "isci-haklari",
@@ -187,6 +191,7 @@ const TOPICS = [
       },
     ],
     videos: [],
+    related: ["vize-sureclari", "maas-vergi", "dolandiriciliklardan-korunma"],
   },
   {
     slug: "gezi-kesif",
@@ -203,6 +208,7 @@ const TOPICS = [
       { id: "C0Nbab1mtu8", title: "Yeni Zelanda Waitomo Mağaraları: Karanlığın İçindeki Işıklar!", uploadDate: "2026-02-07T13:38:46-08:00", duration: "PT6M23S" },
       { id: "krkUb7Lgorg", title: "Yeni Zelanda'da Sessizliğin İçinde 🐦 | Katikati Bird Gardens", uploadDate: "2026-02-22T06:22:15-08:00", duration: "PT5M34S" },
     ],
+    related: ["gunluk-hayat", "nasil-gelinir", "vize-sureclari"],
   },
   {
     slug: "dolandiriciliklardan-korunma",
@@ -315,5 +321,6 @@ const TOPICS = [
       },
     ],
     videos: [],
+    related: ["vize-sureclari", "isci-haklari", "nasil-gelinir"],
   },
 ];

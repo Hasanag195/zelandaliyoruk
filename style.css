@@ -403,6 +403,43 @@ footer.site-footer {
   line-height: 1.75;
 }
 
+.related-topics {
+  margin: 40px 0;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.related-topics-title {
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  margin: 0 0 16px;
+}
+
+.related-topics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.related-topic-card {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.related-topic-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

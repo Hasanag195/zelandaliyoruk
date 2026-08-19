@@ -60,7 +60,7 @@
           <span>${T("gateConsentPre")}<a href="${getLang() === "en" ? "/en/privacy.html" : "/privacy.html"}" target="_blank" rel="noopener">${T("gateConsentLink")}</a>${T("gateConsentPost")}</span>
         </label>
         <button type="submit">${T("gateSubmit")}</button>
-        <div class="gate-error" id="gate-error"></div>
+        <div class="gate-error" id="gate-error" aria-live="polite"></div>
       </form>
       <p class="gate-privacy">${T("gatePrivacy")}</p>
     </div>
