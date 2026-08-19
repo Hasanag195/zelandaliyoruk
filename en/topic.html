@@ -104,6 +104,20 @@
     } else {
       document.title = `${L(topic.title)} | zelandaliyoruk`;
 
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute("content", L(topic.summary));
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", `${L(topic.title)} | zelandaliyoruk`);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute("content", L(topic.summary));
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (!ogUrl) {
+        ogUrl = document.createElement("meta");
+        ogUrl.setAttribute("property", "og:url");
+        document.head.appendChild(ogUrl);
+      }
+      ogUrl.setAttribute("content", `https://zelandaliyoruk.com${BASE}/topic.html${qs}`);
+
       const videosHtml = topic.videos.length
         ? `<div class="video-grid">${topic.videos
             .map(
