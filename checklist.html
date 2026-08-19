@@ -96,7 +96,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      &copy; <span id="year"></span> zelandaliyoruk
+      &copy; <span id="year"></span> zelandaliyoruk · <a id="footer-privacy-link"></a>
     </div>
   </footer>
 
@@ -109,6 +109,8 @@
     const BASE = "";
     document.documentElement.lang = getLang();
     document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("footer-privacy-link").href = getLang() === "en" ? "/en/privacy.html" : "/privacy.html";
+    document.getElementById("footer-privacy-link").textContent = T("footerPrivacy");
     renderLangSwitch("lang-switch", { tr: "/checklist.html", en: "/en/checklist.html" });
 
     document.getElementById("back-link").textContent = T("backToTopics");

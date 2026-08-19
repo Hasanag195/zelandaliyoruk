@@ -46,7 +46,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      &copy; <span id="year"></span> zelandaliyoruk
+      &copy; <span id="year"></span> zelandaliyoruk · <a id="footer-privacy-link"></a>
     </div>
   </footer>
 
@@ -58,6 +58,8 @@
     const BASE = "";
     document.documentElement.lang = getLang();
     document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("footer-privacy-link").href = getLang() === "en" ? "/en/privacy.html" : "/privacy.html";
+    document.getElementById("footer-privacy-link").textContent = T("footerPrivacy");
     document.getElementById("back-link").textContent = T("backToTopics");
     document.getElementById("disclaimer-label").textContent = T("disclaimerLabel");
     document.getElementById("disclaimer-text").textContent = T("disclaimer");
