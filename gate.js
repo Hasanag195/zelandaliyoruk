@@ -52,8 +52,10 @@
       <h1>${T("gateTitle")}</h1>
       <p>${T("gateDesc")}</p>
       <form id="gate-form" novalidate>
-        <input type="text" name="name" placeholder="${T("gateNamePh")}" autocomplete="name" required />
-        <input type="email" name="email" placeholder="${T("gateEmailPh")}" autocomplete="email" required />
+        <label class="sr-only" for="gate-name">${T("gateNamePh")}</label>
+        <input type="text" id="gate-name" name="name" placeholder="${T("gateNamePh")}" autocomplete="name" required />
+        <label class="sr-only" for="gate-email">${T("gateEmailPh")}</label>
+        <input type="email" id="gate-email" name="email" placeholder="${T("gateEmailPh")}" autocomplete="email" required />
         <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
         <label class="gate-consent">
           <input type="checkbox" name="consent" id="gate-consent" required />

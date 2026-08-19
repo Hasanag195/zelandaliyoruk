@@ -17,6 +17,8 @@
   <meta property="og:url" content="https://zelandaliyoruk.com/en/" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+  <meta name="theme-color" content="#0c4a30" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -90,12 +92,15 @@
       <h3 id="ask-title"></h3>
       <p id="ask-desc"></p>
       <form id="ask-form" novalidate>
+        <label class="sr-only" for="ask-name" id="ask-name-label"></label>
         <input type="text" name="name" id="ask-name" required />
+        <label class="sr-only" for="ask-email" id="ask-email-label"></label>
         <input type="email" name="email" id="ask-email" required />
+        <label class="sr-only" for="ask-question" id="ask-question-label"></label>
         <textarea name="question" id="ask-question" rows="3" required></textarea>
         <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
         <button type="submit" id="ask-submit"></button>
-        <div class="ask-msg" id="ask-msg"></div>
+        <div class="ask-msg" id="ask-msg" aria-live="polite"></div>
       </form>
     </div>
   </section>
@@ -141,8 +146,11 @@
     document.getElementById("ask-title").textContent = T("askTitle");
     document.getElementById("ask-desc").textContent = T("askDesc");
     document.getElementById("ask-name").placeholder = T("askNamePh");
+    document.getElementById("ask-name-label").textContent = T("askNamePh");
     document.getElementById("ask-email").placeholder = T("askEmailPh");
+    document.getElementById("ask-email-label").textContent = T("askEmailPh");
     document.getElementById("ask-question").placeholder = T("askQuestionPh");
+    document.getElementById("ask-question-label").textContent = T("askQuestionPh");
     document.getElementById("ask-submit").textContent = T("askSubmit");
     document.getElementById("disclaimer-label").textContent = T("disclaimerLabel");
     document.getElementById("disclaimer-text").textContent = T("disclaimer");

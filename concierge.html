@@ -6,6 +6,8 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Settlement Concierge | zelandaliyoruk</title>
   <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+  <meta name="theme-color" content="#0c4a30" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -47,6 +49,7 @@
       <h1 id="cc-locked-title"></h1>
       <p style="color:var(--muted);margin-bottom:24px" id="cc-locked-desc"></p>
       <div class="cc-err" id="cc-err" aria-live="polite"></div>
+      <label class="sr-only" for="cc-key" id="cc-key-label"></label>
       <input type="password" id="cc-key" />
       <button id="cc-unlock"></button>
 
@@ -97,6 +100,7 @@
     document.getElementById("cc-locked-title").textContent = T("ccLockedTitle");
     document.getElementById("cc-locked-desc").textContent = T("ccLockedDesc");
     document.getElementById("cc-key").placeholder = T("ccKeyPh");
+    document.getElementById("cc-key-label").textContent = T("ccKeyPh");
     document.getElementById("cc-unlock").textContent = T("ccUnlock");
     document.getElementById("cc-interest-prompt").textContent = T("ccInterestPrompt");
     document.getElementById("cc-interested").textContent = T("ccInterestBtn");
