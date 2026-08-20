@@ -171,6 +171,7 @@ const TOPICS = [
       { id: "2gDdP0fvNlg", title: "Yeni Zelanda Gerçeği? | Dışarıdan Göründüğü Gibi mi?", uploadDate: "2026-01-14T13:26:03Z", duration: "PT18S" },
       { id: "QF0J7ngw-eY", title: "AFAT OLCAK GİBİ. #yenizelanda #zelandaliyoruk #nzlife", uploadDate: "2026-04-11T10:12:45Z", duration: "PT32S" },
       { id: "6-fok6zKSfg", title: "Yeni Zelanda'ya gidecek arkadaşına gönder!", uploadDate: "2026-08-20T04:31:37Z", duration: "PT24S" },
+      { id: "C618whiui9E", title: "Zelanda'da Hata Yapmanın Bedeli Ağır! 🇳🇿💸", uploadDate: "2026-03-11T04:25:54Z", duration: "PT40S" },
     ],
     related: ["maas-vergi", "gezi-kesif", "isci-haklari"],
   },
