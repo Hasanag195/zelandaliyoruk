@@ -18,7 +18,7 @@
     overlay.className = "gate-overlay";
     overlay.innerHTML = `
       <div class="gate-card">
-        <img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
+        <picture><source srcset="assets/logo.webp" type="image/webp" /><img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" /></picture>
         <h1>${T("welcomeHi")}${name ? ", " + name.split(" ")[0] : ""} 👋</h1>
         <p>${T("welcomeDesc")}</p>
         <ul class="welcome-list">
@@ -48,7 +48,7 @@
   overlay.innerHTML = `
     <div class="gate-card">
       <div class="lang-switch" id="gate-lang-switch" style="margin: 0 auto 16px; width: fit-content;"></div>
-      <img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" />
+      <picture><source srcset="assets/logo.webp" type="image/webp" /><img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" /></picture>
       <h1>${T("gateTitle")}</h1>
       <p>${T("gateDesc")}</p>
       <form id="gate-form" novalidate>
