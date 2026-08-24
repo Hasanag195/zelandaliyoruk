@@ -1,6 +1,14 @@
 const REPO = "Hasanag195/zelandaliyoruk-leads";
 const PATH = "questions.ndjson";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 3;
+
+function getClientIp(req) {
+  const fwd = req.headers["x-forwarded-for"];
+  if (fwd) return String(fwd).split(",")[0].trim();
+  return req.socket?.remoteAddress || "unknown";
+}
 
 async function githubRequest(path, options = {}) {
   return fetch(`https://api.github.com/repos/${REPO}/${path}`, {
@@ -43,7 +51,8 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const record = JSON.stringify({ name, email, question, topic, ts: new Date().toISOString() });
+  const ip = getClientIp(req);
+  const record = JSON.stringify({ name, email, question, topic, ts: new Date().toISOString(), ip });
 
   try {
     let lastError = null;
@@ -55,6 +64,25 @@ module.exports = async (req, res) => {
       }
       const current = await getRes.json();
       const currentContent = Buffer.from(current.content, "base64").toString("utf8");
+
+      const now = Date.now();
+      const recentFromIp = currentContent
+        .split("\n")
+        .map((l) => l.trim())
+        .filter(Boolean)
+        .map((l) => {
+          try {
+            return JSON.parse(l);
+          } catch {
+            return null;
+          }
+        })
+        .filter((r) => r && r.ip === ip && now - new Date(r.ts).getTime() < RATE_LIMIT_WINDOW_MS);
+      if (recentFromIp.length >= RATE_LIMIT_MAX) {
+        res.status(429).json({ ok: false, error: "rate_limited" });
+        return;
+      }
+
       const newContent = currentContent + (currentContent.endsWith("\n") || !currentContent ? "" : "\n") + record + "\n";
 
       const putRes = await githubRequest(`contents/${PATH}`, {

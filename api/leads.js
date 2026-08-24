@@ -1,6 +1,14 @@
 const LEADS_REPO = "Hasanag195/zelandaliyoruk-leads";
 const LEADS_PATH = "leads.ndjson";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 3;
+
+function getClientIp(req) {
+  const fwd = req.headers["x-forwarded-for"];
+  if (fwd) return String(fwd).split(",")[0].trim();
+  return req.socket?.remoteAddress || "unknown";
+}
 
 async function githubRequest(path, options = {}) {
   const res = await fetch(`https://api.github.com/repos/${LEADS_REPO}/${path}`, {
@@ -44,6 +52,8 @@ module.exports = async (req, res) => {
     return;
   }
 
+  const ip = getClientIp(req);
+
   try {
     let lastError = null;
     for (let attempt = 0; attempt < 3; attempt++) {
@@ -68,9 +78,18 @@ module.exports = async (req, res) => {
         })
         .filter(Boolean);
 
+      const now = Date.now();
+      const recentFromIp = records.filter(
+        (r) => r.ip === ip && now - new Date(r.ts).getTime() < RATE_LIMIT_WINDOW_MS
+      );
+      if (recentFromIp.length >= RATE_LIMIT_MAX) {
+        res.status(429).json({ ok: false, error: "rate_limited" });
+        return;
+      }
+
       const emailLower = email.toLowerCase();
       const existingIdx = records.findIndex((r) => String(r.email || "").toLowerCase() === emailLower);
-      const updatedRecord = { name, email, ts: new Date().toISOString(), consentAt: new Date().toISOString() };
+      const updatedRecord = { name, email, ts: new Date().toISOString(), consentAt: new Date().toISOString(), ip };
       if (existingIdx >= 0) {
         records[existingIdx] = updatedRecord;
       } else {
