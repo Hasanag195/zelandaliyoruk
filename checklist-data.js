@@ -38,10 +38,10 @@ const CHECKLIST = {
       title: "4. İlk Hafta",
       desc: "Yeni Zelanda'ya vardığında yapılacaklar.",
       items: [
-        { t: "IRD numarası başvurusu yap" },
+        { t: "Havaalanında ilk iş: yerel SIM kart al (harita, ulaşım, iletişim için hemen gerekiyor)" },
+        { t: "Geçici konaklamana yerleş, kalıcı ev arayışına başla" },
         { t: "Banka hesabı aç" },
-        { t: "Geçici konaklama ayarla, kalıcı ev arayışına başla" },
-        { t: "Yerel SIM kart al" },
+        { t: "IRD numarası başvurusu yap (başvuru için NZ banka hesap numarası isteniyor, bu yüzden banka hesabından sonra yap)" },
       ],
     },
     {
@@ -102,10 +102,10 @@ const CHECKLIST = {
       title: "4. First Week",
       desc: "Things to do once you've arrived in New Zealand.",
       items: [
-        { t: "Apply for your IRD number" },
+        { t: "First thing at the airport: get a local SIM card (you need it immediately for maps, transport, communication)" },
+        { t: "Settle into your temporary accommodation and start looking for a permanent home" },
         { t: "Open a bank account" },
-        { t: "Arrange temporary accommodation and start looking for a permanent home" },
-        { t: "Get a local SIM card" },
+        { t: "Apply for your IRD number (the application asks for a NZ bank account number, so do this after opening your account)" },
       ],
     },
     {
