@@ -262,20 +262,11 @@ const TOPICS = [
           { label: { tr: "Stewart Island / Rakiura (En güneydeki ada, vahşi Kiwi kuşlarının doğal yaşam alanı)", en: "Stewart Island / Rakiura (the southernmost island, home to wild kiwi birds)" } },
         ],
       },
-      {
-        label: { tr: "Türklerle Bağlantılı Yerler", en: "Places Connected to Turkey" },
-        items: [
-          {
-            label: { tr: "Gelibolu ve Anzac Bağlantısı", en: "Gallipoli and the Anzac Connection" },
-            content: {
-              tr: "Birinci Dünya Savaşı'nda Gelibolu'da Yeni Zelanda ve Türk askerleri karşı karşıya geldi; bu ortak tarih bugün iki ülke arasında güçlü bir bağ. Auckland Savaş Anıtı Müzesi gibi yerlerde bu tarihi anlatan sergiler bulunuyor.",
-              en: "During World War I, New Zealand and Turkish soldiers fought at Gallipoli; this shared history is still a strong bond between the two countries today. Places like the Auckland War Memorial Museum have exhibits telling this history.",
-            },
-            url: "https://www.aucklandmuseum.com/war-memorial",
-          },
-        ],
-      },
     ],
+    pinned: {
+      tr: `<a href="https://www.linz.govt.nz/our-work/new-zealand-geographic-board/place-name-stories/new-zealands-first-world-war-place-names/army-commanders/ataturk-memorial-wellington" target="_blank" rel="noopener">ATATÜRK ANITI — WELLINGTON</a><p>Wellington'ın güney kıyısında, Tarakena Bay üzerindeki sırtta yer alır (Breaker Bay bölgesi). 1990'da açılan anıt; Atatürk büstü, mermer bir hilal ve Anzac Koyu'ndan getirilen toprağı içeriyor. Yer, Anzac Koyu'nun coğrafyasına benzerliği ve 1914'te Wellington Piyade Taburu'nun buradan yola çıkmasından dolayı seçilmiş.</p>`,
+      en: `<a href="https://www.linz.govt.nz/our-work/new-zealand-geographic-board/place-name-stories/new-zealands-first-world-war-place-names/army-commanders/ataturk-memorial-wellington" target="_blank" rel="noopener">ATATÜRK MEMORIAL — WELLINGTON</a><p>Located on the ridge above Tarakena Bay on Wellington's south coast (Breaker Bay area). Unveiled in 1990, the memorial features a bust of Atatürk, a marble crescent, and soil brought from Anzac Cove. The site was chosen for its resemblance to the Anzac Cove landscape and because it was where the Wellington Infantry Battalion trained before departing in 1914.</p>`,
+    },
     videos: [],
     related: ["gunluk-hayat", "nasil-gelinir", "vize-sureclari"],
   },

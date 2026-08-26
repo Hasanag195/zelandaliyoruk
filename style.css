@@ -873,6 +873,34 @@ footer.site-footer {
   border-bottom-color: var(--accent);
 }
 
+.pinned-highlight {
+  background: linear-gradient(135deg, #fdf6e3, #f9ecc9);
+  border: 2px solid #D4A72C;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 30px;
+}
+
+.pinned-highlight a {
+  display: inline-block;
+  color: #8a6a12;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.15rem;
+  text-decoration: none;
+  border-bottom: 2px solid #D4A72C;
+  margin-bottom: 8px;
+}
+
+.pinned-highlight a:hover { color: #6b5109; border-color: #6b5109; }
+
+.pinned-highlight p {
+  margin: 8px 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
 .ask-box {
   background: var(--surface);
   border: 1px solid var(--border);
