@@ -1,8 +1,8 @@
 const CHECKLIST = {
   tr: [
     {
-      title: "1. Türkiye'de Hazırlık",
-      desc: "Başvurudan önce halletmen gerekenler.",
+      title: "1. Gelmeden Önce",
+      desc: "Türkiye'deyken halletmen gereken her şey: vize, belgeler ve seyahat hazırlığı.",
       items: [
         { t: "Pasaportunun geçerlilik süresini kontrol et (en az 6 ay kalmış olmalı)" },
         { t: "Hangi vize türünün sana uygun olduğuna karar ver", link: ["Vize Türleri sayfası", "topic.html?t=vize-sureclari"] },
@@ -10,54 +10,45 @@ const CHECKLIST = {
         { t: "Sağlık sigortası araştır (bazı vize türlerinde istenir)" },
         { t: "Adli sicil kaydını (police certificate) çıkart" },
         { t: "Diploma / mesleki belgelerinin İngilizce tercümesi ve denklik durumunu araştır" },
-      ],
-    },
-    {
-      title: "2. Vize Başvurusu",
-      desc: "Başvuru sürecinde dikkat edilmesi gerekenler.",
-      items: [
         { t: "Başvuru için gerekli belge ve kanıtları hazırla", link: ["belge listesi", "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/"] },
         { t: "Başvuruyu yalnızca Immigration NZ'nin resmi sitesi üzerinden yap" },
         { t: "\"Bağlantım var, hızlandırırım\" diyen kimseye güvenme, böyle bir yetki kimsede yoktur", link: ["dolandırıcılık rehberi", "topic.html?t=dolandiriciliklardan-korunma"] },
         { t: "Danışman kullanacaksan mutlaka lisansını doğrula", link: ["IAA lisans doğrulama", "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/"] },
         { t: "Ücretleri sadece resmi sistem üzerinden öde. Banka havalesi isteyen biri dolandırıcıdır" },
-      ],
-    },
-    {
-      title: "3. Gelmeden Önce",
-      desc: "Uçuş öncesi son hazırlıklar.",
-      items: [
         { t: "Uçak bileti ve ilk birkaç gecelik konaklama ayarla" },
-        { t: "Yeni Zelanda'da banka hesabı açma sürecini araştır" },
+        { t: "Yeni Zelanda'da banka hesabı açma sürecini araştır (bazı bankalar yurt dışından online başvuruyu destekler)" },
         { t: "IRD numarası (vergi numarası) başvurusu için bilgi topla" },
         { t: "Eşyalarını göndermek istiyorsan kargo/nakliye seçeneklerini karşılaştır" },
-        { t: "Yerel telefon hattı / SIM kart seçeneklerine bak" },
+        { t: "Yerel telefon hattı seçeneklerini önceden araştır (havaalanında hangi operatörün standı var, eSIM alınabilir mi)" },
+        { t: "Telefonunun kilidinin açık (unlocked) olduğunu kontrol et, inince yerel SIM takabilmen için" },
+        { t: "Pasaport, vize onayı, sigorta ve uçak bileti gibi belgelerin hem fiziksel hem dijital (telefonda/bulutta) kopyasını hazırla" },
+        { t: "İlk birkaç gün için biraz nakit (NZD) veya uluslararası geçerli bir kart hazırla" },
       ],
     },
     {
-      title: "4. İlk Hafta",
-      desc: "Yeni Zelanda'ya vardığında yapılacaklar.",
+      title: "2. Gelince",
+      desc: "Uçaktan iner inmez, havaalanında ve ilk saatlerde yapılacaklar.",
       items: [
-        { t: "Havaalanında ilk iş: yerel SIM kart al (harita, ulaşım, iletişim için hemen gerekiyor)" },
-        { t: "Geçici konaklamana yerleş, kalıcı ev arayışına başla" },
-        { t: "Banka hesabı aç" },
+        { t: "İlk öncelik: havaalanındaki bir operatör standından yerel SIM kart al (harita, ulaşım ve iletişim için hemen gerekiyor)" },
+        { t: "Gümrük/biyogüvenlik beyan formunu eksiksiz doldur (yiyecek, bitki, ayakkabı/kamp malzemesi gibi şeyleri mutlaka beyan et, Yeni Zelanda gümrüğü bu konuda çok sıkı)" },
+        { t: "Konaklamana ulaşım ayarla (SIM kart aldıktan sonra Uber/taksi/otobüs çağırmak kolaylaşır)" },
+        { t: "Konaklamana yerleş, eşyalarını yerleştir" },
+        { t: "Ailene veya sevdiklerine güvenle vardığını haber ver" },
+        { t: "Acil durum numarasını kaydet: 111 (polis, ambulans, itfaiye)" },
+        { t: "Konaklamana yakın market ve eczanenin yerini öğren" },
+      ],
+    },
+    {
+      title: "3. Geldikten Sonra",
+      desc: "İlk haftalardan itibaren yerleşme ve iş bulma süreci.",
+      items: [
+        { t: "Banka hesabı aç (genelde yüz yüze işlem gerekir, adres kanıtı isteyebilirler)" },
         { t: "IRD numarası başvurusu yap (başvuru için NZ banka hesap numarası isteniyor, bu yüzden banka hesabından sonra yap)" },
-      ],
-    },
-    {
-      title: "5. İş Bulma",
-      desc: "Çalışmaya başlamadan önce ve sonrasında.",
-      items: [
+        { t: "Kalıcı ev arayışına başla" },
         { t: "Vizenin çalışma koşullarını (saat sınırı, işveren bağımlılığı vb.) kontrol et" },
         { t: "İşe alım karşılığı senden ücret isteyen işveren yasa dışı iş yapıyordur, uzak dur" },
         { t: "Seek.co.nz gibi platformlarda iş ara" },
         { t: "İşe başladığında haklarını bil", link: ["İşçi Hakları sayfası", "topic.html?t=isci-haklari"] },
-      ],
-    },
-    {
-      title: "6. Uzun Vadeli",
-      desc: "Yerleşme sürecinin devamı.",
-      items: [
         { t: "Vize süren bitmeden önce uzatma/geçiş planını netleştir" },
         { t: "Oturum izni (residence) yollarını araştır", link: ["Vize Türleri sayfası", "topic.html?t=vize-sureclari"] },
       ],
@@ -65,8 +56,8 @@ const CHECKLIST = {
   ],
   en: [
     {
-      title: "1. Preparing in Turkey",
-      desc: "What to sort out before you apply.",
+      title: "1. Before You Leave",
+      desc: "Everything to sort out while still in Turkey: visa, documents, and travel prep.",
       items: [
         { t: "Check your passport's validity (at least 6 months remaining)" },
         { t: "Decide which visa type suits you", link: ["Visa Types page", "topic.html?t=vize-sureclari"] },
@@ -74,54 +65,45 @@ const CHECKLIST = {
         { t: "Look into health insurance (required for some visa types)" },
         { t: "Get your police certificate" },
         { t: "Look into English translation and recognition of your diploma / professional qualifications" },
-      ],
-    },
-    {
-      title: "2. Visa Application",
-      desc: "Things to watch for during the application process.",
-      items: [
         { t: "Prepare the documents and evidence required for your application", link: ["document list", "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/"] },
         { t: "Only apply through Immigration NZ's official website" },
         { t: "Don't trust anyone who says \"I have connections, I'll speed it up\", no one has that authority", link: ["scam prevention guide", "topic.html?t=dolandiriciliklardan-korunma"] },
         { t: "If you use an adviser, always verify their licence", link: ["IAA licence check", "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/"] },
         { t: "Only pay fees through the official system. Anyone asking for a bank transfer is a scammer" },
-      ],
-    },
-    {
-      title: "3. Before You Leave",
-      desc: "Final preparations before your flight.",
-      items: [
         { t: "Book your flight and your first few nights of accommodation" },
-        { t: "Look into opening a bank account in New Zealand" },
+        { t: "Look into opening a bank account in New Zealand (some banks support applying online from abroad)" },
         { t: "Gather information for your IRD number (tax number) application" },
         { t: "Compare shipping/freight options if you want to send your belongings" },
-        { t: "Look into local phone line / SIM card options" },
+        { t: "Research local phone line options in advance (which carrier has a stand at the airport, whether eSIM is available)" },
+        { t: "Check that your phone is unlocked, so you can put in a local SIM as soon as you land" },
+        { t: "Prepare both physical and digital (phone/cloud) copies of your passport, visa approval, insurance, and flight ticket" },
+        { t: "Have some cash (NZD) or an internationally accepted card ready for your first few days" },
       ],
     },
     {
-      title: "4. First Week",
-      desc: "Things to do once you've arrived in New Zealand.",
+      title: "2. On Arrival",
+      desc: "The moment you step off the plane: what to do at the airport and in the first hours.",
       items: [
-        { t: "First thing at the airport: get a local SIM card (you need it immediately for maps, transport, communication)" },
-        { t: "Settle into your temporary accommodation and start looking for a permanent home" },
-        { t: "Open a bank account" },
+        { t: "First priority: get a local SIM card from a carrier stand at the airport (you need it immediately for maps, transport, and communication)" },
+        { t: "Fill out the customs/biosecurity declaration form completely (declare food, plants, footwear/camping gear — New Zealand customs is very strict about this)" },
+        { t: "Arrange transport to your accommodation (easier to call an Uber/taxi/bus once you have a SIM)" },
+        { t: "Settle into your accommodation and unpack" },
+        { t: "Let your family or loved ones know you've arrived safely" },
+        { t: "Save the emergency number: 111 (police, ambulance, fire)" },
+        { t: "Find the nearest supermarket and pharmacy to where you're staying" },
+      ],
+    },
+    {
+      title: "3. After You've Arrived",
+      desc: "Settling in and finding work from the first weeks onward.",
+      items: [
+        { t: "Open a bank account (usually needs to be done in person, they may ask for proof of address)" },
         { t: "Apply for your IRD number (the application asks for a NZ bank account number, so do this after opening your account)" },
-      ],
-    },
-    {
-      title: "5. Finding Work",
-      desc: "Before and after you start working.",
-      items: [
+        { t: "Start looking for a permanent home" },
         { t: "Check your visa's work conditions (hour limits, employer restrictions etc.)" },
         { t: "Any employer who asks you for money in exchange for hiring you is acting illegally. Stay away" },
         { t: "Look for jobs on platforms like Seek.co.nz" },
         { t: "Know your rights once you start working", link: ["Worker Rights page", "topic.html?t=isci-haklari"] },
-      ],
-    },
-    {
-      title: "6. Long Term",
-      desc: "Continuing your settlement journey.",
-      items: [
         { t: "Clarify your extension/transition plan before your visa expires" },
         { t: "Research pathways to residence", link: ["Visa Types page", "topic.html?t=vize-sureclari"] },
       ],
