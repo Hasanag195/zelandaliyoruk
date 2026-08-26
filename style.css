@@ -280,8 +280,8 @@ header.site-header .container {
 
 .topic-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent);
+  box-shadow: var(--shadow-md), 0 0 0 2px #D4A72C;
+  border-color: #D4A72C;
 }
 
 .topic-card:hover::before {
@@ -332,7 +332,8 @@ header.site-header .container {
 }
 
 .topic-card--locked:hover {
-  border-color: var(--accent);
+  border-color: #D4A72C;
+  box-shadow: 0 0 0 2px #D4A72C;
 }
 
 .topic-card-lock {
