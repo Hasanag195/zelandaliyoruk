@@ -737,6 +737,29 @@ footer.site-footer {
 
 .share-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
 
+.highlight-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 10px 30px 0;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #D4A72C;
+  color: #14210f;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(212, 167, 44, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.highlight-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 167, 44, 0.5);
+}
+
 .inz-status {
   font-family: "Inter", sans-serif;
   font-size: 0.83rem;
@@ -899,6 +922,99 @@ footer.site-footer {
   margin: 8px 0 0;
   color: var(--text);
   font-size: 0.95rem;
+}
+
+.calc-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.calc-box h2 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+}
+
+.calc-box > p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.calc-field {
+  margin-bottom: 14px;
+}
+
+.calc-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.calc-field input[type="number"],
+.calc-field select {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.calc-field--inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calc-field--inline label {
+  margin: 0;
+}
+
+.calc-box button[type="submit"] {
+  padding: 11px 26px;
+  border-radius: 999px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.calc-box button[type="submit"]:hover { background: var(--primary-dark); }
+
+.calc-results {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.9rem;
+}
+
+.calc-row--total {
+  border-top: 1px solid var(--border);
+  margin-top: 6px;
+  padding-top: 12px;
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+}
+
+.calc-disclaimer {
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: var(--muted);
 }
 
 .ask-box {

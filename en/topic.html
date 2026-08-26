@@ -57,6 +57,7 @@
   <script src="/i18n.js"></script>
   <script src="/gate.js"></script>
   <script src="/data.js"></script>
+  <script src="/salary-calculator.js"></script>
   <script>
     const BASE = "/en";
     document.documentElement.lang = getLang();
@@ -210,19 +211,56 @@
           </div>`
         : "";
 
+      const closestRelated = topic.related && topic.related.length
+        ? TOPICS.find((t) => t.slug === topic.related[0] && t.slug !== topic.slug)
+        : null;
+
+      const calculatorHtml = topic.calculator === "salary-nz" ? `
+        <div class="calc-box">
+          <h2>${T("calcTitle")}</h2>
+          <p>${T("calcDesc")}</p>
+          <form id="calc-form">
+            <div class="calc-field">
+              <label for="calc-gross">${T("calcGrossLabel")}</label>
+              <input type="number" id="calc-gross" min="0" step="500" value="65000" required />
+            </div>
+            <div class="calc-field calc-field--inline">
+              <input type="checkbox" id="calc-ks-enabled" checked />
+              <label for="calc-ks-enabled">${T("calcKiwiSaverLabel")}</label>
+            </div>
+            <div class="calc-field">
+              <label for="calc-ks-rate">${T("calcKiwiSaverRateLabel")}</label>
+              <select id="calc-ks-rate">
+                <option value="0.03" selected>3%</option>
+                <option value="0.04">4%</option>
+                <option value="0.06">6%</option>
+                <option value="0.08">8%</option>
+                <option value="0.10">10%</option>
+              </select>
+            </div>
+            <button type="submit">${T("calcButton")}</button>
+          </form>
+          <div class="calc-results" id="calc-results" hidden></div>
+          <p class="calc-disclaimer">${T("calcDisclaimer")}</p>
+        </div>
+      ` : "";
+
       detail.innerHTML = `
         <span class="eyebrow">${T("topicsEyebrow")}</span>
         <h1>${L(topic.title)}</h1>
         <p class="summary">${L(topic.summary)}</p>
         ${topic.intro ? `<p class="topic-intro">${L(topic.intro)}</p>` : ""}
-        ${topic.slug !== "vize-sureclari" ? `<a class="share-btn" href="${BASE}/topic.html?t=vize-sureclari">${T("visaTypesLink")}</a>` : ""}
+        ${closestRelated ? `<a class="highlight-link" href="${BASE}/topic.html?t=${closestRelated.slug}">${L(closestRelated.title)}</a>` : ""}
         <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">${T("shareBtn")}</a>
         ${topic.inzWatch ? `<div class="inz-status" id="inz-status">${T("inzChecking")}</div>` : ""}
         ${topic.pinned ? `<div class="pinned-highlight">${L(topic.pinned)}</div>` : ""}
+        ${calculatorHtml}
         ${accordionHtml}
         ${relatedHtml}
         ${questionFormHtml}
       `;
+
+      if (topic.calculator === "salary-nz" && window.initSalaryCalculator) initSalaryCalculator();
 
       detail.querySelectorAll(".accordion-toggle").forEach((btn) => {
         btn.addEventListener("click", () => {
