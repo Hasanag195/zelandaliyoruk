@@ -5,8 +5,13 @@ const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX = 3;
 
 function getClientIp(req) {
+  // x-forwarded-for can be a client-supplied, spoofable chain; the entry
+  // closest to our own edge (the last one) is the one Vercel appends itself.
   const fwd = req.headers["x-forwarded-for"];
-  if (fwd) return String(fwd).split(",")[0].trim();
+  if (fwd) {
+    const parts = String(fwd).split(",").map((p) => p.trim()).filter(Boolean);
+    if (parts.length) return parts[parts.length - 1];
+  }
   return req.socket?.remoteAddress || "unknown";
 }
 

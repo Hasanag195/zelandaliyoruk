@@ -2,7 +2,7 @@ const REPO = "Hasanag195/zelandaliyoruk-leads";
 const PATH = "questions.ndjson";
 
 module.exports = async (req, res) => {
-  const key = req.query.key || req.headers["x-admin-key"] || "";
+  const key = req.headers["x-admin-key"] || "";
   if (!process.env.ADMIN_KEY || key !== process.env.ADMIN_KEY) {
     res.status(401).json({ ok: false, error: "unauthorized" });
     return;
