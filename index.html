@@ -157,8 +157,9 @@
 
     const grid = document.getElementById("topic-grid");
     grid.innerHTML = TOPICS.map(
-      (t) => `
+      (t, i) => `
         <a class="topic-card" href="${BASE}/topic.html?t=${t.slug}">
+          <span class="topic-card-index">${String(i + 1).padStart(2, "0")}</span>
           <h3>${L(t.title)}</h3>
           <p>${L(t.summary)}</p>
         </a>
