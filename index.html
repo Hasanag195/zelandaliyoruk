@@ -55,8 +55,10 @@
   <main>
   <section class="hero">
     <div class="container">
+      <span class="hero-eyebrow" id="hero-eyebrow"></span>
       <h1 id="hero-title"></h1>
       <p id="hero-subtitle"></p>
+      <div class="hero-stats" id="hero-stats"></div>
     </div>
   </section>
 
@@ -125,8 +127,12 @@
     renderLangSwitch("lang-switch", { tr: "/", en: "/en/" });
     document.getElementById("cta-link").href = `${BASE}/checklist.html`;
 
+    document.getElementById("hero-eyebrow").textContent = T("heroEyebrow");
     document.getElementById("hero-title").textContent = T("heroTitle");
     document.getElementById("hero-subtitle").textContent = T("heroSubtitle");
+    document.getElementById("hero-stats").innerHTML = T("heroStats")
+      .map((s) => `<div class="hero-stat"><span class="hero-stat-num">${s.n}</span><span class="hero-stat-label">${s.l}</span></div>`)
+      .join("");
     document.getElementById("cta-eyebrow").textContent = T("ctaEyebrow");
     document.getElementById("cta-title").textContent = T("ctaTitle");
     document.getElementById("cta-subtitle").textContent = T("ctaSubtitle");
