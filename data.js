@@ -205,9 +205,69 @@ const TOPICS = [
       en: "A general look at New Zealand's nature and places worth visiting.",
     },
     intro: {
-      tr: "Yeni Zelanda sadece vize ve iş süreçlerinden ibaret değil, dünyanın en etkileyici doğal manzaralarından bazılarına da ev sahipliği yapıyor: Waitomo'nun ışık böcekli mağaralarından volkanik bölgelere, Hobbiton gibi film setlerinden ulusal parklara kadar geniş bir çeşitlilik var. Bu sayfa, ülkenin bu tarafını tanımak isteyenler için bir başlangıç noktası.",
-      en: "New Zealand isn't just about visas and work, it's also home to some of the most striking natural landscapes in the world: from the glowworm caves of Waitomo to volcanic regions, film sets like Hobbiton to national parks. This page is a starting point for getting to know that side of the country.",
+      tr: `Yeni Zelanda sadece vize ve iş süreçlerinden ibaret değil, dünyanın en etkileyici doğal manzaralarından bazılarına da ev sahipliği yapıyor. Aşağıda, ilk kez gidecekler için bilinen ve gerçek yerlerin kısa bir listesi var. Yerleştikten sonra hafta sonları keşfetmek için iyi bir başlangıç noktası olabilir.`,
+      en: `New Zealand isn't just about visas and work, it's also home to some of the most striking natural landscapes in the world. Below is a short list of well-known, real places for a first visit. It can be a good starting point for weekend trips once you've settled in.`,
     },
+    accordion: [
+      {
+        label: { tr: "Doğa ve Manzara", en: "Nature and Landscape" },
+        open: true,
+        items: [
+          {
+            label: { tr: "Waitomo Işık Böceği Mağaraları", en: "Waitomo Glowworm Caves" },
+            content: {
+              tr: "Kuzey Ada'da, karanlık mağara tavanının binlerce ışık böceğiyle yıldızlı gökyüzü gibi parladığı ünlü bir yer. Tekne turlarıyla geziliyor.",
+              en: "On the North Island, famous for cave ceilings that glow like a starry sky thanks to thousands of glowworms. Visited by boat tour.",
+            },
+            url: "https://waitomo.com/",
+          },
+          {
+            label: { tr: "Tongariro Ulusal Parkı", en: "Tongariro National Park" },
+            content: {
+              tr: "Aktif volkanlar, kraterler ve Tongariro Alpine Crossing gibi ünlü yürüyüş rotalarıyla bilinen bir UNESCO Dünya Mirası alanı.",
+              en: "A UNESCO World Heritage site known for active volcanoes, craters, and famous hikes like the Tongariro Alpine Crossing.",
+            },
+            url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/",
+          },
+          {
+            label: { tr: "Milford Sound / Fiordland", en: "Milford Sound / Fiordland" },
+            content: {
+              tr: "Güney Ada'da, dik dağların denize dik indiği bir fiyort. Genelde Yeni Zelanda'nın en etkileyici manzaralarından biri olarak anılır.",
+              en: "A fiord on the South Island where steep mountains drop straight into the sea. Often called one of New Zealand's most striking landscapes.",
+            },
+            url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/milford-sound-piopiotahi/",
+          },
+          {
+            label: { tr: "Rotorua (Jeotermal Bölge)", en: "Rotorua (Geothermal Region)" },
+            content: {
+              tr: "Kaynayan çamur havuzları, gayzerler ve sıcak su kaynaklarıyla bilinen volkanik bir bölge; Maori kültürü deneyimleri de burada yoğun.",
+              en: "A volcanic region known for bubbling mud pools, geysers and hot springs; also a hub for Maori culture experiences.",
+            },
+            url: "https://www.rotoruanz.com/",
+          },
+        ],
+      },
+      {
+        label: { tr: "Kültür ve Tarih", en: "Culture and History" },
+        items: [
+          {
+            label: { tr: "Hobbiton Film Seti", en: "Hobbiton Movie Set" },
+            content: {
+              tr: "Yüzüklerin Efendisi ve Hobbit filmlerinde kullanılan gerçek set, Waikato bölgesinde bir çiftlik arazisinde, turlarla geziliyor.",
+              en: "The real set used in The Lord of the Rings and The Hobbit films, located on a farm in the Waikato region, visited by guided tour.",
+            },
+          },
+          {
+            label: { tr: "Gelibolu ve Anzac Bağlantısı", en: "Gallipoli and the Anzac Connection" },
+            content: {
+              tr: "Birinci Dünya Savaşı'nda Gelibolu'da Yeni Zelanda ve Türk askerleri karşı karşıya geldi; bu ortak tarih bugün iki ülke arasında güçlü bir bağ. Auckland Savaş Anıtı Müzesi gibi yerlerde bu tarihi anlatan sergiler bulunuyor.",
+              en: "During World War I, New Zealand and Turkish soldiers fought at Gallipoli; this shared history is still a strong bond between the two countries today. Places like the Auckland War Memorial Museum have exhibits telling this history.",
+            },
+            url: "https://www.aucklandmuseum.com/war-memorial",
+          },
+        ],
+      },
+    ],
     videos: [],
     related: ["gunluk-hayat", "nasil-gelinir", "vize-sureclari"],
   },
