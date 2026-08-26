@@ -133,6 +133,16 @@
     document.getElementById("hero-stats").innerHTML = T("heroStats")
       .map((s) => `<div class="hero-stat"><span class="hero-stat-num">${s.n}</span><span class="hero-stat-label">${s.l}</span></div>`)
       .join("");
+
+    fetch("/api/channel-stats")
+      .then((r) => r.json())
+      .then((data) => {
+        if (!data.ok) return;
+        const nums = document.querySelectorAll("#hero-stats .hero-stat-num");
+        if (nums[0]) nums[0].textContent = data.subscribers.toLocaleString("tr-TR");
+        if (nums[1]) nums[1].textContent = data.videos.toLocaleString("tr-TR");
+      })
+      .catch(() => {});
     document.getElementById("cta-eyebrow").textContent = T("ctaEyebrow");
     document.getElementById("cta-title").textContent = T("ctaTitle");
     document.getElementById("cta-subtitle").textContent = T("ctaSubtitle");
