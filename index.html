@@ -79,14 +79,6 @@
     </div>
   </section>
 
-  <section class="videos">
-    <div class="container">
-      <span class="eyebrow" id="videos-eyebrow"></span>
-      <h2 id="videos-heading"></h2>
-      <div class="video-list" id="video-list"></div>
-    </div>
-  </section>
-
   <section class="container" style="padding-bottom: 48px">
     <div class="ask-box" style="margin-top: 0">
       <h3 id="ask-title"></h3>
@@ -140,8 +132,6 @@
     document.getElementById("cta-subtitle").textContent = T("ctaSubtitle");
     document.getElementById("topics-eyebrow").textContent = T("topicsEyebrow");
     document.getElementById("topics-heading").textContent = T("topicsHeading");
-    document.getElementById("videos-eyebrow").textContent = T("videosEyebrow");
-    document.getElementById("videos-heading").textContent = T("videosHeading");
     document.getElementById("ask-title").textContent = T("askTitle");
     document.getElementById("ask-desc").textContent = T("askDesc");
     document.getElementById("ask-name").placeholder = T("askNamePh");
@@ -174,28 +164,6 @@
         </a>
       `
     ).join("");
-
-    const videoList = document.getElementById("video-list");
-    videoList.innerHTML = TOPICS.filter((t) => t.videos.length)
-      .map(
-        (t) => `
-        <div class="video-group">
-          <h3 class="video-group-title"><a href="${BASE}/topic.html?t=${t.slug}">${L(t.title)}</a></h3>
-          <div class="video-group-list">
-            ${t.videos
-              .map(
-                (v) => `
-                <a class="video-row" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">
-                  <span class="video-row-play">▶</span>
-                  <span class="video-row-title">${v.title}</span>
-                </a>`
-              )
-              .join("")}
-          </div>
-        </div>
-      `
-      )
-      .join("");
 
     const askForm = document.getElementById("ask-form");
     askForm.querySelector('input[name="name"]').value = localStorage.getItem("zy_lead_name") || "";
