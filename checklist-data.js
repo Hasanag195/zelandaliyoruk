@@ -44,7 +44,8 @@ const CHECKLIST = {
       items: [
         { t: "Banka hesabı aç (genelde yüz yüze işlem gerekir, adres kanıtı isteyebilirler)" },
         { t: "IRD numarası başvurusu yap (başvuru için NZ banka hesap numarası isteniyor, bu yüzden banka hesabından sonra yap)" },
-        { t: "Kalıcı ev arayışına başla" },
+        { t: "Önce flatting (ortak ev/oda) seçeneklerine bak, çoğu yeni gelen için en hızlı ve uygun maliyetli başlangıç budur", link: ["NZ Flatmates", "https://www.nzflatmates.co.nz/"] },
+        { t: "Durumuna göre (aile, uzun vadeli plan, bütçe) tek başına bir ev/daire kiralamaya geç", link: ["Trade Me Property", "https://www.trademe.co.nz/a/property/rental"] },
         { t: "Vizenin çalışma koşullarını (saat sınırı, işveren bağımlılığı vb.) kontrol et" },
         { t: "İşe alım karşılığı senden ücret isteyen işveren yasa dışı iş yapıyordur, uzak dur" },
         { t: "İş ararken Seek.co.nz, Trade Me Jobs, Indeed.co.nz ve LinkedIn gibi platformları kullan", link: ["resmi iş arama rehberi", "https://www.workandincome.govt.nz/work/find-jobs/where-to-look-for-jobs/index.html"] },
@@ -99,7 +100,8 @@ const CHECKLIST = {
       items: [
         { t: "Open a bank account (usually needs to be done in person, they may ask for proof of address)" },
         { t: "Apply for your IRD number (the application asks for a NZ bank account number, so do this after opening your account)" },
-        { t: "Start looking for a permanent home" },
+        { t: "Start with flatting (shared house/room) options first, the fastest and most affordable start for most newcomers", link: ["NZ Flatmates", "https://www.nzflatmates.co.nz/"] },
+        { t: "Depending on your situation (family, long-term plans, budget), move on to renting a place of your own", link: ["Trade Me Property", "https://www.trademe.co.nz/a/property/rental"] },
         { t: "Check your visa's work conditions (hour limits, employer restrictions etc.)" },
         { t: "Any employer who asks you for money in exchange for hiring you is acting illegally. Stay away" },
         { t: "Search for jobs using platforms like Seek.co.nz, Trade Me Jobs, Indeed.co.nz, and LinkedIn", link: ["official job search guide", "https://www.workandincome.govt.nz/work/find-jobs/where-to-look-for-jobs/index.html"] },
