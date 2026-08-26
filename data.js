@@ -210,53 +210,58 @@ const TOPICS = [
     },
     accordion: [
       {
-        label: { tr: "Doğa ve Manzara", en: "Nature and Landscape" },
+        label: { tr: "Kuzey Adası", en: "North Island" },
         open: true,
         items: [
-          {
-            label: { tr: "Waitomo Işık Böceği Mağaraları", en: "Waitomo Glowworm Caves" },
-            content: {
-              tr: "Kuzey Ada'da, karanlık mağara tavanının binlerce ışık böceğiyle yıldızlı gökyüzü gibi parladığı ünlü bir yer. Tekne turlarıyla geziliyor.",
-              en: "On the North Island, famous for cave ceilings that glow like a starry sky thanks to thousands of glowworms. Visited by boat tour.",
-            },
-            url: "https://waitomo.com/",
-          },
-          {
-            label: { tr: "Tongariro Ulusal Parkı", en: "Tongariro National Park" },
-            content: {
-              tr: "Aktif volkanlar, kraterler ve Tongariro Alpine Crossing gibi ünlü yürüyüş rotalarıyla bilinen bir UNESCO Dünya Mirası alanı.",
-              en: "A UNESCO World Heritage site known for active volcanoes, craters, and famous hikes like the Tongariro Alpine Crossing.",
-            },
-            url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/",
-          },
-          {
-            label: { tr: "Milford Sound / Fiordland", en: "Milford Sound / Fiordland" },
-            content: {
-              tr: "Güney Ada'da, dik dağların denize dik indiği bir fiyort. Genelde Yeni Zelanda'nın en etkileyici manzaralarından biri olarak anılır.",
-              en: "A fiord on the South Island where steep mountains drop straight into the sea. Often called one of New Zealand's most striking landscapes.",
-            },
-            url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/milford-sound-piopiotahi/",
-          },
-          {
-            label: { tr: "Rotorua (Jeotermal Bölge)", en: "Rotorua (Geothermal Region)" },
-            content: {
-              tr: "Kaynayan çamur havuzları, gayzerler ve sıcak su kaynaklarıyla bilinen volkanik bir bölge; Maori kültürü deneyimleri de burada yoğun.",
-              en: "A volcanic region known for bubbling mud pools, geysers and hot springs; also a hub for Maori culture experiences.",
-            },
-            url: "https://www.rotoruanz.com/",
-          },
+          { label: { tr: "Auckland", en: "Auckland" } },
+          { label: { tr: "Waiheke Island", en: "Waiheke Island" } },
+          { label: { tr: "Hobbiton Film Seti (Matamata)", en: "Hobbiton Movie Set (Matamata)" } },
+          { label: { tr: "Waitomo Işık Böceği Mağaraları", en: "Waitomo Glowworm Caves" } },
+          { label: { tr: "Rotorua (Te Puia, Wai-O-Tapu, Whakarewarewa)", en: "Rotorua (Te Puia, Wai-O-Tapu, Whakarewarewa)" } },
+          { label: { tr: "Lake Taupo", en: "Lake Taupo" } },
+          { label: { tr: "Huka Falls", en: "Huka Falls" } },
+          { label: { tr: "Tongariro Ulusal Parkı (Tongariro Alpine Crossing)", en: "Tongariro National Park (Tongariro Alpine Crossing)" } },
+          { label: { tr: "Bay of Islands (Paihia, Russell)", en: "Bay of Islands (Paihia, Russell)" } },
+          { label: { tr: "Cape Reinga", en: "Cape Reinga" } },
+          { label: { tr: "Coromandel Yarımadası (Cathedral Cove, Hot Water Beach)", en: "Coromandel Peninsula (Cathedral Cove, Hot Water Beach)" } },
+          { label: { tr: "Wellington (Başkent, Te Papa Tongarewa Müzesi)", en: "Wellington (capital, Te Papa Tongarewa Museum)" } },
+          { label: { tr: "Mount Taranaki (Egmont Ulusal Parkı)", en: "Mount Taranaki (Egmont National Park)" } },
+          { label: { tr: "Napier (Art Deco Bölgesi)", en: "Napier (Art Deco district)" } },
+          { label: { tr: "Hawke's Bay", en: "Hawke's Bay" } },
+          { label: { tr: "Piha Beach", en: "Piha Beach" } },
+          { label: { tr: "Rangitoto Island", en: "Rangitoto Island" } },
         ],
       },
       {
-        label: { tr: "Kültür ve Tarih", en: "Culture and History" },
+        label: { tr: "Güney Adası", en: "South Island" },
         items: [
-          {
-            label: { tr: "Hobbiton Film Seti", en: "Hobbiton Movie Set" },
-            content: {
-              tr: "Yüzüklerin Efendisi ve Hobbit filmlerinde kullanılan gerçek set, Waikato bölgesinde bir çiftlik arazisinde, turlarla geziliyor.",
-              en: "The real set used in The Lord of the Rings and The Hobbit films, located on a farm in the Waikato region, visited by guided tour.",
-            },
-          },
+          { label: { tr: "Queenstown (Macera Başkenti)", en: "Queenstown (Adventure Capital)" } },
+          { label: { tr: "Milford Sound (Piopiotahi)", en: "Milford Sound (Piopiotahi)" } },
+          { label: { tr: "Doubtful Sound", en: "Doubtful Sound" } },
+          { label: { tr: "Fiordland Ulusal Parkı", en: "Fiordland National Park" } },
+          { label: { tr: "Lake Tekapo (The Church of the Good Shepherd)", en: "Lake Tekapo (The Church of the Good Shepherd)" } },
+          { label: { tr: "Lake Pukaki", en: "Lake Pukaki" } },
+          { label: { tr: "Aoraki / Mount Cook Ulusal Parkı", en: "Aoraki / Mount Cook National Park" } },
+          { label: { tr: "Wanaka (That Wanaka Tree, Roys Peak)", en: "Wanaka (That Wanaka Tree, Roys Peak)" } },
+          { label: { tr: "Abel Tasman Ulusal Parkı", en: "Abel Tasman National Park" } },
+          { label: { tr: "Franz Josef Buzulu", en: "Franz Josef Glacier" } },
+          { label: { tr: "Fox Buzulu", en: "Fox Glacier" } },
+          { label: { tr: "Christchurch", en: "Christchurch" } },
+          { label: { tr: "Akaroa", en: "Akaroa" } },
+          { label: { tr: "Kaikoura (Balina Gözlem Noktası)", en: "Kaikoura (Whale Watching)" } },
+          { label: { tr: "Marlborough Sounds (Blenheim)", en: "Marlborough Sounds (Blenheim)" } },
+          { label: { tr: "Nelson", en: "Nelson" } },
+          { label: { tr: "Punakaiki Pancake Rocks", en: "Punakaiki Pancake Rocks" } },
+          { label: { tr: "Hokitika Gorge", en: "Hokitika Gorge" } },
+          { label: { tr: "Moeraki Boulders", en: "Moeraki Boulders" } },
+          { label: { tr: "Dunedin (Larnach Kalesi, Otago Yarımadası)", en: "Dunedin (Larnach Castle, Otago Peninsula)" } },
+          { label: { tr: "Catlins Sahili (Nugget Point Feneri)", en: "Catlins Coast (Nugget Point Lighthouse)" } },
+          { label: { tr: "Stewart Island (Rakiura Ulusal Parkı)", en: "Stewart Island (Rakiura National Park)" } },
+        ],
+      },
+      {
+        label: { tr: "Türklerle Bağlantılı Yerler", en: "Places Connected to Turkey" },
+        items: [
           {
             label: { tr: "Gelibolu ve Anzac Bağlantısı", en: "Gallipoli and the Anzac Connection" },
             content: {
