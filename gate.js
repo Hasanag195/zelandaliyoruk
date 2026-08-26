@@ -1,54 +1,13 @@
 (function () {
-  function otherLangUrls() {
-    const path = location.pathname;
-    const qs = location.search || "";
-    if (path.startsWith("/en/")) {
-      return { tr: (path.replace(/^\/en/, "") || "/") + qs, en: path + qs };
-    }
-    return { tr: path + qs, en: "/en" + (path === "/" ? "/" : path) + qs };
-  }
+  if (localStorage.getItem("zy_lead_ok") === "1") return;
+  if (sessionStorage.getItem("zy_gate_dismissed") === "1") return;
 
-  function showWelcome() {
-    if (localStorage.getItem("zy_welcome_seen") === "1") return;
-
-    document.documentElement.style.overflow = "hidden";
-    const name = localStorage.getItem("zy_lead_name") || "";
-
-    const overlay = document.createElement("div");
-    overlay.className = "gate-overlay";
-    overlay.innerHTML = `
-      <div class="gate-card">
-        <picture><source srcset="assets/logo.webp" type="image/webp" /><img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" /></picture>
-        <h1>${T("welcomeHi")}${name ? ", " + name.split(" ")[0] : ""} 👋</h1>
-        <p>${T("welcomeDesc")}</p>
-        <ul class="welcome-list">
-          ${T("welcomeList").map((li) => `<li>${li}</li>`).join("")}
-        </ul>
-        <button id="welcome-start" type="button">${T("welcomeStart")}</button>
-      </div>
-    `;
-    document.body.appendChild(overlay);
-
-    overlay.querySelector("#welcome-start").addEventListener("click", () => {
-      localStorage.setItem("zy_welcome_seen", "1");
-      document.documentElement.style.overflow = "";
-      overlay.remove();
-    });
-  }
-
-  if (localStorage.getItem("zy_lead_ok") === "1") {
-    showWelcome();
-    return;
-  }
-
-  document.documentElement.style.overflow = "hidden";
-
-  const overlay = document.createElement("div");
-  overlay.className = "gate-overlay";
-  overlay.innerHTML = `
-    <div class="gate-card">
-      <div class="lang-switch" id="gate-lang-switch" style="margin: 0 auto 16px; width: fit-content;"></div>
-      <picture><source srcset="assets/logo.webp" type="image/webp" /><img class="gate-logo" src="assets/logo.jpg" alt="zelandaliyoruk logo" /></picture>
+  const banner = document.createElement("div");
+  banner.className = "gate-banner";
+  banner.innerHTML = `
+    <div class="gate-banner-card">
+      <button type="button" class="gate-banner-close" id="gate-banner-close" aria-label="Kapat">&times;</button>
+      <picture><source srcset="/assets/logo.webp" type="image/webp" /><img class="gate-logo" src="/assets/logo.jpg" alt="zelandaliyoruk logo" /></picture>
       <h1>${T("gateTitle")}</h1>
       <p>${T("gateDesc")}</p>
       <form id="gate-form" novalidate>
@@ -67,11 +26,15 @@
       <p class="gate-privacy">${T("gatePrivacy")}</p>
     </div>
   `;
-  document.body.appendChild(overlay);
-  renderLangSwitch("gate-lang-switch", otherLangUrls());
+  document.body.appendChild(banner);
 
-  const form = overlay.querySelector("#gate-form");
-  const errorEl = overlay.querySelector("#gate-error");
+  banner.querySelector("#gate-banner-close").addEventListener("click", () => {
+    sessionStorage.setItem("zy_gate_dismissed", "1");
+    banner.remove();
+  });
+
+  const form = banner.querySelector("#gate-form");
+  const errorEl = banner.querySelector("#gate-error");
   const btn = form.querySelector("button");
 
   form.addEventListener("submit", async (e) => {
@@ -105,9 +68,8 @@
       localStorage.setItem("zy_lead_ok", "1");
       localStorage.setItem("zy_lead_name", name);
       localStorage.setItem("zy_lead_email", email);
-      overlay.remove();
-      showWelcome();
-      if (!document.querySelector(".gate-overlay")) document.documentElement.style.overflow = "";
+      banner.querySelector(".gate-banner-card").innerHTML = `<p class="gate-thanks">${T("gateThanks")}</p>`;
+      setTimeout(() => banner.remove(), 2600);
     } catch (err) {
       errorEl.textContent = T("gateErr");
       btn.disabled = false;
