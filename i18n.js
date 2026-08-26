@@ -32,10 +32,10 @@
       heroSubtitle: "Vize süreçlerinden günlük hayata, konu başlığına göre derlenmiş kapsamlı rehber.",
       heroStats: [
         { n: "580+", l: "Abone" },
-        { n: "55+", l: "Video" },
         { n: "7", l: "Rehber Konusu" },
         { n: "Ücretsiz", l: "Rehber" },
       ],
+      heroShare: "📤 Arkadaşına Gönder",
       ctaEyebrow: "Ücretsiz Kaynak",
       ctaTitle: "Yeni Zelanda'ya Yolculuk Checklist'i",
       ctaSubtitle: "Hazırlıktan ilk haftaya, işaretleyerek takip edebileceğin adım adım liste.",
@@ -134,10 +134,10 @@
       heroSubtitle: "From visa processes to daily life, a comprehensive guide organised by topic.",
       heroStats: [
         { n: "580+", l: "Subscribers" },
-        { n: "55+", l: "Videos" },
         { n: "7", l: "Guide Topics" },
         { n: "Free", l: "Guide" },
       ],
+      heroShare: "📤 Send to a Friend",
       ctaEyebrow: "Free Resource",
       ctaTitle: "New Zealand Journey Checklist",
       ctaSubtitle: "A step-by-step list you can tick off, from preparation to your first week.",
