@@ -231,7 +231,7 @@ function page(topic, lang) {
       ${closest ? `<a class="highlight-link" href="${base}/t/${closest.slug}.html">${esc(L(closest.title, lang))}</a>` : ""}
       <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">${esc(T(lang, "shareBtn"))}</a>
       ${topic.inzWatch ? `<div class="inz-status" id="inz-status">${esc(T(lang, "inzChecking"))}</div>` : ""}
-      ${topic.pinned ? `<div class="pinned-highlight">${L(topic.pinned, lang)}</div>` : ""}
+      ${topic.pinned ? (Array.isArray(topic.pinned) ? topic.pinned : [topic.pinned]).map((p) => `<div class="pinned-highlight${p.tone === "light" ? " pinned-highlight--light" : ""}">${L(p, lang)}</div>`).join("") : ""}
       ${calculatorHtml(topic, lang)}
       ${accordionHtml(topic, lang)}
       ${relatedHtml(topic, lang, base)}

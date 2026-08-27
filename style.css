@@ -1107,7 +1107,8 @@ details.accordion[open] > .accordion-summary .accordion-chevron { transform: rot
   margin-bottom: 30px;
 }
 
-.pinned-highlight a {
+.pinned-highlight a,
+.pinned-highlight-title {
   display: inline-block;
   color: #8a6a12;
   font-weight: 800;
@@ -1125,6 +1126,27 @@ details.accordion[open] > .accordion-summary .accordion-chevron { transform: rot
   margin: 8px 0 0;
   color: var(--text);
   font-size: 0.95rem;
+}
+
+.pinned-highlight ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.pinned-highlight li {
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.pinned-highlight--light {
+  background: linear-gradient(135deg, #eef7f1, #e1f0e7);
+  border-color: #4a8a6b;
+}
+
+.pinned-highlight--light .pinned-highlight-title {
+  color: #1f6b4a;
+  border-bottom-color: #4a8a6b;
 }
 
 .calc-box {
