@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
-Disallow: /concierge.html
 
 Sitemap: https://zelandaliyoruk.com/sitemap.xml
