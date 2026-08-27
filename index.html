@@ -13,9 +13,12 @@
   <meta property="og:site_name" content="zelandaliyoruk" />
   <meta property="og:title" content="zelandaliyoruk Yeni Zelanda Rehberi" />
   <meta property="og:description" content="Yeni Zelanda'ya yolculuk, vize, maaş ve günlük hayat hakkında konu başlıklarıyla kapsamlı rehber." />
-  <meta property="og:image" content="https://zelandaliyoruk.com/assets/logo.jpg" />
+  <meta property="og:image" content="https://zelandaliyoruk.com/assets/yt-banner.png" />
+  <meta property="og:image:width" content="2048" />
+  <meta property="og:image:height" content="1152" />
+  <meta name="twitter:image" content="https://zelandaliyoruk.com/assets/yt-banner.png" />
   <meta property="og:url" content="https://zelandaliyoruk.com/" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
   <link rel="apple-touch-icon" href="/assets/logo.jpg" />
   <meta name="theme-color" content="#0c4a30" />
@@ -93,9 +96,14 @@
         <label class="sr-only" for="ask-question" id="ask-question-label"></label>
         <textarea name="question" id="ask-question" rows="3" required></textarea>
         <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
+        <label class="gate-consent">
+          <input type="checkbox" name="consent" id="ask-consent" required />
+          <span id="ask-consent-text"></span>
+        </label>
         <button type="submit" id="ask-submit"></button>
         <div class="ask-msg" id="ask-msg" aria-live="polite"></div>
       </form>
+      <p class="gate-privacy" id="ask-notice"></p>
     </div>
   </section>
 
@@ -159,6 +167,11 @@
     document.getElementById("ask-question").placeholder = T("askQuestionPh");
     document.getElementById("ask-question-label").textContent = T("askQuestionPh");
     document.getElementById("ask-submit").textContent = T("askSubmit");
+    document.getElementById("ask-consent-text").innerHTML =
+      T("askConsentPre") +
+      `<a href="${getLang() === "en" ? "/en/privacy.html" : "/privacy.html"}" target="_blank" rel="noopener">${T("askConsentLink")}</a>` +
+      T("askConsentPost");
+    document.getElementById("ask-notice").textContent = T("askNotice");
     document.getElementById("disclaimer-label").textContent = T("disclaimerLabel");
     document.getElementById("disclaimer-text").textContent = T("disclaimer");
 
@@ -176,7 +189,7 @@
     const grid = document.getElementById("topic-grid");
     grid.innerHTML = TOPICS.map(
       (t, i) => `
-        <a class="topic-card" href="${BASE}/topic.html?t=${t.slug}">
+        <a class="topic-card" href="${BASE}/t/${t.slug}.html">
           <span class="topic-card-index">${String(i + 1).padStart(2, "0")}</span>
           <h3>${L(t.title)}</h3>
           <p>${L(t.summary)}</p>
@@ -198,9 +211,15 @@
       const email = data.get("email").trim();
       const question = data.get("question").trim();
       const hp = data.get("hp").trim();
+      const consent = data.get("consent") === "on";
 
       if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !question) {
         askMsg.textContent = T("askValidation");
+        askMsg.classList.add("ask-msg--error");
+        return;
+      }
+      if (!consent) {
+        askMsg.textContent = T("askConsentErr");
         askMsg.classList.add("ask-msg--error");
         return;
       }
@@ -213,7 +232,7 @@
         const res = await fetch("/api/questions", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, question, topic: "Ana Sayfa (Genel)", hp }),
+          body: JSON.stringify({ name, email, question, topic: "Ana Sayfa (Genel)", hp, consent }),
         });
         if (!res.ok) throw new Error("failed");
         askForm.reset();

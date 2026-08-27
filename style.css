@@ -1078,6 +1078,27 @@ footer.site-footer {
   border-bottom-color: #b5872a;
 }
 
+/* Statik konu sayfalarındaki <details> tabanlı akordeon (JS gerektirmez) */
+details.accordion > .accordion-summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  cursor: pointer;
+  font-family: "Fraunces", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--primary-dark);
+  transition: background 0.25s ease;
+}
+details.accordion > .accordion-summary::-webkit-details-marker { display: none; }
+details.accordion > .accordion-summary:hover { background: rgba(212, 167, 44, 0.08); }
+details.accordion[open] > .accordion-summary { border-bottom: 1px solid rgba(169, 131, 79, 0.18); }
+details.accordion[open] > .accordion-summary .accordion-chevron { transform: rotate(180deg); }
+.accordion-panel--static { max-height: none; overflow: visible; }
+
 .pinned-highlight {
   background: linear-gradient(135deg, #fdf6e3, #f9ecc9);
   border: 2px solid #D4A72C;

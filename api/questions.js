@@ -45,19 +45,21 @@ module.exports = async (req, res) => {
   const question = String(body.question || "").trim().slice(0, 2000);
   const topic = String(body.topic || "").trim().slice(0, 120);
   const hp = String(body.hp || "").trim();
+  const consent = body.consent === true || body.consent === "on";
 
   if (hp) {
     res.status(200).json({ ok: true });
     return;
   }
 
-  if (!name || !EMAIL_RE.test(email) || !question) {
+  if (!name || !EMAIL_RE.test(email) || !question || !consent) {
     res.status(400).json({ ok: false, error: "invalid_input" });
     return;
   }
 
   const ip = getClientIp(req);
-  const record = JSON.stringify({ name, email, question, topic, ts: new Date().toISOString(), ip });
+  const ts = new Date().toISOString();
+  const record = JSON.stringify({ name, email, question, topic, consent: true, consentAt: ts, ts, ip });
 
   try {
     let lastError = null;
