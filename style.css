@@ -1241,6 +1241,27 @@ details.accordion[open] > .accordion-summary .accordion-chevron { transform: rot
   margin: 0;
 }
 
+.calc-field .calc-field--inline input[type="number"] {
+  max-width: 180px;
+  flex: 1 1 auto;
+}
+
+.calc-field .calc-field--inline select {
+  max-width: 130px;
+  flex: 0 0 auto;
+}
+
+.calc-ietc-hint {
+  margin: -8px 0 14px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  max-width: 460px;
+}
+
+.calc-row--credit strong {
+  color: #1f6b4a;
+}
+
 .calc-box button[type="submit"] {
   padding: 11px 26px;
   border-radius: 999px;

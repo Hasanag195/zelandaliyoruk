@@ -119,7 +119,14 @@ function calculatorHtml(topic, lang) {
     <form id="calc-form">
       <div class="calc-field">
         <label for="calc-gross">${T(lang, "calcGrossLabel")}</label>
-        <input type="number" id="calc-gross" min="0" step="500" value="65000" required />
+        <div class="calc-field--inline">
+          <input type="number" id="calc-gross" min="0" step="100" value="65000" required />
+          <select id="calc-period" aria-label="${T(lang, "calcPeriodLabel")}">
+            <option value="year" selected>${T(lang, "calcPeriodYear")}</option>
+            <option value="month">${T(lang, "calcPeriodMonth")}</option>
+            <option value="week">${T(lang, "calcPeriodWeek")}</option>
+          </select>
+        </div>
       </div>
       <div class="calc-field calc-field--inline">
         <input type="checkbox" id="calc-ks-enabled" checked />
@@ -135,6 +142,15 @@ function calculatorHtml(topic, lang) {
           <option value="0.10">10%</option>
         </select>
       </div>
+      <div class="calc-field calc-field--inline">
+        <input type="checkbox" id="calc-sl-enabled" />
+        <label for="calc-sl-enabled">${T(lang, "calcStudentLoanLabel")}</label>
+      </div>
+      <div class="calc-field calc-field--inline">
+        <input type="checkbox" id="calc-ietc-enabled" />
+        <label for="calc-ietc-enabled">${T(lang, "calcIetcLabel")}</label>
+      </div>
+      <p class="calc-ietc-hint">${T(lang, "calcIetcHint")}</p>
       <button type="submit">${T(lang, "calcButton")}</button>
     </form>
     <div class="calc-results" id="calc-results" hidden></div>

@@ -57,11 +57,18 @@
       
       <div class="calc-box">
     <h2>Salary Calculator</h2>
-    <p>Enter your gross (before-tax) annual salary to see an estimated take-home amount.</p>
+    <p>Enter your gross (before-tax) salary to see an estimated take-home amount.</p>
     <form id="calc-form">
       <div class="calc-field">
-        <label for="calc-gross">Gross Annual Salary (NZD)</label>
-        <input type="number" id="calc-gross" min="0" step="500" value="65000" required />
+        <label for="calc-gross">Gross Salary (NZD)</label>
+        <div class="calc-field--inline">
+          <input type="number" id="calc-gross" min="0" step="100" value="65000" required />
+          <select id="calc-period" aria-label="Pay period">
+            <option value="year" selected>Annual</option>
+            <option value="month">Monthly</option>
+            <option value="week">Weekly</option>
+          </select>
+        </div>
       </div>
       <div class="calc-field calc-field--inline">
         <input type="checkbox" id="calc-ks-enabled" checked />
@@ -77,10 +84,19 @@
           <option value="0.10">10%</option>
         </select>
       </div>
+      <div class="calc-field calc-field--inline">
+        <input type="checkbox" id="calc-sl-enabled" />
+        <label for="calc-sl-enabled">I have a student loan repayment</label>
+      </div>
+      <div class="calc-field calc-field--inline">
+        <input type="checkbox" id="calc-ietc-enabled" />
+        <label for="calc-ietc-enabled">I might be eligible for the Independent Earner Tax Credit (IETC)</label>
+      </div>
+      <p class="calc-ietc-hint">Applies if your annual income is between $24,000-$70,000 and you don't receive Working for Families, an income-tested benefit, or NZ Superannuation.</p>
       <button type="submit">Calculate</button>
     </form>
     <div class="calc-results" id="calc-results" hidden></div>
-    <p class="calc-disclaimer">This is an estimate and doesn't account for student loan repayments, secondary income, or tax credits. For current official rates, check ird.govt.nz.</p>
+    <p class="calc-disclaimer">This is an estimate and doesn't account for secondary income or unusual tax code situations. For current official rates, check ird.govt.nz.</p>
   </div>
       
       <details class="accordion" open>

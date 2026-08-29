@@ -57,11 +57,18 @@
       
       <div class="calc-box">
     <h2>Maaş Hesaplayıcı</h2>
-    <p>Brüt (vergi öncesi) yıllık maaşını gir, net eline geçecek tahmini tutarı gör.</p>
+    <p>Brüt (vergi öncesi) maaşını gir, net eline geçecek tahmini tutarı gör.</p>
     <form id="calc-form">
       <div class="calc-field">
-        <label for="calc-gross">Brüt Yıllık Maaş (NZD)</label>
-        <input type="number" id="calc-gross" min="0" step="500" value="65000" required />
+        <label for="calc-gross">Brüt Maaş (NZD)</label>
+        <div class="calc-field--inline">
+          <input type="number" id="calc-gross" min="0" step="100" value="65000" required />
+          <select id="calc-period" aria-label="Ödeme periyodu">
+            <option value="year" selected>Yıllık</option>
+            <option value="month">Aylık</option>
+            <option value="week">Haftalık</option>
+          </select>
+        </div>
       </div>
       <div class="calc-field calc-field--inline">
         <input type="checkbox" id="calc-ks-enabled" checked />
@@ -77,10 +84,19 @@
           <option value="0.10">10%</option>
         </select>
       </div>
+      <div class="calc-field calc-field--inline">
+        <input type="checkbox" id="calc-sl-enabled" />
+        <label for="calc-sl-enabled">Öğrenci kredisi ödemem var</label>
+      </div>
+      <div class="calc-field calc-field--inline">
+        <input type="checkbox" id="calc-ietc-enabled" />
+        <label for="calc-ietc-enabled">Independent Earner Tax Credit (IETC) için uygun olabilirim</label>
+      </div>
+      <p class="calc-ietc-hint">Yıllık geliri $24.000-$70.000 arasında olan ve Working for Families, işsizlik/engellilik maaşı ya da NZ Emekliliği almayanlar için geçerlidir.</p>
       <button type="submit">Hesapla</button>
     </form>
     <div class="calc-results" id="calc-results" hidden></div>
-    <p class="calc-disclaimer">Bu tahmini bir hesaplamadır, öğrenci kredisi, ikincil gelir veya vergi kredileri gibi durumları hesaba katmaz. Güncel resmi oranlar için ird.govt.nz'yi kontrol et.</p>
+    <p class="calc-disclaimer">Bu tahmini bir hesaplamadır, ikincil gelir veya farklı vergi kodu durumlarını hesaba katmaz. Güncel resmi oranlar için ird.govt.nz'yi kontrol et.</p>
   </div>
       
       <details class="accordion" open>
