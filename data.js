@@ -19,8 +19,151 @@ const TOPICS = [
     },
     intro: {
       tr: `Türkiye'den Yeni Zelanda'ya gelmek isteyenler için en sık sorulan soru budur: hangi yol yasal ve gerçekçi? Genel olarak dört ana yol var.<br><br><strong>Çalışma Tatili Vizesi:</strong> Türkiye ile Yeni Zelanda arasında özel bir anlaşma var. 18-30 yaş arasındakiler bu vizeyle bir yıla kadar çalışıp seyahat edebiliyor.<br><br><strong>Öğrenci Vizesi:</strong> Yeni Zelanda'da tanınan bir okula kayıt olarak alınıyor. Bazı öğrenci vizeleri sınırlı çalışma hakkı da tanıyor, mezuniyetten sonra çalışma vizesine geçiş yolu da var.<br><br><strong>Sponsorlu Çalışma Vizesi (AEWV):</strong> Yeni Zelanda'da akredite olmuş bir işverenden iş teklifi alarak başvurulan yol. İşveren sponsorluğu şart.<br><br><strong>Partner Vizesi:</strong> Yeni Zelanda vatandaşı veya kalıcı oturum sahibi biriyle ciddi ve kanıtlanabilir bir ilişkisi olanlar için.<br><br>Her yolun kendi belgeleri ve şartları var. Hangisinin sana uyduğunu görmek için <a href="/t/vize-sureclari.html">Vize Türleri ve Resmi Süreçler</a> sayfasına bakabilirsin, orada her yol için resmi kaynaklara da ulaşırsın. Amaç seni belirli bir yola yönlendirmek değil, hangi seçeneklerin var olduğunu net şekilde göstermek. Nihai ve güncel şartlar için her zaman Immigration New Zealand'ın resmi sayfaları esas alınmalı.`,
-      en: `For anyone thinking about moving from Turkey to New Zealand, the first question is always the same: which path is legal and realistic? Broadly, there are four main paths.<br><br><strong>Working Holiday Visa:</strong> Turkey has a special agreement with New Zealand. People aged 18-30 can work and travel on this visa for up to a year.<br><br><strong>Student Visa:</strong> Obtained by enrolling at a recognised New Zealand school. Some student visas also allow limited work rights, with a pathway to a work visa after graduation.<br><br><strong>Sponsored Work Visa (AEWV):</strong> Applied for with a job offer from an accredited employer in New Zealand. Employer sponsorship is required.<br><br><strong>Partner Visa:</strong> For people in a genuine, evidenced relationship with a New Zealand citizen or resident.<br><br>Each route has its own documents and requirements. To see which one fits you, check the <a href="/en/t/vize-sureclari.html">Visa Types and Official Processes</a> page, where you'll also find official sources for each route. The goal isn't to steer you toward one path, but to show clearly what options exist. For final, up-to-date requirements, always check Immigration New Zealand's official pages.`,
+      en: `For anyone thinking about moving from Turkey to New Zealand, the first question is always the same: which path is legal and realistic? Broadly, there are four main paths.<br><br><strong>Working Holiday Visa:</strong> Turkey has a special agreement with New Zealand. People aged 18-30 can work and travel on this visa for up to a year.<br><br><strong>Student Visa:</strong> Obtained by enrolling at a recognised New Zealand school. Some student visas also allow limited work rights, with a pathway to a work visa after graduation.<br><br><strong>Sponsored Work Visa (AEWV):</strong> Applied for with a job offer from an accredited employer in New Zealand. Employer sponsorship is required.<br><br><strong>Partner Visa:</strong> For people in a genuine, evidenced relationship with a New Zealand citizen or resident.<br><br>Each route has its own documents and requirements. Below you'll find more detail on each path, along with official sources. The goal isn't to steer you toward one path, but to show clearly what options exist. For final, up-to-date requirements, always check Immigration New Zealand's official pages.`,
     },
+    accordion: [
+      {
+        label: { tr: "🎒 Çalışma Tatili Vizesi (Working Holiday)", en: "🎒 Working Holiday Visa" },
+        open: true,
+        items: [
+          {
+            label: { tr: "Kimler başvurabilir?", en: "Who can apply?" },
+            content: {
+              tr: "Türkiye Çalışma Tatili Vizesi, 18-30 yaş arasındaki Türk vatandaşları için ayrılmış özel bir kota kapsamında sunuluyor. Yılda belirli sayıda kontenjan açılıyor ve başvurular buna göre değerlendiriliyor; güncel kontenjan ve başvuru dönemini resmi sayfadan kontrol etmen gerekir.",
+              en: "The Turkey Working Holiday Visa is offered under a special annual quota reserved for Turkish citizens aged 18-30. A limited number of places open each year and applications are assessed accordingly; check the official page for the current quota and application window.",
+            },
+          },
+          {
+            label: { tr: "Bu vizeyle ne yapabilirsin?", en: "What can you do on this visa?" },
+            content: {
+              tr: "Bu vizeyle Yeni Zelanda'da bir işverene bağlı kalmadan çalışabilir, seyahat edebilir ve genelde 3 aya kadar kısa süreli bir eğitim/kurs alabilirsin. Vizenin süresi ve tam koşulları resmi sayfada belirtiliyor, bu koşullar zamanla değişebilir.",
+              en: "On this visa you can work in New Zealand without being tied to one employer, travel freely, and generally study a short course of up to 3 months. The exact duration and conditions are listed on the official page and can change over time.",
+            },
+          },
+          {
+            label: { tr: "Sonrasında ne olur?", en: "What happens afterwards?" },
+            content: {
+              tr: "Çalışma Tatili Vizesi kalıcı bir yol değildir, süresi dolunca ülkeden ayrılman gerekir. Yeni Zelanda'da kalmayı düşünüyorsan bu süre içinde bir işveren bulup sponsorlu çalışma vizesine (AEWV) geçiş yapmayı ya da öğrenci vizesiyle devam etmeyi değerlendirebilirsin.",
+              en: "The Working Holiday Visa isn't a permanent pathway, you need to leave once it expires. If you're considering staying longer, you can use this time to find an employer and transition to a sponsored work visa (AEWV), or continue on a student visa.",
+            },
+            url: "https://www.immigration.govt.nz/visas/turkey-working-holiday-visa/",
+          },
+        ],
+      },
+      {
+        label: { tr: "🎓 Öğrenci Vizesi", en: "🎓 Student Visa" },
+        items: [
+          {
+            label: { tr: "Tanınan bir okula kayıt şartı", en: "Requirement to enrol at a recognised school" },
+            content: {
+              tr: "Öğrenci vizesi almak için Yeni Zelanda'da NZQA onaylı, tanınan bir eğitim kurumundan kabul almış olman gerekiyor. Kurs süresi, okulun türü (üniversite, politeknik, dil okulu) ve masraf gösterme şartı vize koşullarını doğrudan etkiliyor.",
+              en: "To get a student visa you need an offer of place from an NZQA-approved, recognised education provider in New Zealand. Course length, the type of institution (university, polytechnic, language school), and proof-of-funds requirements all directly affect your visa conditions.",
+            },
+          },
+          {
+            label: { tr: "Çalışma hakkı sınırlı olabilir", en: "Work rights may be limited" },
+            content: {
+              tr: "Bazı öğrenci vizeleri haftada belirli saate kadar çalışma izni tanır, bazı kısa kurslarda ise çalışma hakkı hiç yoktur. Bu tamamen kayıtlı olduğun kursun türüne ve seviyesine bağlıdır, başvurmadan önce mutlaka kendi durumun için resmi sayfadan kontrol et.",
+              en: "Some student visas allow work up to a set number of hours per week, while some short courses carry no work rights at all. This depends entirely on the type and level of course you're enrolled in, always check the official page for your specific situation before applying.",
+            },
+          },
+          {
+            label: { tr: "Mezuniyet sonrası çalışma yolu", en: "Post-study work pathway" },
+            content: {
+              tr: "Belirli seviyedeki bir programı tamamladıktan sonra Post-Study Work Visa'ya başvurarak Yeni Zelanda'da çalışmaya devam edebilirsin. Bu, öğrenci vizesinden sponsorlu çalışma vizesine geçişte en sık kullanılan köprülerden biri.",
+              en: "After completing a qualifying programme at a certain level, you can apply for a Post-Study Work Visa to continue working in New Zealand. This is one of the most common bridges from a student visa to a sponsored work visa.",
+            },
+            url: "https://www.immigration.govt.nz/visas/post-study-work-visa",
+          },
+          {
+            label: { tr: "📎 Kaynak: Öğrenci Vizeleri (Immigration NZ)", en: "📎 Source: Study Visas (Immigration NZ)" },
+            url: "https://www.immigration.govt.nz/study/study-visas/",
+          },
+        ],
+      },
+      {
+        label: { tr: "💼 Sponsorlu Çalışma Vizesi (AEWV)", en: "💼 Sponsored Work Visa (AEWV)" },
+        items: [
+          {
+            label: { tr: "Süreç üç aşamalıdır", en: "The process has three stages" },
+            content: {
+              tr: "AEWV başvurusu üç ayrı aşamadan oluşur: önce işveren Immigration NZ nezdinde akredite olur, sonra pozisyon için bir \"job check\" yapılır, en son sen kendi başvurunu yaparsın. Yani bu vizeye sadece sen başvuramazsın, işverenin de kendi tarafındaki adımları tamamlamış olması gerekir.",
+              en: "An AEWV application has three separate stages: first the employer becomes accredited with Immigration NZ, then the role goes through a \"job check\", and finally you submit your own application. You can't apply for this visa alone, your employer also has to complete their side of the process.",
+            },
+          },
+          {
+            label: { tr: "İşverenin akredite olması şart", en: "The employer must be accredited" },
+            content: {
+              tr: "Sana iş teklifi yapan işverenin Immigration NZ tarafından akredite edilmiş olması gerekiyor. Bir işverenin akreditasyonu olup olmadığını başvurmadan önce doğrulaman, olası dolandırıcılık veya usulsüz teklifleri elemede önemli bir adım.",
+              en: "The employer offering you a job needs to be accredited with Immigration NZ. Verifying an employer's accreditation status before you apply is an important step in filtering out scams or non-compliant offers.",
+            },
+            url: "https://www.immigration.govt.nz/work/worker-rights/what-your-employer-must-do-when-they-hire-you-on-an-aewv/",
+          },
+          {
+            label: { tr: "Maaş eşiği zamanla değişir", en: "The pay threshold changes over time" },
+            content: {
+              tr: "AEWV'nin belirli bir asgari maaş eşiğinin üzerinde ödeme yapılmasını şart koştuğu roller var. Bu eşik zaman zaman güncellendiği için burada kesin bir rakam vermek yanıltıcı olur, güncel eşiği her zaman resmi sayfadan kontrol et.",
+              en: "Some AEWV roles require pay above a set minimum threshold. Because this threshold is updated from time to time, quoting an exact figure here would be misleading, always check the current threshold on the official page.",
+            },
+            url: "https://immigration.govt.nz/visas/accredited-employer-work-visa",
+          },
+        ],
+      },
+      {
+        label: { tr: "❤️ Partner Vizesi", en: "❤️ Partner Visa" },
+        items: [
+          {
+            label: { tr: "İlişkinin \"gerçek ve istikrarlı\" olduğunu kanıtlaman gerekir", en: "You need to prove the relationship is \"genuine and stable\"" },
+            content: {
+              tr: "Bu vize, Yeni Zelanda vatandaşı veya kalıcı oturum sahibi biriyle evli, sivil birlikte ya da fiilen birlikte yaşayan (de facto) bir ilişkin varsa değerlendirilir. Immigration NZ, ilişkinin gerçekliğini ortak kira sözleşmesi, banka hesabı, fotoğraflar, tanıklık mektupları gibi somut kanıtlarla değerlendirir.",
+              en: "This visa is considered if you're married to, in a civil union with, or in a de facto relationship with a New Zealand citizen or resident. Immigration NZ assesses the genuineness of the relationship using concrete evidence like a joint tenancy agreement, shared bank account, photos, and letters of support.",
+            },
+          },
+          {
+            label: { tr: "Çalışma ve oturum izni versiyonları var", en: "There are both work and resident visa versions" },
+            content: {
+              tr: "Partner vizesi hem geçici bir çalışma vizesi hem de kalıcı oturum izni (residence) olarak sunulabiliyor, hangisine uygun olduğun ilişkinin süresine ve durumuna göre değişir. İkisinin de kendi belge ve kanıt şartları var.",
+              en: "A partner visa can be either a temporary work visa or a permanent residence visa, which one you qualify for depends on the length and status of your relationship. Each has its own document and evidence requirements.",
+            },
+            url: "https://www.immigration.govt.nz/visas/partner-of-a-new-zealander-resident-visa/",
+          },
+        ],
+      },
+      {
+        label: { tr: "✅ Hangi Yol Sana Uygun Olabilir?", en: "✅ Which Path Might Suit You?" },
+        items: [
+          {
+            label: { tr: "Kısa süreli deneyimlemek istiyorsan", en: "If you want a short-term experience first" },
+            content: {
+              tr: "18-30 yaş arasındaysan ve önce ülkeyi görüp deneyimlemek istiyorsan Çalışma Tatili Vizesi en hızlı ve en az bağlayıcı yoldur, iş bulmak için işveren sponsorluğu beklemene gerek yoktur.",
+              en: "If you're 18-30 and want to see and experience the country first, the Working Holiday Visa is the fastest and least binding route, you don't need to wait for employer sponsorship to find work.",
+            },
+          },
+          {
+            label: { tr: "Belirli bir mesleğe geçiş planlıyorsan", en: "If you're planning a career-focused transition" },
+            content: {
+              tr: "Yeni Zelanda'da tanınan bir alanda eğitim almak ve mezuniyet sonrası kalıcı bir çalışma yoluna geçmek istiyorsan, Öğrenci Vizesi → Post-Study Work Visa → AEWV/residence zinciri en yaygın izlenen yoldur.",
+              en: "If you want to study in a recognised field in New Zealand and move toward a lasting work pathway after graduating, the Student Visa → Post-Study Work Visa → AEWV/residence chain is the most commonly followed route.",
+            },
+          },
+          {
+            label: { tr: "Zaten bir iş teklifin varsa", en: "If you already have a job offer" },
+            content: {
+              tr: "Akredite bir işverenden somut bir iş teklifin varsa AEWV en doğrudan yoldur. Teklifi kabul etmeden önce işverenin gerçekten akredite olduğunu ve senden hiçbir ücret istemediğini mutlaka doğrula.",
+              en: "If you already have a concrete job offer from an accredited employer, the AEWV is the most direct route. Before accepting, always verify the employer is genuinely accredited and isn't asking you for any fee.",
+            },
+          },
+          {
+            label: { tr: "Bu sayfa bir tavsiye değildir", en: "This page is not advice" },
+            content: {
+              tr: "Yukarıdakiler genel bir yönlendirme amaçlıdır, senin özel durumun için resmi ve güncel şartları her zaman Immigration New Zealand'ın kendi sayfalarından teyit et. Ciddi bir belirsizlik varsa lisanslı bir göçmenlik danışmanına danış.",
+              en: "The above is general orientation only, always confirm the official and current requirements for your specific situation on Immigration New Zealand's own pages. If there's serious uncertainty, consult a Licensed Immigration Adviser.",
+            },
+            url: "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/",
+          },
+        ],
+      },
+    ],
     videos: [],
     related: ["vize-sureclari", "maas-vergi", "gunluk-hayat"],
   },
