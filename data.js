@@ -295,6 +295,117 @@ const TOPICS = [
       tr: `Vize ve maaş kadar önemli ama çok daha az konuşulan bir konu var: Yeni Zelanda'da günlük hayat gerçekten nasıl? Ev bulmaktan markete, kültürel farklardan beklenmedik zorluklara kadar, kimsenin sosyal medyada göstermediği ama herkesin bir noktada karşılaştığı gerçekleri bu sayfada bulabilirsin. Yerleştikten sonra ülkeyi biraz da gezip keşfetmek istersen <a href="/t/gezi-kesif.html">Gezi ve Keşif</a> sayfasına göz atabilirsin.`,
       en: `As important as visas and salaries, but far less talked about: what is everyday life in New Zealand actually like? From finding a home to grocery shopping, cultural differences to unexpected challenges, this page covers the realities nobody shows on social media but everyone eventually runs into. Once you've settled in and want to explore the country a bit, check out the <a href="/en/t/gezi-kesif.html">Travel and Exploration</a> page.`,
     },
+    accordion: [
+      {
+        label: { tr: "🏠 Ev Bulma Gerçekliği", en: "🏠 The Reality of Finding a Home" },
+        open: true,
+        items: [
+          {
+            label: { tr: "NZ'de referans geçmişin yoktur, bu normaldir", en: "You won't have an NZ rental history, and that's normal" },
+            content: {
+              tr: "Ev sahipleri genelde önceki bir NZ ev sahibinden referans ister. Yeni geldiğinde bu elinde olmaz. Bunu telafi etmek için işveren referansı, banka hesap dökümü veya birkaç aylık kirayı peşin önerme gibi yollar kullanılabilir. Bu durum çoğu yeni gelen için normaldir, seni diğerlerinden ayıran bir dezavantaj değildir.",
+              en: "Landlords usually ask for a reference from a previous NZ landlord. When you've just arrived, you won't have one. To make up for this, people often offer an employer reference, bank statements, or a few months' rent upfront. This is a normal situation for most newcomers, not a disadvantage that sets you apart from everyone else.",
+            },
+          },
+          {
+            label: { tr: "İyi flat'ler hızlı kapanır, rekabet gerçektir", en: "Good flats go fast, the competition is real" },
+            content: {
+              tr: "Özellikle Auckland ve Wellington gibi büyük şehirlerde, uygun fiyatlı ve iyi konumdaki flat ilanları saatler içinde onlarca başvuru alabilir. İlanı gördüğün an başvurmak, mümkünse hızlıca bir görüntülü/yüz yüze görüşme ayarlamak avantaj sağlar.",
+              en: "Especially in bigger cities like Auckland and Wellington, a well-located, reasonably priced flat listing can get dozens of applications within hours. Applying the moment you see a listing, and arranging a viewing or video call quickly, gives you an edge.",
+            },
+          },
+          {
+            label: { tr: "Kiracı haklarını öğren", en: "Know your rights as a tenant" },
+            content: {
+              tr: "Yeni Zelanda'da kiracıların yasal hakları net bir şekilde tanımlanmıştır: bond'un nasıl korunduğundan, ev sahibinin ne zaman içeri girebileceğine kadar. Taşınmadan önce bu hakları bilmek, ileride çıkabilecek anlaşmazlıklarda seni korur.",
+              en: "Tenants in New Zealand have clearly defined legal rights, from how your bond is protected to when a landlord can enter the property. Knowing these rights before you move in protects you if a dispute comes up later.",
+            },
+            url: "https://www.tenancy.govt.nz/starting-a-tenancy/new-to-tenancy/information-for-new-tenants/",
+          },
+        ],
+      },
+      {
+        label: { tr: "🚗 Araç Kullanma ve Ehliyet", en: "🚗 Driving and Your Licence" },
+        items: [
+          {
+            label: { tr: "Trafik SOLDAN akar, Türkiye'nin tam tersi", en: "Traffic drives on the LEFT, the opposite of Turkey" },
+            content: {
+              tr: "Yeni Zelanda'da araçlar yolun sol tarafından gider, direksiyon sağdadır. Bu, Türkiye'den gelen sürücüler için alışması en çok zaman alan ve en riskli farklardan biri. İlk günlerde özellikle kavşaklarda ve dönel kavşaklarda (roundabout) fazladan dikkatli ol.",
+              en: "In New Zealand, vehicles drive on the left side of the road and the steering wheel is on the right. This is one of the hardest and riskiest adjustments for drivers coming from Turkey. Be extra careful in the first days, especially at intersections and roundabouts.",
+            },
+          },
+          {
+            label: { tr: "Yabancı ehliyetle ne kadar sürebilirsin?", en: "How long can you drive on your overseas licence?" },
+            content: {
+              tr: "Şu an geçerli bir yabancı araç ehliyetiyle Yeni Zelanda'ya son giriş tarihinden itibaren 18 aya kadar sürebilirsin. Ancak bu süre 1 Kasım 2026'dan itibaren 12 aya düşürülecek. Ülkeden çıkıp tekrar girersen süre yeniden başlar. Uluslararası sürücü belgesi (IDP) tek başına ehliyet dönüşümü için yeterli değildir, fiziksel ehliyetini ibraz etmen gerekir.",
+              en: "With a currently valid overseas car licence, you can drive for up to 18 months from your last date of entry into New Zealand. However, this will be reduced to 12 months from 1 November 2026. If you leave the country and re-enter, the period restarts. An International Driving Permit (IDP) alone isn't enough to convert your licence, you'll need to present your physical overseas licence.",
+            },
+            url: "https://www.nzta.govt.nz/travelling-on-our-roads/visitors-and-new-residents/driving-on-nz-roads/time-limit-extended-for-driving-on-an-overseas-licence",
+          },
+          {
+            label: { tr: "Türkiye ehliyeti \"muaf ülke\" listesinde değil", en: "A Turkish licence is not on the \"exempt country\" list" },
+            content: {
+              tr: "NZ Transport Agency, bazı ülkelerin ehliyetlerini (çoğunlukla AB, İngiltere, ABD, Kanada, Avustralya, Japonya, Güney Kore gibi) \"muaf\" sayıp dönüşümü kolaylaştırıyor. Türkiye bu listede değil, yani NZ ehliyetine geçmek için hem yazılı (teori) hem de pratik sınava girmen gerekiyor. Güncel listeyi ve tam süreci resmi sayfadan kontrol et.",
+              en: "NZ Transport Agency treats licences from certain countries (mostly the EU, UK, US, Canada, Australia, Japan, South Korea) as \"exempt\", making conversion easier. Turkey is not on that list, meaning you'll need to sit both a written (theory) and a practical test to get an NZ licence. Check the current list and full process on the official page.",
+            },
+            url: "https://www.nzta.govt.nz/driver-licences/new-residents-and-visitors/converting-to-nz-driver-licence/converting-a-car-licence/converting-a-car-licence-from-an-exempt-country",
+          },
+        ],
+      },
+      {
+        label: { tr: "🏥 Sağlık Sistemi ve Sigorta", en: "🏥 Healthcare and Insurance" },
+        items: [
+          {
+            label: { tr: "Kamu sağlık sistemi vizenin uzunluğuna bağlı", en: "Public healthcare access depends on your visa's length" },
+            content: {
+              tr: "Devlet destekli (ücretsiz/düşük ücretli) sağlık hizmetlerinden yararlanmak için, çalışma vizenin seni Yeni Zelanda'da toplamda 2 yıl veya daha uzun süre kalmaya hak kazandırması gerekir. Working Holiday gibi 1 yıllık bir vizen varsa bu şartı karşılamazsın, bu yüzden özel sağlık/seyahat sigortası şart.",
+              en: "To access publicly funded (free or low-cost) health services, your work visa needs to entitle you to stay in New Zealand for a total of 2 years or more. If you're on a 1-year visa like a Working Holiday, you won't meet this, which is exactly why private health or travel insurance is essential.",
+            },
+            url: "https://www.tewhatuora.govt.nz/our-health-system/eligibility-for-publicly-funded-health-services/guide-to-eligibility-for-public-health-services/",
+          },
+          {
+            label: { tr: "Acil durumda 111'i ara, ambulans ücretlidir", en: "Call 111 in an emergency, but ambulance transport isn't free" },
+            content: {
+              tr: "Acil durumlarda 111'i aramak Türkiye'deki gibi ücretsizdir ve herkese açıktır. Ancak ambulans nakli, sağlık sigortan veya ACC kapsamın yoksa genelde ücretlidir. Kaza sonucu yaralanmalarda ACC (Accident Compensation Corporation) sistemi, vatandaşlık/vize durumundan bağımsız olarak seni kapsayabilir.",
+              en: "Calling 111 in an emergency is free and available to everyone, just like in Turkey. However, ambulance transport is generally not free unless you have health insurance or ACC cover. For injuries from an accident, the ACC (Accident Compensation Corporation) system can cover you regardless of your citizenship or visa status.",
+            },
+          },
+        ],
+      },
+      {
+        label: { tr: "🌦️ Ev Konforu, İklim ve Kültürel Farklar", en: "🌦️ Home Comfort, Climate and Cultural Differences" },
+        items: [
+          {
+            label: { tr: "Evler Türkiye'deki gibi merkezi ısıtmalı değildir", en: "Homes aren't centrally heated the way they are in Turkey" },
+            content: {
+              tr: "Yeni Zelanda evlerinin büyük kısmı, özellikle eski yapılar, merkezi ısıtma sistemine sahip değildir ve yalıtımı Türkiye standartlarına göre zayıf kalabilir. Kışın içerisi beklenenden daha soğuk olabilir, ısıtıcı (heat pump) olup olmadığını ev bakarken mutlaka sor.",
+              en: "A large share of New Zealand homes, especially older ones, don't have central heating, and insulation can be weaker than Turkish standards. Indoors can feel colder than expected in winter, so always ask whether a property has a heat pump when viewing.",
+            },
+          },
+          {
+            label: { tr: "Güneş çok daha güçlü yakar", en: "The sun burns much stronger" },
+            content: {
+              tr: "Yeni Zelanda'nın UV seviyesi, ozon tabakasındaki incelme nedeniyle Akdeniz iklimine göre belirgin şekilde daha yüksektir. Bulutlu bir günde bile güneş kremi kullanmak ciddiye alınması gereken bir tavsiyedir, sadece turistik bir uyarı değildir.",
+              en: "New Zealand's UV levels are noticeably higher than in a Mediterranean climate, due to thinning in the ozone layer over the region. Wearing sunscreen even on a cloudy day is genuinely important advice, not just a tourist-brochure warning.",
+            },
+          },
+          {
+            label: { tr: "Bahşiş kültürü yoktur", en: "There's no tipping culture" },
+            content: {
+              tr: "Restoranlarda veya taksilerde bahşiş bırakmak beklenmez, bırakmasan da kimse tepki göstermez. İyi bir hizmete teşekkür etmek istersen, bu tamamen isteğe bağlıdır ve küçük bir jest olarak görülür.",
+              en: "Tipping at restaurants or in taxis isn't expected, and nobody will react if you don't leave one. If you want to thank someone for good service, it's entirely optional and seen as a small, extra gesture.",
+            },
+          },
+          {
+            label: { tr: "İş kültürü daha az hiyerarşiktir", en: "Work culture is less hierarchical" },
+            content: {
+              tr: "Kiwi iş kültürü genelde daha düz bir hiyerarşiye sahiptir, yöneticine ilk isimle hitap etmek yaygındır. Doğrudan ama nazik bir iletişim tarzı beklenir; aşırı resmiyet bazen mesafeli algılanabilir.",
+              en: "Kiwi work culture generally has a flatter hierarchy, and calling your manager by their first name is common. A direct but polite communication style is expected; being overly formal can sometimes come across as distant.",
+            },
+          },
+        ],
+      },
+    ],
     videos: [],
     related: ["maas-vergi", "gezi-kesif", "isci-haklari"],
   },
