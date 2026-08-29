@@ -284,12 +284,12 @@ const TOPICS = [
     slug: "dolandiriciliklardan-korunma",
     title: { tr: "Yeni Zelanda'da Dolandırılmamak İçin Rehber", en: "Guide to Avoiding Scams in New Zealand" },
     summary: {
-      tr: "Göçmenlik dolandırıcılığı Yeni Zelanda'da gerçek bir tehdit. İş teklifi, vize vaadi veya danışman seçiminde dikkat etmen gereken noktalar.",
-      en: "Immigration scams are a real threat in New Zealand. Here are the key things to watch for with job offers, visa promises, or choosing an adviser.",
+      tr: "Yeni Zelanda'da dolandırıcılık gerçek bir tehdit. İş teklifi, vize vaadi, ev ilanı veya danışman seçiminde dikkat etmen gereken noktalar.",
+      en: "Scams are a real threat in New Zealand. Here are the key things to watch for with job offers, visa promises, rental listings, or choosing an adviser.",
     },
     intro: {
-      tr: `Yeni Zelanda'ya yeni gelenler, dolandırıcılar için kolay hedef haline gelebiliyor: sahte iş teklifleri, yetkisiz danışmanlar, sahte web siteleri. Bu sayfa, en sık karşılaşılan dolandırıcılık türlerini ve kendini nasıl koruyacağını anlatıyor. Bir bilginin resmi olup olmadığından emin değilsen, her zaman <a href="/t/vize-sureclari.html">Vize Türleri ve Resmi Süreçler</a> sayfasındaki resmi kaynaklarla karşılaştır.`,
-      en: `Newcomers to New Zealand can easily become targets for scammers: fake job offers, unlicensed advisers, fraudulent websites. This page walks through the most common types of scams and how to protect yourself. If you're not sure whether something official is real, always compare it against the official sources on the <a href="/en/t/vize-sureclari.html">Visa Types and Official Processes</a> page.`,
+      tr: `Yeni Zelanda'ya yeni gelenler, dolandırıcılar için kolay hedef haline gelebiliyor: sahte iş teklifleri, yetkisiz danışmanlar, sahte web siteleri, hatta sahte ev ilanları. Bu sayfa, en sık karşılaşılan dolandırıcılık türlerini ve kendini nasıl koruyacağını anlatıyor. Bir bilginin resmi olup olmadığından emin değilsen, her zaman <a href="/t/vize-sureclari.html">Vize Türleri ve Resmi Süreçler</a> sayfasındaki resmi kaynaklarla karşılaştır.`,
+      en: `Newcomers to New Zealand can easily become targets for scammers: fake job offers, unlicensed advisers, fraudulent websites, even fake rental listings. This page walks through the most common types of scams and how to protect yourself. If you're not sure whether something official is real, always compare it against the official sources on the <a href="/en/t/vize-sureclari.html">Visa Types and Official Processes</a> page.`,
     },
     accordion: [
       {
@@ -361,6 +361,48 @@ const TOPICS = [
             content: {
               tr: "Vize başvurusu, sağlık muayenesi veya herhangi bir resmi işlem için senden banka hesabına havale istenmesi kesinlikle resmi bir süreç değildir. Resmi ödemeler yalnızca Immigration NZ'nin kendi sistemi üzerinden kredi/banka kartıyla veya onaylı klinikler aracılığıyla yapılır.",
               en: "Being asked to transfer money to a bank account for a visa application, medical exam, or any official process is never a legitimate procedure. Official payments are only made through Immigration NZ's own system by credit/debit card, or through approved clinics.",
+            },
+          },
+        ],
+      },
+      {
+        label: { tr: "🚩 Ev İlanı ve İkinci El Eşya Dolandırıcılıkları", en: "🚩 Rental Listing and Marketplace Scams" },
+        items: [
+          {
+            label: { tr: "Görmeden veya görüntülü görüşmeden asla ön ödeme yapma", en: "Never pay a deposit before viewing in person or on a video call" },
+            content: {
+              tr: "Trade Me veya Facebook Marketplace'te \"yurt dışındayım, anahtarı kargolamadan önce bond/depozito yatır\" diyen ilanlar klasik bir dolandırıcılık yöntemidir. Evi bizzat veya en azından görüntülü görüşmeyle görmeden, ilan sahibiyle yüz yüze/görüntülü doğrulama yapmadan hiçbir ödeme yapma.",
+              en: "Listings on Trade Me or Facebook Marketplace saying \"I'm overseas, pay the bond before I courier the keys\" are a classic scam pattern. Never pay anything before viewing the property in person or at least on a video call, and verifying the lister is real.",
+            },
+          },
+          {
+            label: { tr: "Bond, resmi sistemde (Bond Hub) kayıtlı olmalı", en: "The bond must be lodged in the official system (Bond Hub)" },
+            content: {
+              tr: "Yeni Zelanda'da alınan bond (depozito), ev sahibi tarafından yasal olarak Tenancy Services'in Bond Hub sistemine yatırılmak zorundadır. Sana \"bana elden/IBAN'a gönder\" diyen ve resmi makbuz vermeyen bir ev sahibi büyük risk taşır; bond'unun kayıtlı olup olmadığını kendi Bond Hub hesabından kontrol edebilirsin.",
+              en: "In New Zealand, a bond a landlord collects must legally be lodged with Tenancy Services' Bond Hub system. A landlord who asks you to send it \"directly to my account\" without an official receipt is a major red flag; you can check whether your bond was actually lodged through your own Bond Hub account.",
+            },
+            url: "https://www.tenancy.govt.nz/rent-bond-and-bills/bond/",
+          },
+          {
+            label: { tr: "Yazılı kira sözleşmesi zorunludur", en: "A written tenancy agreement is required" },
+            content: {
+              tr: "Yeni Zelanda'da her kiralık ev için yazılı bir tenancy agreement (kira sözleşmesi) olması gerekir. Sözleşme imzalamadan, şartları okumadan ve bir kopyasını almadan taşınma veya ödeme yapma.",
+              en: "Every rental in New Zealand is required to have a written tenancy agreement. Don't move in or pay anything before signing an agreement, reading its terms, and getting your own copy.",
+            },
+            url: "https://www.tenancy.govt.nz/starting-a-tenancy/tenancy-agreements/",
+          },
+          {
+            label: { tr: "Piyasanın çok altındaki fiyata dikkat", en: "Watch for prices far below market rate" },
+            content: {
+              tr: "Aynı bölgedeki benzer ilanlardan belirgin şekilde ucuz bir kira veya satış ilanı, dikkat çekmek için kasıtlı olarak düşük tutulmuş bir tuzak olabilir. Fiyatı bölgedeki diğer ilanlarla karşılaştır, aşırı cazip görünen teklifin gerçek olma ihtimaline şüpheyle yaklaş.",
+              en: "A rental or sale price noticeably below similar listings in the same area may be deliberately lowballed bait. Compare it against other listings in the area, and be sceptical of an offer that seems too good to be true.",
+            },
+          },
+          {
+            label: { tr: "Facebook Marketplace'te ikinci el eşya alırken", en: "When buying second-hand items on Facebook Marketplace" },
+            content: {
+              tr: "Mümkünse eşyayı görüp kontrol ettikten sonra, halka açık ve güvenli bir yerde nakit veya anlık transferle öde. Görmediğin bir eşya için tanımadığın birine önceden havale yapma, özellikle satıcı \"kargoyla göndereceğim\" deyip önce ödeme istiyorsa uzak dur.",
+              en: "Where possible, pay in a public, safe location after seeing and checking the item, using cash or an instant transfer. Don't wire money in advance to a stranger for an item you haven't seen, especially if the seller insists on payment before promising to \"post it\" to you.",
             },
           },
         ],

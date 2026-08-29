@@ -44,6 +44,7 @@ const CHECKLIST = {
       items: [
         { t: "Banka hesabı aç (genelde yüz yüze işlem gerekir, adres kanıtı isteyebilirler)" },
         { t: "IRD numarası başvurusu yap (başvuru için NZ banka hesap numarası isteniyor, bu yüzden banka hesabından sonra yap)" },
+        { t: "Toplu taşıma kartı çıkart, sistem şehre göre değişir: Auckland'da AT HOP, Wellington'da Snapper, Christchurch'te Metrocard", link: ["AT HOP (Auckland)", "https://at.govt.nz/bus-train-ferry/at-hop-card/"] },
         { t: "Önce flatting (ortak ev/oda) seçeneklerine bak, çoğu yeni gelen için en hızlı ve uygun maliyetli başlangıç budur", link: ["NZ Flatmates", "https://www.nzflatmates.co.nz/"] },
         { t: "Durumuna göre (aile, uzun vadeli plan, bütçe) tek başına bir ev/daire kiralamaya geç", link: ["Trade Me Property", "https://www.trademe.co.nz/a/property/rental"] },
         { t: "Vizenin çalışma koşullarını (saat sınırı, işveren bağımlılığı vb.) kontrol et" },
@@ -100,6 +101,7 @@ const CHECKLIST = {
       items: [
         { t: "Open a bank account (usually needs to be done in person, they may ask for proof of address)" },
         { t: "Apply for your IRD number (the application asks for a NZ bank account number, so do this after opening your account)" },
+        { t: "Get a public transport card, the system differs by city: AT HOP in Auckland, Snapper in Wellington, Metrocard in Christchurch", link: ["AT HOP (Auckland)", "https://at.govt.nz/bus-train-ferry/at-hop-card/"] },
         { t: "Start with flatting (shared house/room) options first, the fastest and most affordable start for most newcomers", link: ["NZ Flatmates", "https://www.nzflatmates.co.nz/"] },
         { t: "Depending on your situation (family, long-term plans, budget), move on to renting a place of your own", link: ["Trade Me Property", "https://www.trademe.co.nz/a/property/rental"] },
         { t: "Check your visa's work conditions (hour limits, employer restrictions etc.)" },
