@@ -23,8 +23,11 @@
   const STRINGS = {
     tr: {
       backToTopics: "← Tüm konular",
+      lastUpdated: "Son güncelleme:",
       topicsEyebrow: "Rehber",
       topicsHeading: "Konu Başlıkları",
+      topicSearchPh: "Konu ara... (örn. vize, market, ehliyet)",
+      topicSearchEmpty: "Bu aramayla eşleşen bir konu bulunamadı.",
       videosEyebrow: "İzle",
       videosHeading: "Videolar",
       heroEyebrow: "Türkiye'den Yeni Zelanda'ya Rehber",
@@ -126,8 +129,11 @@
     },
     en: {
       backToTopics: "← All topics",
+      lastUpdated: "Last updated:",
       topicsEyebrow: "Guide",
       topicsHeading: "Topics",
+      topicSearchPh: "Search topics... (e.g. visa, groceries, driving)",
+      topicSearchEmpty: "No topics match that search.",
       videosEyebrow: "Watch",
       videosHeading: "Videos",
       heroEyebrow: "Turkey to New Zealand, Guided",

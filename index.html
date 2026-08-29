@@ -80,6 +80,10 @@
     <div class="container">
       <span class="eyebrow" id="topics-eyebrow"></span>
       <h2 id="topics-heading"></h2>
+      <div class="topic-search">
+        <input type="search" id="topic-search-input" autocomplete="off" />
+      </div>
+      <p class="topic-search-empty" id="topic-search-empty" hidden></p>
       <div class="topic-grid" id="topic-grid"></div>
     </div>
   </section>
@@ -187,15 +191,37 @@
     `;
 
     const grid = document.getElementById("topic-grid");
-    grid.innerHTML = TOPICS.map(
-      (t, i) => `
-        <a class="topic-card" href="${BASE}/t/${t.slug}.html">
+    const searchInput = document.getElementById("topic-search-input");
+    const searchEmpty = document.getElementById("topic-search-empty");
+    searchInput.placeholder = T("topicSearchPh");
+    searchEmpty.textContent = T("topicSearchEmpty");
+
+    const norm = (s) => (s || "").toLocaleLowerCase("tr").normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const topicSearchIndex = TOPICS.map((t) => {
+      const accordionText = (t.accordion || [])
+        .flatMap((g) => [L(g.label), ...g.items.map((i) => L(i.label))])
+        .join(" ");
+      return norm([L(t.title), L(t.summary), accordionText].join(" "));
+    });
+
+    function renderGrid(query) {
+      const q = norm(query || "");
+      let shown = 0;
+      grid.innerHTML = TOPICS.map((t, i) => {
+        const match = !q || topicSearchIndex[i].includes(q);
+        if (match) shown++;
+        return `
+        <a class="topic-card" href="${BASE}/t/${t.slug}.html"${match ? "" : ' hidden'}>
           <span class="topic-card-index">${String(i + 1).padStart(2, "0")}</span>
           <h3>${L(t.title)}</h3>
           <p>${L(t.summary)}</p>
         </a>
-      `
-    ).join("");
+      `;
+      }).join("");
+      searchEmpty.hidden = shown > 0;
+    }
+    renderGrid("");
+    searchInput.addEventListener("input", (e) => renderGrid(e.target.value));
 
     const askForm = document.getElementById("ask-form");
     askForm.querySelector('input[name="name"]').value = localStorage.getItem("zy_lead_name") || "";

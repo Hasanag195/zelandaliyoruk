@@ -4,6 +4,9 @@ const SITE = {
   channelUrl: "https://www.youtube.com/@zelandalıyoruk",
   instagramUrl: "https://www.instagram.com/zelandaliyoruk",
   tiktokUrl: "https://www.tiktok.com/@zelandaliyoruk",
+  // Rehber içeriği (data.js) her önemli güncellemede bu tarihi de güncelle.
+  // Konu sayfalarında "Son güncelleme" olarak gösterilir.
+  contentUpdated: "2026-08-30",
 };
 
 const TOPICS = [
@@ -12,7 +15,7 @@ const TOPICS = [
     title: { tr: "Yeni Zelanda'ya Nasıl Gelinir", en: "How to Come to New Zealand" },
     summary: {
       tr: "Yeni Zelanda'ya gelmenin yasal yolları: sponsorlu çalışma vizesi, öğrenci vizesi ve diğer seçenekler.",
-      en: "Legal ways to come to New Zealand: sponsored work visa, student visa and other options.",
+      en: "Legal ways to come to New Zealand from Turkey: sponsored work visa, student visa, partner visa and other realistic options explained.",
     },
     intro: {
       tr: `Türkiye'den Yeni Zelanda'ya gelmek isteyenler için en sık sorulan soru budur: hangi yol yasal ve gerçekçi? Genel olarak dört ana yol var.<br><br><strong>Çalışma Tatili Vizesi:</strong> Türkiye ile Yeni Zelanda arasında özel bir anlaşma var. 18-30 yaş arasındakiler bu vizeyle bir yıla kadar çalışıp seyahat edebiliyor.<br><br><strong>Öğrenci Vizesi:</strong> Yeni Zelanda'da tanınan bir okula kayıt olarak alınıyor. Bazı öğrenci vizeleri sınırlı çalışma hakkı da tanıyor, mezuniyetten sonra çalışma vizesine geçiş yolu da var.<br><br><strong>Sponsorlu Çalışma Vizesi (AEWV):</strong> Yeni Zelanda'da akredite olmuş bir işverenden iş teklifi alarak başvurulan yol. İşveren sponsorluğu şart.<br><br><strong>Partner Vizesi:</strong> Yeni Zelanda vatandaşı veya kalıcı oturum sahibi biriyle ciddi ve kanıtlanabilir bir ilişkisi olanlar için.<br><br>Her yolun kendi belgeleri ve şartları var. Hangisinin sana uyduğunu görmek için <a href="/t/vize-sureclari.html">Vize Türleri ve Resmi Süreçler</a> sayfasına bakabilirsin, orada her yol için resmi kaynaklara da ulaşırsın. Amaç seni belirli bir yola yönlendirmek değil, hangi seçeneklerin var olduğunu net şekilde göstermek. Nihai ve güncel şartlar için her zaman Immigration New Zealand'ın resmi sayfaları esas alınmalı.`,
@@ -25,8 +28,8 @@ const TOPICS = [
     slug: "vize-sureclari",
     title: { tr: "Vize Türleri & Resmi Süreçler", en: "Visa Types & Official Processes" },
     summary: {
-      tr: "Türkiye'den Yeni Zelanda'ya gelmek için ihtiyacın olan resmi bilgiler tek yerde. Başlığa tıkla, doğrudan resmi kaynağa git. Bu sayfa danışmanlık değildir.",
-      en: "Everything official you need to come to New Zealand from Turkey, in one place. Click a heading to go straight to the official source. This page is not advice.",
+      tr: "Türkiye'den Yeni Zelanda'ya gelmek için ihtiyacın olan resmi bilgiler tek yerde. Başlığa tıkla, resmi kaynağa git. Bu sayfa danışmanlık değildir.",
+      en: "Everything official you need to come to New Zealand from Turkey, in one place. Click a heading to go straight to the official source.",
     },
     intro: {
       tr: `Yeni Zelanda vize sistemi kafa karıştırıcı olabilir, onlarca kategori var ve her birinin şartı farklı. Bu sayfa kendi yorumumuzu eklemeden, doğrudan Immigration New Zealand'ın güncel sayfalarına bağlanıyor. Hangi yolun sana uygun olabileceğine dair kısa bir özet istersen önce <a href="/t/nasil-gelinir.html">Yeni Zelanda'ya Nasıl Gelinir</a> sayfasına bakabilirsin.`,
@@ -115,8 +118,8 @@ const TOPICS = [
     slug: "maas-vergi",
     title: { tr: "Maaş & Vergi Sistemi", en: "Salary & Tax System" },
     summary: {
-      tr: "Yeni Zelanda'da maaşlar, vergi sistemi ve çalışma hayatı hakkında gerçekler.",
-      en: "The realities of salaries, the tax system and working life in New Zealand.",
+      tr: "Yeni Zelanda'da maaşlar, gelir vergisi dilimleri, ACC ve KiwiSaver kesintileri nasıl işler? Gerçek rakamlarla, hesap makineli anlatım.",
+      en: "How do salaries, income tax brackets, ACC and KiwiSaver deductions actually work in New Zealand? Real numbers, with a built-in calculator.",
     },
     intro: {
       tr: `Yeni Zelanda'da ne kadar kazanılır, vergi sistemi nasıl işler, eline geçen maaş beklediğinden ne kadar farklı olur? Burada üç şey maaşından otomatik olarak kesilir.<br><br><strong>Gelir vergisi (PAYE):</strong> İşveren, vergiyi maaşından kaynağında keser, sen ayrıca bir şey yapmazsın. Sistem dilimlidir, yani tüm kazancına en yüksek oran uygulanmaz, sadece o dilime giren kısma uygulanır. IRD'nin güncel resmi dilimleri (2025-2026): 15.600 NZD'ye kadar %10.5, 15.600-53.500 NZD arası %17.5, 53.500-78.100 NZD arası %30, 78.100-180.000 NZD arası %33, 180.000 NZD üzeri %39.<br><br><strong>ACC işçi primi:</strong> İş kazası sigortası için maaşından %1.75 daha kesilir (belirli bir tavana kadar).<br><br><strong>KiwiSaver:</strong> Çoğu çalışanın maaşından %3, %4, %6, %8 veya %10 oranında (kendi seçtiğin) bir emeklilik tasarrufu kesilir. Bu para kaybolmuyor, kendi KiwiSaver hesabına gidiyor, istersen katılmayabilirsin.<br><br>Aşağıdaki hesap makinesiyle brüt maaşını girip net eline ne geçeceğini tahmini olarak görebilirsin. Güncel oranları ve asgari ücreti resmi kaynaklardan da kontrol edebilirsin. İşe başladığında haklarını bilmek de en az maaş kadar önemli, bunun için <a href="/t/isci-haklari.html">İşçi Hakları</a> sayfasına bakabilirsin.`,
@@ -142,8 +145,8 @@ const TOPICS = [
     slug: "gunluk-hayat",
     title: { tr: "Günlük Hayat Gerçekleri", en: "Everyday Life Realities" },
     summary: {
-      tr: "Yeni Zelanda'da yaşamın gündelik gerçekleri: kimsenin anlatmadığı detaylar.",
-      en: "The everyday realities of life in New Zealand: the details nobody tells you.",
+      tr: "Yeni Zelanda'da yaşamın gündelik gerçekleri: ev bulma, market fiyatları, kültürel farklar ve kimsenin sosyal medyada anlatmadığı detaylar.",
+      en: "The everyday realities of life in New Zealand: finding a home, grocery prices, cultural differences and the details nobody shows on social media.",
     },
     intro: {
       tr: `Vize ve maaş kadar önemli ama çok daha az konuşulan bir konu var: Yeni Zelanda'da günlük hayat gerçekten nasıl? Ev bulmaktan markete, kültürel farklardan beklenmedik zorluklara kadar, kimsenin sosyal medyada göstermediği ama herkesin bir noktada karşılaştığı gerçekleri bu sayfada bulabilirsin. Yerleştikten sonra ülkeyi biraz da gezip keşfetmek istersen <a href="/t/gezi-kesif.html">Gezi ve Keşif</a> sayfasına göz atabilirsin.`,
@@ -156,8 +159,8 @@ const TOPICS = [
     slug: "isci-haklari",
     title: { tr: "İşçi Hakları", en: "Worker Rights" },
     summary: {
-      tr: "Yeni Zelanda'da çalışma vizesiyle çalışırken haklarını ve işvereninin sorumluluklarını bil. Başlığa tıkla, altındaki konulardan resmi sayfaya git.",
-      en: "Know your rights and your employer's responsibilities while working in New Zealand on a work visa. Click the heading, then any topic to go to the official page.",
+      tr: "Yeni Zelanda'da çalışma vizesiyle çalışırken haklarını ve işvereninin sorumluluklarını bil. Başlığa tıkla, resmi kaynağa git.",
+      en: "Know your rights and your employer's responsibilities while working in New Zealand on a work visa, with links straight to official pages.",
     },
     intro: {
       tr: `Çalışma vizesiyle Yeni Zelanda'da çalışmaya başladığında, işverenin sana karşı yasal sorumlulukları var, senin de bilmen gereken haklar var. Bu sayfa, göçmen işçilerin haklarını ve olası sorun durumlarında nereye başvurulacağını doğrudan resmi kaynaklarla anlatıyor. İş teklifi karşılığında senden para isteyen ya da sana garanti veren biri varsa, <a href="/t/dolandiriciliklardan-korunma.html">Dolandırılmamak İçin Rehber</a> sayfasına bak.`,
@@ -202,8 +205,8 @@ const TOPICS = [
     slug: "gezi-kesif",
     title: { tr: "Gezi & Keşif", en: "Travel & Exploration" },
     summary: {
-      tr: "Yeni Zelanda'nın doğası ve gezilecek yerleri hakkında genel bir bakış.",
-      en: "A general look at New Zealand's nature and places worth visiting.",
+      tr: "Yeni Zelanda'nın doğası ve gezilecek yerleri hakkında genel bir bakış: bilinen rotalar, Yüzüklerin Efendisi çekim yerleri ve hafta sonu gezileri.",
+      en: "A general look at New Zealand's nature and places worth visiting: well-known routes, Lord of the Rings filming spots and weekend trip ideas.",
     },
     intro: {
       tr: `Yeni Zelanda sadece vize ve iş süreçlerinden ibaret değil, dünyanın en etkileyici doğal manzaralarından bazılarına da ev sahipliği yapıyor. Aşağıda, ilk kez gidecekler için bilinen ve gerçek yerlerin kısa bir listesi var. Yerleştikten sonra hafta sonları keşfetmek için iyi bir başlangıç noktası olabilir.`,
@@ -281,7 +284,7 @@ const TOPICS = [
     slug: "dolandiriciliklardan-korunma",
     title: { tr: "Yeni Zelanda'da Dolandırılmamak İçin Rehber", en: "Guide to Avoiding Scams in New Zealand" },
     summary: {
-      tr: "Göçmenlik dolandırıcılığı Yeni Zelanda'da gerçek bir tehdit. İş teklifi, vize vaadi veya danışman seçiminde dikkat etmen gereken temel noktalar burada.",
+      tr: "Göçmenlik dolandırıcılığı Yeni Zelanda'da gerçek bir tehdit. İş teklifi, vize vaadi veya danışman seçiminde dikkat etmen gereken noktalar.",
       en: "Immigration scams are a real threat in New Zealand. Here are the key things to watch for with job offers, visa promises, or choosing an adviser.",
     },
     intro: {

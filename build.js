@@ -31,11 +31,24 @@ vm.runInContext(fs.readFileSync(path.join(ROOT, "data.js"), "utf8"), sandbox);
 
 // data.js top-level `const` bağlamın lexical scope'unda kalır; ifadeyle çekiyoruz.
 const TOPICS = vm.runInContext("typeof TOPICS !== 'undefined' ? TOPICS : null", sandbox);
+const SITE = vm.runInContext("typeof SITE !== 'undefined' ? SITE : null", sandbox);
 const STRINGS = sandbox.window._STRINGS;
 if (!Array.isArray(TOPICS) || !STRINGS) {
   console.error("data.js / i18n.js okunamadı");
   process.exit(1);
 }
+
+const lastUpdatedHtml = (lang) => {
+  if (!SITE || !SITE.contentUpdated) return "";
+  const d = new Date(SITE.contentUpdated + "T00:00:00Z");
+  const formatted = d.toLocaleDateString(lang === "en" ? "en-NZ" : "tr-TR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+  return `<p class="last-updated">${esc(T(lang, "lastUpdated"))} <time datetime="${SITE.contentUpdated}">${esc(formatted)}</time></p>`;
+};
 
 const T = (lang, key) =>
   (STRINGS[lang] && STRINGS[lang][key] != null ? STRINGS[lang][key] : STRINGS.tr[key]) ?? key;
@@ -227,6 +240,7 @@ function page(topic, lang) {
       <span class="eyebrow">${esc(T(lang, "topicsEyebrow"))}</span>
       <h1>${esc(L(topic.title, lang))}</h1>
       <p class="summary">${esc(L(topic.summary, lang))}</p>
+      ${lastUpdatedHtml(lang)}
       ${topic.intro ? `<p class="topic-intro">${L(topic.intro, lang)}</p>` : ""}
       ${closest ? `<a class="highlight-link" href="${base}/t/${closest.slug}.html">${esc(L(closest.title, lang))}</a>` : ""}
       <a class="share-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">${esc(T(lang, "shareBtn"))}</a>

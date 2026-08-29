@@ -339,12 +339,44 @@ header.site-header .container {
   background: linear-gradient(90deg, #D4A72C, transparent);
 }
 
+.topic-search {
+  max-width: 420px;
+  margin: 28px auto 0;
+}
+
+.topic-search input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topic-search input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.topic-search-empty {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
 .topic-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 26px;
   margin-top: 40px;
+}
+
+.topic-grid a[hidden] {
+  display: none;
 }
 
 .topic-card {
@@ -525,6 +557,14 @@ footer.site-footer {
   max-width: 640px;
   margin-bottom: 12px;
   font-size: 1.02rem;
+}
+
+.last-updated {
+  color: var(--muted);
+  font-size: 0.82rem;
+  opacity: 0.75;
+  margin: 0 0 20px;
+  letter-spacing: 0.01em;
 }
 
 .topic-intro {
