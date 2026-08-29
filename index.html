@@ -81,6 +81,7 @@
       <span class="eyebrow" id="topics-eyebrow"></span>
       <h2 id="topics-heading"></h2>
       <div class="topic-search">
+        <label class="sr-only" for="topic-search-input" id="topic-search-label"></label>
         <input type="search" id="topic-search-input" autocomplete="off" />
       </div>
       <p class="topic-search-empty" id="topic-search-empty" hidden></p>
@@ -194,6 +195,7 @@
     const searchInput = document.getElementById("topic-search-input");
     const searchEmpty = document.getElementById("topic-search-empty");
     searchInput.placeholder = T("topicSearchPh");
+    document.getElementById("topic-search-label").textContent = T("topicSearchPh");
     searchEmpty.textContent = T("topicSearchEmpty");
 
     const norm = (s) => (s || "").toLocaleLowerCase("tr").normalize("NFD").replace(/[̀-ͯ]/g, "");
