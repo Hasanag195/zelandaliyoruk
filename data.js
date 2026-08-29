@@ -422,32 +422,160 @@ const TOPICS = [
     },
     accordion: [
       {
-        label: { tr: "İşçi Hakları Konuları", en: "Worker Rights Topics" },
+        label: { tr: "📋 Yurt Dışından Gelen Çalışan Olarak Temel Haklar", en: "📋 Basic Rights as a Worker from Overseas" },
         open: true,
         items: [
           {
-            label: { tr: "Kurallar: Yurt Dışından Gelen Çalışan Olarak Haklarınız", en: "Rules: Your Rights as a Worker from Overseas" },
+            label: { tr: "Yerel çalışanlarla aynı temel haklara sahipsin", en: "You have the same basic rights as local workers" },
+            content: {
+              tr: "Çalışma vizesiyle çalışıyor olman, temel iş hukuku haklarından (asgari ücret, izinler, güvenli çalışma ortamı gibi) daha az yararlanacağın anlamına gelmez. Bu haklar vatandaşlık veya vize durumundan bağımsız olarak herkese eşit uygulanır.",
+              en: "Working on a work visa doesn't mean you get fewer basic employment rights (minimum wage, leave, a safe workplace) than a local worker. These rights apply equally to everyone, regardless of citizenship or visa status.",
+            },
             url: "https://www.immigration.govt.nz/work/worker-rights/your-rights-as-a-worker-from-overseas/",
           },
           {
-            label: { tr: "Çalışma Sorumluluğu: İşvereniniz AEWV'de Ne Yapmalı", en: "Employer Responsibility: What Your Employer Must Do on an AEWV" },
+            label: { tr: "AEWV'de işverenin sana karşı yükümlülükleri var", en: "On an AEWV, your employer has obligations toward you" },
+            content: {
+              tr: "İşveren, akredite olurken Immigration NZ'ye taahhüt ettiği belirli standartlara uymak zorundadır: doğru ücret ödemesi, çalışma koşullarının ilan edilenle aynı olması gibi. İşveren bu taahhütlere uymazsa akreditasyonunu kaybedebilir.",
+              en: "As part of becoming accredited, an employer commits to Immigration NZ that they'll meet certain standards, such as paying the correct wage and matching the working conditions they advertised. An employer who breaks these commitments risks losing their accreditation.",
+            },
             url: "https://www.immigration.govt.nz/work/worker-rights/what-your-employer-must-do-when-they-hire-you-on-an-aewv/",
           },
           {
-            label: { tr: "Çalışan Hakları ve Sorumlulukları", en: "Employee Rights and Responsibilities" },
+            label: { tr: "Çalışan hakları ve sorumlulukları genel çerçevesi", en: "The general framework of employee rights and responsibilities" },
+            content: {
+              tr: "Employment New Zealand, hem çalışanların hem işverenlerin karşılıklı hak ve sorumluluklarını tek bir yerde topluyor. Bir konuda emin değilsen ilk bakılacak yer burasıdır.",
+              en: "Employment New Zealand brings together both employees' and employers' mutual rights and responsibilities in one place. If you're unsure about something, this is the first place to check.",
+            },
             url: "https://www.employment.govt.nz/starting-employment/rights-and-responsibilities/employee-rights-and-responsibilities",
           },
           {
-            label: { tr: "İhmaller: İş Yerinde Destek ve Sorun Bildirme", en: "Problems: Support in the Workplace and Reporting Issues" },
-            url: "https://www.immigration.govt.nz/work/worker-rights/support-in-the-workplace/",
-          },
-          {
-            label: { tr: "Göçmen Sömürüsü", en: "Migrant Exploitation" },
+            label: { tr: "Göçmen sömürüsü ciddiye alınan bir konudur", en: "Migrant exploitation is taken seriously" },
+            content: {
+              tr: "Ücretinin bir kısmının geri istenmesi, pasaportunun elinden alınması, fazladan ücretsiz çalıştırılman gibi durumlar göçmen sömürüsü kapsamına girer ve yasa dışıdır. Bu tür bir durumdaysan, işvereni kaybetme korkusu seni sessiz kalmaya itmemeli, bildirebileceğin resmi kanallar var.",
+              en: "Being asked to pay back part of your wages, having your passport taken from you, or being made to work extra hours unpaid all count as migrant exploitation and are illegal. If you're in this situation, fear of losing your employer shouldn't keep you silent, there are official channels to report it.",
+            },
             url: "https://www.employment.govt.nz/resolving-problems/migrant-exploitation",
           },
           {
-            label: { tr: "Göçmen Sömürüsünden Korunma Çalışma Vizesi", en: "Migrant Exploitation Protection Work Visa" },
+            label: { tr: "Sömürülüyorsan işvereninden bağımsız bir vize var", en: "There's a visa that frees you from a bad employer" },
+            content: {
+              tr: "Göçmen Sömürüsünden Korunma Çalışma Vizesi (Migrant Exploitation Protection Work Visa), sömürüldüğünü kanıtlayabilen çalışanların, mevcut işvereninden bağımsız, geçici bir çalışma vizesine geçmesini sağlar. Bu, sömürüldüğün işveren yüzünden ülkeyi terk etmek zorunda kalmayacağın anlamına gelir.",
+              en: "The Migrant Exploitation Protection Work Visa lets a worker who can show they've been exploited move to a temporary work visa independent of their current employer. This means you don't have to leave the country because of an exploitative employer.",
+            },
             url: "https://www.immigration.govt.nz/visas/migrant-exploitation-protection-work-visa",
+          },
+        ],
+      },
+      {
+        label: { tr: "📝 İş Sözleşmesi", en: "📝 Employment Agreement" },
+        items: [
+          {
+            label: { tr: "Yazılı sözleşme yasal zorunluluktur", en: "A written agreement is a legal requirement" },
+            content: {
+              tr: "Yeni Zelanda'da her çalışanın yazılı bir iş sözleşmesi (employment agreement) olması zorunludur. İşe başlamadan önce sözleşmeyi okuman, anlaman ve bir kopyasını almış olman gerekir. Sözlü anlaşmayla, sözleşmesiz çalıştırılman yasaya aykırıdır.",
+              en: "In New Zealand, every employee is legally required to have a written employment agreement. You should read it, understand it, and have your own copy before you start work. Being made to work on a verbal agreement with no written contract is against the law.",
+            },
+            url: "https://www.employment.govt.nz/starting-employment/employment-agreements",
+          },
+          {
+            label: { tr: "90 günlük deneme süresi (trial period) farklı işler", en: "The 90-day trial period works differently" },
+            content: {
+              tr: "İşverenler, işe başladığın ilk 90 gün için bir deneme süresi uygulayabilir; bu, sözleşmende açıkça yazılı olmalı ve işe başlamadan önce imzalanmış olmalı. Bu süre içinde işveren, seni gerekçe göstermeden ve genel işten çıkarma prosedürlerine uymadan işten çıkarabilir. Bu, Türkiye'deki uygulamadan belirgin şekilde farklıdır, sözleşmeni imzalamadan önce bu maddeyi mutlaka oku.",
+              en: "Employers can apply a trial period for your first 90 days; this must be clearly written into your agreement and signed before you start work. During this period, an employer can dismiss you without giving a reason and without following the usual dismissal procedures. This is notably different from practice in Turkey, make sure you read this clause carefully before signing.",
+            },
+            url: "https://www.employment.govt.nz/starting-employment/hiring/trial-periods",
+          },
+        ],
+      },
+      {
+        label: { tr: "💰 Ücret ve Bordro", en: "💰 Pay and Payslips" },
+        items: [
+          {
+            label: { tr: "Ulusal asgari ücretin altında ödeme yapılamaz", en: "You can't be paid below the national minimum wage" },
+            content: {
+              tr: "Yaşına ve pozisyonuna göre değişen istisnalar dışında, hiçbir işveren seni ulusal asgari ücretin altında çalıştıramaz. Güncel oranı her zaman resmi sayfadan kontrol et, burada sabit bir rakam vermiyoruz çünkü düzenli olarak güncelleniyor.",
+              en: "Outside a small set of age/role-based exceptions, no employer can pay you below the national minimum wage. Always check the current rate on the official page, we don't quote a fixed figure here because it's updated regularly.",
+            },
+            url: "https://www.employment.govt.nz/pay-and-hours/pay-and-wages/minimum-wage",
+          },
+          {
+            label: { tr: "Bordronu okumayı öğren", en: "Learn to read your payslip" },
+            content: {
+              tr: "Her maaş ödemesinde bir bordro (payslip) almalısın; brüt ücret, kesintiler ve net ödeme net şekilde görünmelidir. Bordronu düzenli kontrol etmek, yanlış veya eksik ödemeyi erken fark etmenin en basit yoludur.",
+              en: "You should receive a payslip with every pay run, showing your gross pay, deductions, and net pay clearly. Checking your payslip regularly is the simplest way to catch an incorrect or missing payment early.",
+            },
+            url: "https://www.employment.govt.nz/pay-and-hours/pay-and-wages/payslips",
+          },
+          {
+            label: { tr: "Fazla mesai için otomatik ek ücret garantisi yoktur", en: "There's no automatic guarantee of extra pay for overtime" },
+            content: {
+              tr: "Türkiye'nin aksine, Yeni Zelanda'da yasal olarak zorunlu bir 'fazla mesai ücreti' oranı yoktur. Fazla saatler için ek ödeme yapılıp yapılmayacağı, yapılacaksa ne kadar olacağı tamamen iş sözleşmende ne yazdığına bağlıdır. Bu maddeyi sözleşmeni imzalamadan önce netleştir.",
+              en: "Unlike Turkey, New Zealand has no legally mandated 'overtime rate'. Whether you get extra pay for extra hours, and how much, depends entirely on what's written in your employment agreement. Get this clarified before you sign.",
+            },
+          },
+        ],
+      },
+      {
+        label: { tr: "🏖️ İzin Hakları", en: "🏖️ Leave Entitlements" },
+        items: [
+          {
+            label: { tr: "Yıllık izin: 12 ay sonra 4 hafta", en: "Annual leave: 4 weeks after 12 months" },
+            content: {
+              tr: "Aynı işverende kesintisiz 12 ay çalıştıktan sonra, yılda 4 hafta ücretli yıllık izin hakkın doğar. Bu, birçok Avrupa ülkesine göre cömert bir haktır ve Türkiye'deki kıdeme bağlı sistemden farklı işler.",
+              en: "After 12 months of continuous employment with the same employer, you become entitled to 4 weeks of paid annual leave per year. This is generous compared to many European countries and works differently from Turkey's tenure-based system.",
+            },
+            url: "https://www.employment.govt.nz/leave-and-holidays/annual-holidays",
+          },
+          {
+            label: { tr: "Hastalık izni: 6 ay sonra yılda 10 gün", en: "Sick leave: 10 days a year after 6 months" },
+            content: {
+              tr: "Aynı işverende 6 ay çalıştıktan sonra, yılda 10 gün ücretli hastalık izni hakkın doğar. Bu izin kendi hastalığın için olduğu kadar, eşinin veya bakmakla yükümlü olduğun kişilerin hastalığı için de kullanılabilir.",
+              en: "After 6 months with the same employer, you become entitled to 10 days of paid sick leave a year. This leave can be used for your own illness as well as for your partner's or a dependant's illness.",
+            },
+            url: "https://www.employment.govt.nz/leave-and-holidays/sick-leave",
+          },
+          {
+            label: { tr: "Resmi tatiller: çalışırsan 1.5 kat ücret", en: "Public holidays: 1.5x pay if you work" },
+            content: {
+              tr: "Normalde çalışacağın bir güne denk gelen resmi bir tatilde, o günü ücretli izin olarak kullanma hakkın var. Eğer o gün çalışmayı kabul edersen, en az 1.5 kat ücret almalısın; bazı durumlarda ayrıca başka bir gün izin (alternative day) hakkın da doğar.",
+              en: "If a public holiday falls on a day you'd normally work, you're entitled to take it as paid leave. If you agree to work that day instead, you must be paid at least time-and-a-half, and in some cases you also earn an alternative paid day off.",
+            },
+            url: "https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-rights-for-employees",
+          },
+        ],
+      },
+      {
+        label: { tr: "⚠️ İşyerinde Güvenlik", en: "⚠️ Workplace Health and Safety" },
+        items: [
+          {
+            label: { tr: "Güvenli bir çalışma ortamı hakkın var", en: "You have a right to a safe workplace" },
+            content: {
+              tr: "İşveren, seni fiziksel ve zihinsel olarak güvende tutacak makul önlemleri almak zorundadır. Ciddi bir tehlike varsa çalışmayı reddetme hakkın vardır. Bu kural, göçmen işçiler dahil herkese eşit uygulanır. WorkSafe NZ, iş sağlığı ve güvenliğinin resmi düzenleyici kurumudur.",
+              en: "Your employer must take reasonable steps to keep you physically and mentally safe at work. You have the right to refuse to do work that poses a serious risk. This applies equally to everyone, including migrant workers. WorkSafe NZ is the official health and safety regulator.",
+            },
+            url: "https://www.worksafe.govt.nz/",
+          },
+        ],
+      },
+      {
+        label: { tr: "🚩 Sorun Yaşarsan", en: "🚩 If Something Goes Wrong" },
+        items: [
+          {
+            label: { tr: "Önce ücretsiz devlet arabuluculuğunu dene", en: "Try free government mediation first" },
+            content: {
+              tr: "İşverenle bir sorun yaşarsan, doğrudan dava açmadan önce Employment New Zealand'ın ücretsiz arabuluculuk (mediation) hizmetini deneyebilirsin. Bu hizmet tarafsızdır ve genelde daha hızlı, daha az stresli bir çözüm sunar.",
+              en: "If you have a problem with your employer, before going straight to legal action you can try Employment New Zealand's free mediation service. It's impartial and usually offers a faster, less stressful resolution.",
+            },
+            url: "https://www.employment.govt.nz/resolving-problems/how-to-resolve-problems/mediation",
+          },
+          {
+            label: { tr: "Haksız işten çıkarma için 90 günlük süre var", en: "You have 90 days to raise a claim for unjustified dismissal" },
+            content: {
+              tr: "Haksız işten çıkarıldığını veya haksız bir muameleye uğradığını düşünüyorsan, bir 'personal grievance' (kişisel şikayet) başvurusu yapman gerekir. Bu başvuru, olay tarihinden itibaren 90 gün içinde yapılmalıdır, bu süre kaçırılırsa hakkını kaybetme riskin var. Süre kısıtlı olduğu için gecikmeden harekete geç.",
+              en: "If you believe you were unjustifiably dismissed or treated unfairly, you need to raise a 'personal grievance'. This must be raised within 90 days of the event, missing this window risks losing your right to claim. Because the deadline is strict, act without delay.",
+            },
+            url: "https://www.employment.govt.nz/resolving-problems/how-to-resolve-problems/personal-grievances",
           },
         ],
       },
