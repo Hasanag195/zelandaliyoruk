@@ -120,7 +120,7 @@ function calculatorHtml(topic, lang) {
       <div class="calc-field">
         <label for="calc-gross">${T(lang, "calcGrossLabel")}</label>
         <div class="calc-field--inline">
-          <input type="number" id="calc-gross" min="0" step="100" value="65000" required />
+          <input type="number" id="calc-gross" min="0" step="any" value="65000" required />
           <select id="calc-period" aria-label="${T(lang, "calcPeriodLabel")}">
             <option value="year" selected>${T(lang, "calcPeriodYear")}</option>
             <option value="month">${T(lang, "calcPeriodMonth")}</option>
