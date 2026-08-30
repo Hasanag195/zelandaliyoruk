@@ -136,7 +136,7 @@ function calculatorHtml(topic, lang) {
       <div class="calc-field">
         <label for="calc-ks-rate">${T(lang, "calcKiwiSaverRateLabel")}</label>
         <select id="calc-ks-rate" disabled>
-          <option value="0.03" selected>3%</option>
+          <option value="0.035" selected>3.5%</option>
           <option value="0.04">4%</option>
           <option value="0.06">6%</option>
           <option value="0.08">8%</option>
