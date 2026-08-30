@@ -286,6 +286,13 @@ function page(topic, lang) {
   </footer>
 
   <script defer src="/_vercel/insights/script.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW92XXGXXT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-XW92XXGXXT");
+  </script>
   ${lang === "en" ? '<script>window.__FORCE_LANG = "en";</script>' : ""}
   <script src="/i18n.js"></script>
   <script src="/data.js"></script>
