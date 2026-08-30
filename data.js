@@ -303,8 +303,8 @@ const TOPICS = [
           {
             label: { tr: "NZ'de referans geçmişin yoktur, bu normaldir", en: "You won't have an NZ rental history, and that's normal" },
             content: {
-              tr: "Ev sahipleri genelde önceki bir NZ ev sahibinden referans ister. Yeni geldiğinde bu elinde olmaz. Bunu telafi etmek için işveren referansı, banka hesap dökümü veya birkaç aylık kirayı peşin önerme gibi yollar kullanılabilir. Bu durum çoğu yeni gelen için normaldir, seni diğerlerinden ayıran bir dezavantaj değildir.",
-              en: "Landlords usually ask for a reference from a previous NZ landlord. When you've just arrived, you won't have one. To make up for this, people often offer an employer reference, bank statements, or a few months' rent upfront. This is a normal situation for most newcomers, not a disadvantage that sets you apart from everyone else.",
+              tr: "Ev sahipleri genelde önceki bir NZ ev sahibinden referans ister. Yeni geldiğinde bu elinde olmaz. Bunu telafi etmek için işveren referansı, banka hesap dökümü veya kısa bir kendini tanıtma yazısı sunmak işe yarayabilir. Dikkat: bir ev sahibinin senden 2 haftadan fazla kirayı peşin istemesi yasal değildir, böyle bir talep gelirse bunu bilerek reddedebilirsin. Bu durum çoğu yeni gelen için normaldir, seni diğerlerinden ayıran bir dezavantaj değildir.",
+              en: "Landlords usually ask for a reference from a previous NZ landlord. When you've just arrived, you won't have one. To make up for this, an employer reference, bank statements, or a short introduction letter can help. Note: it's unlawful for a landlord to ask you for more than 2 weeks' rent in advance, so you can knowingly push back if someone asks for more. This is a normal situation for most newcomers, not a disadvantage that sets you apart from everyone else.",
             },
           },
           {

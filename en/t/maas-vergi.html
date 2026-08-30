@@ -71,12 +71,13 @@
         </div>
       </div>
       <div class="calc-field calc-field--inline">
-        <input type="checkbox" id="calc-ks-enabled" checked />
+        <input type="checkbox" id="calc-ks-enabled" />
         <label for="calc-ks-enabled">I'm enrolled in KiwiSaver</label>
       </div>
+      <p class="calc-ietc-hint">Note: only New Zealand citizens and permanent residents can join KiwiSaver. You can't join on a work, student, or visitor visa, so don't tick this box.</p>
       <div class="calc-field">
         <label for="calc-ks-rate">KiwiSaver rate</label>
-        <select id="calc-ks-rate">
+        <select id="calc-ks-rate" disabled>
           <option value="0.03" selected>3%</option>
           <option value="0.04">4%</option>
           <option value="0.06">6%</option>

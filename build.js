@@ -129,12 +129,13 @@ function calculatorHtml(topic, lang) {
         </div>
       </div>
       <div class="calc-field calc-field--inline">
-        <input type="checkbox" id="calc-ks-enabled" checked />
+        <input type="checkbox" id="calc-ks-enabled" />
         <label for="calc-ks-enabled">${T(lang, "calcKiwiSaverLabel")}</label>
       </div>
+      <p class="calc-ietc-hint">${T(lang, "calcKiwiSaverHint")}</p>
       <div class="calc-field">
         <label for="calc-ks-rate">${T(lang, "calcKiwiSaverRateLabel")}</label>
-        <select id="calc-ks-rate">
+        <select id="calc-ks-rate" disabled>
           <option value="0.03" selected>3%</option>
           <option value="0.04">4%</option>
           <option value="0.06">6%</option>
