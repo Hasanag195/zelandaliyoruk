@@ -4,7 +4,7 @@ const CHECKLIST = {
       title: "1. Gelmeden Önce",
       desc: "Türkiye'deyken halletmen gereken her şey: vize, belgeler ve seyahat hazırlığı.",
       items: [
-        { t: "Pasaportunun geçerlilik süresini kontrol et (en az 6 ay kalmış olmalı)" },
+        { t: "Pasaportunun, Yeni Zelanda'dan ayrılmayı planladığın tarihten en az 3 ay sonrasına kadar geçerli olduğunu kontrol et", link: ["resmi şart", "https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/before-you-travel-to-new-zealand/"] },
         { t: "Hangi vize türünün sana uygun olduğuna karar ver", link: ["Vize Türleri sayfası", "t/vize-sureclari.html"] },
         { t: "Türkiye Çalışma Tatili Vizesi için yaş uygunluğunu kontrol et (18-30 yaş arası)", link: ["resmi sayfa", "https://www.immigration.govt.nz/visas/turkey-working-holiday-visa/"] },
         { t: "Sağlık sigortası araştır (bazı vize türlerinde istenir)" },
@@ -61,7 +61,7 @@ const CHECKLIST = {
       title: "1. Before You Leave",
       desc: "Everything to sort out while still in Turkey: visa, documents, and travel prep.",
       items: [
-        { t: "Check your passport's validity (at least 6 months remaining)" },
+        { t: "Check that your passport is valid until at least 3 months after your planned departure date from New Zealand", link: ["official requirement", "https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/before-you-travel-to-new-zealand/"] },
         { t: "Decide which visa type suits you", link: ["Visa Types page", "t/vize-sureclari.html"] },
         { t: "Check the age requirement for the Turkey Working Holiday Visa (18-30 years old)", link: ["official page", "https://www.immigration.govt.nz/visas/turkey-working-holiday-visa/"] },
         { t: "Look into health insurance (required for some visa types)" },
