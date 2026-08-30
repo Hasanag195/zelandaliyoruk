@@ -47,7 +47,7 @@ const lastUpdatedHtml = (lang) => {
     day: "numeric",
     timeZone: "UTC",
   });
-  return `<p class="last-updated">${esc(T(lang, "lastUpdated"))} <time datetime="${SITE.contentUpdated}">${esc(formatted)}</time></p>`;
+  return `<p class="last-updated">${esc(T(lang, "lastUpdated"))} <time datetime="${SITE.contentUpdated}">${esc(formatted)}</time> — ${esc(T(lang, "freshnessNote"))}</p>`;
 };
 
 const T = (lang, key) =>
