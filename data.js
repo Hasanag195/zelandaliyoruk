@@ -760,8 +760,8 @@ const TOPICS = [
           {
             label: { tr: "Bond, resmi sistemde (Bond Hub) kayıtlı olmalı", en: "The bond must be lodged in the official system (Bond Hub)" },
             content: {
-              tr: "Yeni Zelanda'da alınan bond (depozito), ev sahibi tarafından yasal olarak Tenancy Services'in Bond Hub sistemine yatırılmak zorundadır. Sana \"bana elden/IBAN'a gönder\" diyen ve resmi makbuz vermeyen bir ev sahibi büyük risk taşır; bond'unun kayıtlı olup olmadığını kendi Bond Hub hesabından kontrol edebilirsin.",
-              en: "In New Zealand, a bond a landlord collects must legally be lodged with Tenancy Services' Bond Hub system. A landlord who asks you to send it \"directly to my account\" without an official receipt is a major red flag; you can check whether your bond was actually lodged through your own Bond Hub account.",
+              tr: "Normal bir ev/daire kiralamasında alınan bond (depozito), ev sahibi tarafından yasal olarak en geç 23 iş günü içinde Tenancy Services'in Bond Hub sistemine yatırılmak zorundadır. Sana \"bana elden/IBAN'a gönder\" diyen ve resmi makbuz vermeyen bir ev sahibi büyük risk taşır; bond'unun kayıtlı olup olmadığını kendi Bond Hub hesabından kontrol edebilirsin.",
+              en: "For a normal house or flat rental, a bond a landlord collects must legally be lodged with Tenancy Services' Bond Hub system within 23 working days. A landlord who asks you to send it \"directly to my account\" without an official receipt is a major red flag; you can check whether your bond was actually lodged through your own Bond Hub account.",
             },
             url: "https://www.tenancy.govt.nz/rent-bond-and-bills/bond/",
           },
