@@ -143,7 +143,7 @@
     document.getElementById("hero-eyebrow").textContent = T("heroEyebrow");
     document.getElementById("hero-title").textContent = T("heroTitle");
     document.getElementById("hero-subtitle").textContent = T("heroSubtitle");
-    const heroShareText = encodeURIComponent(`zelandaliyoruk.com — ${T("heroSubtitle")}\nhttps://zelandaliyoruk.com`);
+    const heroShareText = encodeURIComponent(`zelandaliyoruk.com: ${T("heroSubtitle")}\nhttps://zelandaliyoruk.com`);
     document.getElementById("hero-stats").innerHTML =
       T("heroStats")
         .map((s) => `<div class="hero-stat"><span class="hero-stat-num">${s.n}</span><span class="hero-stat-label">${s.l}</span></div>`)

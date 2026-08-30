@@ -24,7 +24,7 @@
     tr: {
       backToTopics: "← Tüm konular",
       lastUpdated: "Son güncelleme:",
-      freshnessNote: "oranlar ve tutarlar değişmiş olabilir, karar vermeden önce mutlaka güncel resmi kaynağı kontrol et.",
+      freshnessNote: "Oranlar ve tutarlar değişmiş olabilir, karar vermeden önce mutlaka güncel resmi kaynağı kontrol et.",
       topicsEyebrow: "Rehber",
       topicsHeading: "Konu Başlıkları",
       topicSearchPh: "Konu ara... (örn. vize, market, ehliyet)",
@@ -141,7 +141,7 @@
     en: {
       backToTopics: "← All topics",
       lastUpdated: "Last updated:",
-      freshnessNote: "rates and amounts may have changed since then, always check the current official source before deciding anything.",
+      freshnessNote: "Rates and amounts may have changed since then, always check the current official source before deciding anything.",
       topicsEyebrow: "Guide",
       topicsHeading: "Topics",
       topicSearchPh: "Search topics... (e.g. visa, groceries, driving)",

@@ -87,7 +87,7 @@ const CHECKLIST = {
       desc: "The moment you step off the plane: what to do at the airport and in the first hours.",
       items: [
         { t: "First priority: get a local SIM card from a carrier stand at the airport (you need it immediately for maps, transport, and communication)" },
-        { t: "Fill out the customs/biosecurity declaration form completely (declare food, plants, footwear/camping gear — New Zealand customs is very strict about this)" },
+        { t: "Fill out the customs/biosecurity declaration form completely (declare food, plants, footwear/camping gear; New Zealand customs is very strict about this)" },
         { t: "Arrange transport to your accommodation (easier to call an Uber/taxi/bus once you have a SIM)" },
         { t: "Settle into your accommodation and unpack" },
         { t: "Let your family or loved ones know you've arrived safely" },
