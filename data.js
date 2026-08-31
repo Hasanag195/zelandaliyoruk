@@ -271,8 +271,37 @@ const TOPICS = [
     calculator: "salary-nz",
     accordion: [
       {
-        label: { tr: "Resmi Kaynaklar", en: "Official Sources" },
+        label: { tr: "🧾 İlk Maaşından Önce Bilmen Gerekenler", en: "🧾 What to Know Before Your First Paycheck" },
         open: true,
+        items: [
+          {
+            label: { tr: "Doğru vergi kodunu seçmen gerekiyor", en: "You need to pick the right tax code" },
+            content: {
+              tr: "İşe başlarken işverenine bir IR330 formu (Tax Code Declaration) doldurup vermen gerekir. Bu senin ana işin ise \"M\" koduyla başlayan bir kod seçersin; eğer bu ikinci bir işse (ana işinin yanında), \"S\" ile başlayan bir ikincil vergi kodu seçmen gerekir. Yanlış kod seçersen, maaşından kesilen vergi tutarı yanlış çıkar; fazla ya da eksik kesildiğini fark edersen kodu güncellemek için işverenine yeni bir IR330 verirsin.",
+              en: "When starting a job, you need to fill out an IR330 (Tax Code Declaration) form for your employer. If this is your main job, you pick a code starting with \"M\"; if it's a second job alongside your main one, you pick a secondary tax code starting with \"S\". Picking the wrong code means the wrong amount of tax gets deducted from your pay; if you notice too much or too little was withheld, give your employer an updated IR330.",
+            },
+            url: "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/what-tax-code-should-i-use",
+          },
+          {
+            label: { tr: "KiwiSaver'a katılırsan işveren de senin için para yatırır", en: "If you join KiwiSaver, your employer also pays in for you" },
+            content: {
+              tr: "KiwiSaver'a katılan bir çalışansan (unutma, sadece vatandaş/daimi oturum sahipleri katılabilir), işverenin de senin maaşının en az %3.5'i kadar ek bir katkı yapmak zorundadır. Bu, senin cebinden çıkan bir para değildir; işverenin kendi bütçesinden, senin KiwiSaver hesabına eklediği ekstra bir tutardır.",
+              en: "If you're enrolled in KiwiSaver (remember, only citizens/permanent residents can join), your employer is also required to contribute at least 3.5% of your pay on top. This isn't money out of your own pocket, it's an extra amount your employer adds to your KiwiSaver account from their own budget.",
+            },
+            url: "https://www.ird.govt.nz/kiwisaver/kiwisaver-individuals/growing-my-kiwisaver-account/employer-contributions-to-kiwisaver",
+          },
+          {
+            label: { tr: "Sadece maaşla çalışıyorsan genelde beyanname vermezsin", en: "If you only earn salary, you generally don't need to file a return" },
+            content: {
+              tr: "Türkiye'nin aksine, sadece maaş/ücret geliri olan çoğu çalışan için IRD, yıl sonunda (genelde Mayıs-Temmuz arası) otomatik bir hesaplama (income tax assessment) gönderir, ayrıca beyanname doldurmana gerek kalmaz. Maaş dışında (örneğin ek iş, kira geliri gibi) beyan edilmemiş bir gelirin varsa bu durum değişir.",
+              en: "Unlike Turkey, for most employees whose only income is salary or wages, IRD automatically sends you an income tax assessment at the end of the tax year (usually May-July), and you don't need to file a return yourself. This changes if you have other undeclared income, such as a side job or rental income.",
+            },
+            url: "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/what-happens-at-the-end-of-the-tax-year/income-tax-assessments",
+          },
+        ],
+      },
+      {
+        label: { tr: "Resmi Kaynaklar", en: "Official Sources" },
         items: [
           { label: { tr: "Güncel Gelir Vergisi Oranları (IRD)", en: "Current Income Tax Rates (IRD)" }, url: "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals" },
           { label: { tr: "Güncel Asgari Ücret", en: "Current Minimum Wage" }, url: "https://www.employment.govt.nz/pay-and-hours/pay-and-wages/minimum-wage" },
@@ -645,6 +674,34 @@ const TOPICS = [
           { label: { tr: "Larnach Castle (Yeni Zelanda'nın tek kalesi)", en: "Larnach Castle (New Zealand's only castle)" } },
           { label: { tr: "Catlins Coast (Nugget Point Deniz Feneri ve penguen gözlem alanları)", en: "Catlins Coast (Nugget Point Lighthouse and penguin watching areas)" } },
           { label: { tr: "Stewart Island / Rakiura (En güneydeki ada, vahşi Kiwi kuşlarının doğal yaşam alanı)", en: "Stewart Island / Rakiura (the southernmost island, home to wild kiwi birds)" } },
+        ],
+      },
+      {
+        label: { tr: "🚗 Yol Gezisi Pratik Bilgiler", en: "🚗 Practical Road Trip Info" },
+        items: [
+          {
+            label: { tr: "Milli parklara giriş ücretsiz, sadece kalış ücretli", en: "National parks are free to enter, only overnight stays cost money" },
+            content: {
+              tr: "Yeni Zelanda'da milli parklara girmek yasa gereği ücretsizdir, bir gezginin bir günlük yürüyüş için ödemesi gereken bir giriş ücreti yoktur. Ücret sadece DOC (Department of Conservation) kulübelerinde veya kamp alanlarında geceleme yaptığında devreye girer.",
+              en: "Entry to national parks in New Zealand is free by law, there's no entry fee for a day walk. Fees only apply if you stay overnight in a DOC (Department of Conservation) hut or campsite.",
+            },
+            url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/national-parks",
+          },
+          {
+            label: { tr: "Great Walks için önceden rezervasyon şart", en: "Great Walks require booking in advance" },
+            content: {
+              tr: "Milford Track gibi popüler \"Great Walks\" rotalarında geceleyeceğin kulübe veya kampı, sezon başlamadan aylar önce rezerve etmen gerekir; popüler rotalar hızla dolar. Sık yürüyüş yapacaksan, tek tek ödemek yerine bir Backcountry Hut Pass almak daha uygun maliyetli olabilir.",
+              en: "For popular \"Great Walks\" like the Milford Track, you need to book your hut or campsite months before the season starts; popular routes fill up fast. If you plan to hike often, a Backcountry Hut Pass can work out cheaper than paying for each stay individually.",
+            },
+            url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/online-bookings/",
+          },
+          {
+            label: { tr: "Mesafeler göründüğünden uzun sürer", en: "Distances take longer than they look" },
+            content: {
+              tr: "Haritada kısa görünen bir mesafe, dağlık ve dolambaçlı yollar yüzünden tahmininden çok daha uzun sürebilir. Yeni Zelanda'da toplu taşıma şehirler arasında sınırlıdır, bu yüzden kendi aracınla (kiralık ya da satın alınmış) gezmek en yaygın yöntemdir; rota planlarken Google Maps'in verdiği süreye biraz daha pay bırak.",
+              en: "A distance that looks short on the map can take much longer than expected due to winding, mountainous roads. Public transport between towns is limited in New Zealand, so self-driving (rented or owned) is the most common way to get around; when planning a route, build in extra time beyond what Google Maps estimates.",
+            },
+          },
         ],
       },
     ],
