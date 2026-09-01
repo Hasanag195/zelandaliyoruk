@@ -6,7 +6,7 @@ const SITE = {
   tiktokUrl: "https://www.tiktok.com/@zelandaliyoruk",
   // Rehber içeriği (data.js) her önemli güncellemede bu tarihi de güncelle.
   // Konu sayfalarında "Son güncelleme" olarak gösterilir.
-  contentUpdated: "2026-08-30",
+  contentUpdated: "2026-09-01",
 };
 
 const TOPICS = [
