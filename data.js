@@ -6,7 +6,7 @@ const SITE = {
   tiktokUrl: "https://www.tiktok.com/@zelandaliyoruk",
   // Rehber içeriği (data.js) her önemli güncellemede bu tarihi de güncelle.
   // Konu sayfalarında "Son güncelleme" olarak gösterilir.
-  contentUpdated: "2026-10-17",
+  contentUpdated: "2026-10-25",
 };
 
 const TOPICS = [
@@ -407,9 +407,26 @@ const TOPICS = [
           {
             label: { tr: "Evler Türkiye'deki gibi merkezi ısıtmalı değildir", en: "Homes aren't centrally heated the way they are in Turkey" },
             content: {
-              tr: "Yeni Zelanda evlerinin büyük kısmı, özellikle eski yapılar, merkezi ısıtma sistemine sahip değildir ve yalıtımı Türkiye standartlarına göre zayıf kalabilir. Kışın içerisi beklenenden daha soğuk olabilir, ısıtıcı (heat pump) olup olmadığını ev bakarken mutlaka sor.",
-              en: "A large share of New Zealand homes, especially older ones, don't have central heating, and insulation can be weaker than Turkish standards. Indoors can feel colder than expected in winter, so always ask whether a property has a heat pump when viewing.",
+              tr: "Yeni Zelanda evlerinin büyük kısmı, özellikle eski yapılar, merkezi ısıtma sistemine sahip değildir ve yalıtımı Türkiye standartlarına göre zayıf kalabilir. Kışın içerisi beklenenden daha soğuk olabilir, ısıtıcı (heat pump) olup olmadığını ev bakarken mutlaka sor. Kiralık evlerde ise ev sahibi, Healthy Homes standartları gereği oturma odasına odayı 18°C'ye ısıtabilecek sabit bir ısıtıcı koymak zorundadır.",
+              en: "A large share of New Zealand homes, especially older ones, don't have central heating, and insulation can be weaker than Turkish standards. Indoors can feel colder than expected in winter, so always ask whether a property has a heat pump when viewing. In rentals, the Healthy Homes standards require landlords to provide a fixed heater that can warm the main living room to 18°C.",
             },
+            url: "https://www.tenancy.govt.nz/healthy-homes/heating-standard/",
+          },
+          {
+            label: { tr: "Evlerin çoğu betondan değil, ahşap iskeletlidir", en: "Most homes are timber-framed, not concrete" },
+            content: {
+              tr: "Yeni Zelanda'daki alçak katlı evlerin %90'ından fazlası ahşap iskelet üzerine kuruludur, iç duvarlar alçı panel (GIB) ile kaplanır. Duvara vurduğunda içi boş gibi ses gelmesi bu yüzdendir. Ahşap hafif olduğu için deprem sırasında binaya daha az yük biner; ülkenin deprem bölgesinde olması bu tercihin temel sebeplerinden biridir.",
+              en: "Over 90% of New Zealand's low-rise houses are built on a timber frame, with interior walls lined in plasterboard (GIB). That's why a wall sounds hollow when you knock on it. Timber is light, so a building attracts lower forces in an earthquake, which is a key reason for this choice in such a seismically active country.",
+            },
+            url: "https://bulletin.nzsee.org.nz/article/view/1701",
+          },
+          {
+            label: { tr: "Parklarda ücretsiz elektrikli mangal var", en: "Many parks have free electric barbecues" },
+            content: {
+              tr: "Birçok belediye parkında herkesin ücretsiz kullanabileceği elektrikli mangallar bulunur. Örneğin Tauranga'da rezervasyon yoktur, ilk gelen kullanır; çalıştırmak için düğmeye en az 6 saniye basılır. Hangi parklarda olduğunu kendi belediyenin sitesinden kontrol edebilirsin.",
+              en: "Many council parks have electric barbecues that anyone can use for free. In Tauranga, for example, there's no booking, it's first come, first served, and you hold the button for at least 6 seconds to start it. Check your local council's website for locations.",
+            },
+            url: "https://www.tauranga.govt.nz/exploring/facilities/barbecues",
           },
           {
             label: { tr: "Güneş çok daha güçlü yakar", en: "The sun burns much stronger" },
