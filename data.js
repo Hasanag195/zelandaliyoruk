@@ -6,7 +6,7 @@ const SITE = {
   tiktokUrl: "https://www.tiktok.com/@zelandaliyoruk",
   // Rehber içeriği (data.js) her önemli güncellemede bu tarihi de güncelle.
   // Konu sayfalarında "Son güncelleme" olarak gösterilir.
-  contentUpdated: "2026-10-25",
+  contentUpdated: "2026-10-26",
 };
 
 const TOPICS = [
@@ -427,6 +427,14 @@ const TOPICS = [
               en: "Many council parks have electric barbecues that anyone can use for free. In Tauranga, for example, there's no booking, it's first come, first served, and you hold the button for at least 6 seconds to start it. Check your local council's website for locations.",
             },
             url: "https://www.tauranga.govt.nz/exploring/facilities/barbecues",
+          },
+          {
+            label: { tr: "Koyun ülkesinde kuzu eti ucuz değildir", en: "Lamb isn't cheap in the land of sheep" },
+            content: {
+              tr: "Yeni Zelanda'da üretilen kuzu etinin %90'dan fazlası ihraç edilir, bu yüzden markette fiyatını dünya piyasası belirler. Örnek olarak Ekim 2026'da Tauranga'daki bir markette kuzu pirzolanın kilosu yaklaşık 40 NZD, kıyma 22–34 NZD, tavuk ise 9 NZD civarındaydı. Kıyaslarken kur yerine maaşa bakmak daha doğru olur: 1 Nisan 2026'dan itibaren yetişkin asgari ücret saatte 23,95 NZD'dir (brüt).",
+              en: "More than 90% of the lamb produced in New Zealand is exported, so supermarket prices follow the world market. As an example, in October 2026 a Tauranga supermarket priced lamb chops at about NZ$40/kg, mince at NZ$22–34/kg and chicken at around NZ$9/kg. When comparing, look at wages rather than exchange rates: from 1 April 2026 the adult minimum wage is NZ$23.95 an hour (before tax).",
+            },
+            url: "https://www.mbie.govt.nz/about/news/minimum-wage-set-for-2026",
           },
           {
             label: { tr: "Güneş çok daha güçlü yakar", en: "The sun burns much stronger" },
