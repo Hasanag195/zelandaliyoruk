@@ -6,7 +6,7 @@ const SITE = {
   tiktokUrl: "https://www.tiktok.com/@zelandaliyoruk",
   // Rehber içeriği (data.js) her önemli güncellemede bu tarihi de güncelle.
   // Konu sayfalarında "Son güncelleme" olarak gösterilir.
-  contentUpdated: "2026-10-26",
+  contentUpdated: "2026-10-30",
 };
 
 const TOPICS = [
@@ -671,6 +671,14 @@ const TOPICS = [
           { label: { tr: "Hawke's Bay (Şarap ve gurme rotası)", en: "Hawke's Bay (wine and food trail)" } },
           { label: { tr: "Piha Beach (Siyah kumlu sörf plajı)", en: "Piha Beach (black-sand surf beach)" } },
           { label: { tr: "Rangitoto Island (Auckland açıklarındaki volkanik ada)", en: "Rangitoto Island (a volcanic island off Auckland)" } },
+          {
+            label: { tr: "Mauao / Mount Maunganui (Tauranga'nın efsaneli dağı)", en: "Mauao / Mount Maunganui (Tauranga's legendary mountain)" },
+            content: {
+              tr: "Tauranga'daki 232 metrelik Mauao, milyonlarca yıl önce oluşmuş bir lav kubbesidir ve karaya ince bir kum şeridiyle bağlıdır. Maori efsanesine göre isimsiz bir tepe aşkı için denize sürüklenmek istemiş ama güneş doğunca olduğu yerde kalmış; adı da buradan gelir: Mauao, \"şafağa yakalanan\". Zirveye çıkan yürüyüş yolları ve dağın çevresini dolaşan düz bir patika ücretsizdir.",
+              en: "Mauao, the 232-metre mountain in Tauranga, is a lava dome formed millions of years ago and is joined to the mainland by a narrow strip of sand. In Maori legend, a nameless hill wanted to be dragged into the sea for love but was caught where it stood when the sun rose; that is where its name comes from: Mauao, \"caught by the dawn\". The summit tracks and the flat base track around the mountain are free to walk.",
+            },
+            url: "https://www.bayofplentynz.com/experiences/outdoor-adventures/tracks-and-trails/tracks-and-trails-in-mount-maunganui/mauao-mount-maunganui-summit-walk/",
+          },
         ],
       },
       {
