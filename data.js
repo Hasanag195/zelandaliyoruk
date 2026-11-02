@@ -6,7 +6,7 @@ const SITE = {
   tiktokUrl: "https://www.tiktok.com/@zelandaliyoruk",
   // Rehber içeriği (data.js) her önemli güncellemede bu tarihi de güncelle.
   // Konu sayfalarında "Son güncelleme" olarak gösterilir.
-  contentUpdated: "2026-10-30",
+  contentUpdated: "2026-11-02",
 };
 
 const TOPICS = [
@@ -678,6 +678,14 @@ const TOPICS = [
               en: "Mauao, the 232-metre mountain in Tauranga, is a lava dome formed millions of years ago and is joined to the mainland by a narrow strip of sand. In Maori legend, a nameless hill wanted to be dragged into the sea for love but was caught where it stood when the sun rose; that is where its name comes from: Mauao, \"caught by the dawn\". The summit tracks and the flat base track around the mountain are free to walk.",
             },
             url: "https://www.bayofplentynz.com/experiences/outdoor-adventures/tracks-and-trails/tracks-and-trails-in-mount-maunganui/mauao-mount-maunganui-summit-walk/",
+          },
+          {
+            label: { tr: "Hobbiton (Matamata'daki Hobbit köyü)", en: "Hobbiton (the Hobbit village in Matamata)" },
+            content: {
+              tr: "Yüzüklerin Efendisi ve Hobbit filmlerinin çekildiği köy, Matamata'da hâlâ çalışan bir koyun çiftliğinin içinde. Köye yalnızca rehberli turla girilir; 2023'ten beri bir Hobbit evinin içi de gezilebiliyor. Biz gittiğimizde bilet kişi başı yaklaşık 130 NZD'ydi, güncel fiyat ve tur saatleri için resmi siteye bakın.",
+              en: "The village where The Lord of the Rings and The Hobbit films were shot sits on a working sheep farm in Matamata. You can only enter on a guided tour, and since 2023 you can also walk inside a Hobbit hole. When we went, a ticket was about NZD 130 per person; check the official site for current prices and tour times.",
+            },
+            url: "https://www.hobbitontours.com/",
           },
         ],
       },
