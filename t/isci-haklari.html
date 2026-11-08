@@ -190,12 +190,12 @@
       <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
       <label class="gate-consent">
         <input type="checkbox" name="consent" id="ask-consent" required />
-        <span>Verdiğim ad ve e-posta bilgisinin <a href="/privacy.html" target="_blank" rel="noopener">Gizlilik Politikası</a> kapsamında işlenmesini kabul ediyorum.</span>
+        <span>Verdiğim ad ve e-posta bilgisinin <a href="/privacy.html" target="_blank" rel="noopener">Gizlilik Politikası</a> kapsamında işlenmesini ve yurt dışındaki sunucularda (GitHub, Vercel) saklanmasını kabul ediyorum.</span>
       </label>
       <button type="submit">Soruyu Gönder</button>
       <div class="ask-msg" id="ask-msg" aria-live="polite"></div>
     </form>
-    <p class="gate-privacy">Adın ve e-postan yalnızca sorunu yanıtlamak ve bu proje hakkında bilgilendirme için kullanılır, üçüncü taraflarla paylaşılmaz. Seçili sorular kanalda veya sitede yanıtlanabilir; bu sırada adın ya da e-postan yayınlanmaz. Kayıtlar yurt dışındaki sunucularda (GitHub) saklanır. İstediğin zaman silinmesini talep edebilirsin.</p>
+    <p class="gate-privacy">Adın ve e-postan yalnızca sorunu yanıtlamak için kullanılır, pazarlama için paylaşılmaz ve sana toplu e-posta gönderilmez. Seçili sorular kanalda veya sitede genel olarak yanıtlanabilir; adın ya da e-postan yayınlanmaz. Kişisel vize değerlendirmesi yapılmaz. Kayıtlar yurt dışındaki sunucularda (GitHub, Vercel) saklanır. İstediğin zaman silinmesini talep edebilirsin.</p>
   </div>
     </section>
   </div>
@@ -216,13 +216,7 @@
   </footer>
 
   <script defer src="/_vercel/insights/script.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW92XXGXXT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-XW92XXGXXT");
-  </script>
+  <script defer src="/cookie-consent.js"></script>
   
   <script src="/i18n.js"></script>
   <script src="/data.js"></script>

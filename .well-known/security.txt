@@ -1,0 +1,4 @@
+Contact: mailto:zelandaliyoruk@gmail.com
+Expires: 2027-11-09T00:00:00.000Z
+Preferred-Languages: tr, en
+Canonical: https://zelandaliyoruk.com/.well-known/security.txt

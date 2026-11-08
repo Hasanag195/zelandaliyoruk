@@ -100,12 +100,12 @@ module.exports = async (req, res) => {
 
       const emailLower = email.toLowerCase();
       const existingIdx = records.findIndex((r) => String(r.email || "").toLowerCase() === emailLower);
-      const updatedRecord = { name, email, ts: new Date().toISOString(), consentAt: new Date().toISOString(), ipH };
       if (existingIdx >= 0) {
-        records[existingIdx] = updatedRecord;
-      } else {
-        records.push(updatedRecord);
+        res.status(200).json({ ok: true });
+        return;
       }
+      const updatedRecord = { name, email, ts: new Date().toISOString(), consentAt: new Date().toISOString(), ipH };
+      records.push(updatedRecord);
 
       for (const r of records) {
         delete r.ip;

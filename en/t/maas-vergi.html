@@ -149,12 +149,12 @@
       <input type="text" name="hp" class="gate-hp" tabindex="-1" autocomplete="off" />
       <label class="gate-consent">
         <input type="checkbox" name="consent" id="ask-consent" required />
-        <span>I agree to the processing of the name and email I provide as described in the <a href="/en/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+        <span>I agree to the processing of the name and email I provide as described in the <a href="/en/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, including storage on servers abroad (GitHub, Vercel).</span>
       </label>
       <button type="submit">Send Question</button>
       <div class="ask-msg" id="ask-msg" aria-live="polite"></div>
     </form>
-    <p class="gate-privacy">Your name and email are used only to answer your question and to send updates about this project, and are never shared with third parties. Selected questions may be answered on the channel or site; your name and email are not published when that happens. Records are stored on servers outside New Zealand (GitHub). You can request deletion at any time.</p>
+    <p class="gate-privacy">Your name and email are used only to answer your question, are not shared for marketing, and you won't receive bulk emails. Selected questions may be answered in general terms on the channel or site; your name and email are not published. We don't assess individual visa situations. Records are stored on servers outside New Zealand (GitHub, Vercel). You can request deletion at any time.</p>
   </div>
     </section>
   </div>
@@ -175,13 +175,7 @@
   </footer>
 
   <script defer src="/_vercel/insights/script.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW92XXGXXT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-XW92XXGXXT");
-  </script>
+  <script defer src="/cookie-consent.js"></script>
   <script>window.__FORCE_LANG = "en";</script>
   <script src="/i18n.js"></script>
   <script src="/data.js"></script>

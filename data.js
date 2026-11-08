@@ -130,20 +130,20 @@ const TOPICS = [
         ],
       },
       {
-        label: { tr: "✅ Hangi Yol Sana Uygun Olabilir?", en: "✅ Which Path Might Suit You?" },
+        label: { tr: "📋 Vize Yollarına Genel Bakış", en: "📋 General Overview of Visa Routes" },
         items: [
           {
-            label: { tr: "Kısa süreli deneyimlemek istiyorsan", en: "If you want a short-term experience first" },
+            label: { tr: "Çalışma Tatili Vizesi", en: "Working Holiday Visa" },
             content: {
-              tr: "18-30 yaş arasındaysan ve önce ülkeyi görüp deneyimlemek istiyorsan Çalışma Tatili Vizesi en hızlı ve en az bağlayıcı yoldur, iş bulmak için işveren sponsorluğu beklemene gerek yoktur.",
-              en: "If you're 18-30 and want to see and experience the country first, the Working Holiday Visa is the fastest and least binding route, you don't need to wait for employer sponsorship to find work.",
+              tr: "Belirli ülkelerin vatandaşları için, yaş sınırı ve kontenjanı ülkeye göre değişen kısa süreli bir vizedir. Bu vizede işveren sponsorluğu gerekmez. Şartları resmi sayfadan kontrol edilmelidir.",
+              en: "A short-term visa for citizens of certain countries, with age limits and quotas that vary by country. It doesn't require employer sponsorship. Requirements should be checked on the official page.",
             },
           },
           {
-            label: { tr: "Belirli bir mesleğe geçiş planlıyorsan", en: "If you're planning a career-focused transition" },
+            label: { tr: "Öğrenci vizesi ve mezuniyet sonrası", en: "Student visa and after graduation" },
             content: {
-              tr: "Yeni Zelanda'da tanınan bir alanda eğitim almak ve mezuniyet sonrası kalıcı bir çalışma yoluna geçmek istiyorsan, Öğrenci Vizesi → Post-Study Work Visa → AEWV/residence zinciri en yaygın izlenen yoldur.",
-              en: "If you want to study in a recognised field in New Zealand and move toward a lasting work pathway after graduating, the Student Visa → Post-Study Work Visa → AEWV/residence chain is the most commonly followed route.",
+              tr: "Bazı öğrenciler Öğrenci Vizesi, ardından Post-Study Work Visa ve sonrasında AEWV veya oturum başvurusu sırasını izler. Bu sıra garanti değildir; her aşamanın kendi şartları vardır.",
+              en: "Some students follow a Student Visa, then a Post-Study Work Visa, and later an AEWV or residence application. This sequence is not guaranteed; each stage has its own requirements.",
             },
           },
           {
@@ -156,16 +156,16 @@ const TOPICS = [
             linkText: { tr: "Kaynağa git (Competenz)", en: "Go to source (Competenz)" },
           },
           {
-            label: { tr: "Zaten bir iş teklifin varsa", en: "If you already have a job offer" },
+            label: { tr: "Akredite işveren çalışma vizesi (AEWV)", en: "Accredited Employer Work Visa (AEWV)" },
             content: {
-              tr: "Akredite bir işverenden somut bir iş teklifin varsa AEWV en doğrudan yoldur. Teklifi kabul etmeden önce işverenin gerçekten akredite olduğunu ve senden hiçbir ücret istemediğini mutlaka doğrula.",
-              en: "If you already have a concrete job offer from an accredited employer, the AEWV is the most direct route. Before accepting, always verify the employer is genuinely accredited and isn't asking you for any fee.",
+              tr: "Bu vize akredite bir işverenden iş teklifi gerektirir. İşverenin akreditasyonu resmi kaynaktan doğrulanabilir; işverenlerin iş karşılığı ücret alması yasaktır.",
+              en: "This visa requires a job offer from an accredited employer. Accreditation can be checked with official sources; employers are not allowed to charge for a job.",
             },
           },
           {
-            label: { tr: "Bu sayfa bir tavsiye değildir", en: "This page is not advice" },
+            label: { tr: "Bu sayfa danışmanlık değildir", en: "This page is not advice" },
             content: {
-              tr: "Yukarıdakiler genel bir yönlendirme amaçlıdır, senin özel durumun için resmi ve güncel şartları her zaman Immigration New Zealand'ın kendi sayfalarından teyit et. Ciddi bir belirsizlik varsa lisanslı bir göçmenlik danışmanına danış.",
+              tr: "Yukarıdakiler genel bilgidir ve kimseye belirli bir vize önermez. Özel durumun için resmi ve güncel şartları her zaman Immigration New Zealand'ın kendi sayfalarından teyit et. Ciddi bir belirsizlik varsa lisanslı bir göçmenlik danışmanına danış.",
               en: "The above is general orientation only, always confirm the official and current requirements for your specific situation on Immigration New Zealand's own pages. If there's serious uncertainty, consult a Licensed Immigration Adviser.",
             },
             url: "https://www.iaa.govt.nz/for-migrants/working-with-a-licensed-immigration-adviser/",
@@ -184,7 +184,7 @@ const TOPICS = [
       en: "Everything official you need to come to New Zealand from Turkey, in one place. Click a heading to go straight to the official source.",
     },
     intro: {
-      tr: `Yeni Zelanda vize sistemi kafa karıştırıcı olabilir, onlarca kategori var ve her birinin şartı farklı. Bu sayfa kendi yorumumuzu eklemeden, doğrudan Immigration New Zealand'ın güncel sayfalarına bağlanıyor. Hangi yolun sana uygun olabileceğine dair kısa bir özet istersen önce <a href="/t/nasil-gelinir.html">Yeni Zelanda'ya Nasıl Gelinir</a> sayfasına bakabilirsin.`,
+      tr: `Yeni Zelanda vize sistemi kafa karıştırıcı olabilir, onlarca kategori var ve her birinin şartı farklı. Bu sayfa kendi yorumumuzu eklemeden, doğrudan Immigration New Zealand'ın güncel sayfalarına bağlanıyor. Vize yollarına genel bir bakış için önce <a href="/t/nasil-gelinir.html">Yeni Zelanda'ya Nasıl Gelinir</a> sayfasına bakabilirsin.`,
       en: `New Zealand's visa system can feel overwhelming, there are dozens of categories, each with its own requirements. This page doesn't add our own interpretation, it links straight to Immigration New Zealand's current pages. For a short overview of which path might suit you, check the <a href="/en/t/nasil-gelinir.html">How to Come to New Zealand</a> page first.`,
     },
     inzWatch: true,
