@@ -83,15 +83,14 @@
   }
 
   function addFooterLink() {
-    var links = document.querySelectorAll(".site-footer a");
-    if (!links.length) return;
-    var last = links[links.length - 1];
+    var foot = document.querySelector(".site-footer .container") || document.querySelector(".site-footer");
+    if (!foot) return;
     var a = document.createElement("a");
     a.href = "#";
     a.textContent = TX.link;
     a.addEventListener("click", function (e) { e.preventDefault(); showBanner(); });
-    last.parentNode.insertBefore(document.createTextNode(" · "), last.nextSibling);
-    last.parentNode.insertBefore(a, last.nextSibling.nextSibling);
+    foot.appendChild(document.createTextNode(" · "));
+    foot.appendChild(a);
   }
 
   function start() {

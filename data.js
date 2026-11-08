@@ -185,7 +185,7 @@ const TOPICS = [
     },
     intro: {
       tr: `Yeni Zelanda vize sistemi kafa karıştırıcı olabilir, onlarca kategori var ve her birinin şartı farklı. Bu sayfa kendi yorumumuzu eklemeden, doğrudan Immigration New Zealand'ın güncel sayfalarına bağlanıyor. Vize yollarına genel bir bakış için önce <a href="/t/nasil-gelinir.html">Yeni Zelanda'ya Nasıl Gelinir</a> sayfasına bakabilirsin.`,
-      en: `New Zealand's visa system can feel overwhelming, there are dozens of categories, each with its own requirements. This page doesn't add our own interpretation, it links straight to Immigration New Zealand's current pages. For a short overview of which path might suit you, check the <a href="/en/t/nasil-gelinir.html">How to Come to New Zealand</a> page first.`,
+      en: `New Zealand's visa system can feel overwhelming, there are dozens of categories, each with its own requirements. This page doesn't add our own interpretation, it links straight to Immigration New Zealand's current pages. For a general overview of visa routes, see the <a href="/en/t/nasil-gelinir.html">How to Come to New Zealand</a> page first.`,
     },
     inzWatch: true,
     accordion: [
