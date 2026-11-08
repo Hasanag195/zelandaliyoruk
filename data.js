@@ -147,6 +147,14 @@ const TOPICS = [
             },
           },
           {
+            label: { tr: "Almanya'daki Ausbildung burada yok: apprenticeship nedir?", en: "Germany's Ausbildung doesn't exist here: what is an apprenticeship?" },
+            content: {
+              tr: "Almanya'daki Ausbildung sistemi Yeni Zelanda'da aynı şekilde yoktur. Buradaki benzeri apprenticeship: mesleği işinde çalışarak öğrenirsin, yani genelde önce o alanda bir işin ve Yeni Zelanda'da çalışma hakkın olması gerekir. Çalışma vizesiyle buradaysan vizenin eğitim süresinin tamamını kapsaması gerekir. Ücret koşulları eğitim kurumuna ve vizene göre değişebilir. Bu genel bilgidir, kendi durumun için Immigration New Zealand'a veya lisanslı bir danışmana (iaa.govt.nz) başvur.",
+              en: "Germany's Ausbildung system doesn't exist in the same form in New Zealand. The closest equivalent is an apprenticeship: you learn the trade on the job, so you generally need a job in that field and the right to work in New Zealand first. If you're here on a work visa, it must cover the whole training period. Fees can vary by training provider and visa. This is general information; for your own situation, check with Immigration New Zealand or a licensed adviser (iaa.govt.nz).",
+            },
+            url: "https://www.competenz.org.nz/guides/understanding-apprenticeships",
+          },
+          {
             label: { tr: "Zaten bir iş teklifin varsa", en: "If you already have a job offer" },
             content: {
               tr: "Akredite bir işverenden somut bir iş teklifin varsa AEWV en doğrudan yoldur. Teklifi kabul etmeden önce işverenin gerçekten akredite olduğunu ve senden hiçbir ücret istemediğini mutlaka doğrula.",
@@ -350,6 +358,23 @@ const TOPICS = [
               en: "Tenants in New Zealand have clearly defined legal rights, from how your bond is protected to when a landlord can enter the property. Knowing these rights before you move in protects you if a dispute comes up later.",
             },
             url: "https://www.tenancy.govt.nz/starting-a-tenancy/new-to-tenancy/information-for-new-tenants/",
+          },
+        ],
+      },
+      {
+        label: { tr: "💸 Aylık Gider Örneği (Kasım 2026)", en: "💸 Monthly Cost Example (November 2026)" },
+        items: [
+          {
+            label: { tr: "İki kişilik bir evin aylık gideri: yaklaşık 6.200 NZD", en: "Monthly costs for a two-person household: about NZ$6,200" },
+            content: {
+              tr: "Tauranga'da yaşayan iki kişilik evimizin Kasım 2026 itibarıyla gerçek giderleri: kira 2.815, market 1.730, benzin 540, elektrik 270, telefon 180, spor salonu 173, araba bakımı yaklaşık 170, araba sigortası 150, internet 112, su 27 NZD. Haftalık ödenenler 4,33 ile çarpıldı (52 hafta ÷ 12 ay). Bu kişisel bir örnektir; şehir, ev ve yaşam tarzına göre çok değişir. Rakamların tablosunu PDF olarak indirebilirsin.",
+              en: "Actual costs of our two-person household in Tauranga as of November 2026: rent 2,815, groceries 1,730, petrol 540, electricity 270, phones 180, gym 173, car servicing about 170, car insurance 150, internet 112, water NZ$27. Weekly costs were multiplied by 4.33 (52 weeks ÷ 12 months). This is a personal example and varies a lot by city, home and lifestyle. You can download the table as a PDF.",
+            },
+            url: "/pdf/aylik-gider-2026.pdf",
+          },
+          {
+            label: { tr: "🎬 Video: Yeni Zelanda'da Aylık Gerçek Giderim (2026)", en: "🎬 Video: My Real Monthly Costs in New Zealand (2026, in Turkish)" },
+            url: "https://youtu.be/x9i6jjndEl4",
           },
         ],
       },
