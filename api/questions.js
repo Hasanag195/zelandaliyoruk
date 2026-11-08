@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const REPO = "Hasanag195/zelandaliyoruk-leads";
 const PATH = "questions.ndjson";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -13,6 +14,11 @@ function getClientIp(req) {
     if (parts.length) return parts[parts.length - 1];
   }
   return req.socket?.remoteAddress || "unknown";
+}
+
+function ipTag(ip) {
+  // Ham IP saklanmaz; hız sınırı için geri döndürülemez kısa özet, sonraki kayıtta silinir.
+  return crypto.createHmac("sha256", process.env.LEADS_GITHUB_TOKEN || "").update(String(ip)).digest("hex").slice(0, 16);
 }
 
 async function githubRequest(path, options = {}) {
@@ -57,9 +63,9 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const ip = getClientIp(req);
+  const ipH = ipTag(getClientIp(req));
   const ts = new Date().toISOString();
-  const record = JSON.stringify({ name, email, question, topic, consent: true, consentAt: ts, ts, ip });
+  const record = JSON.stringify({ name, email, question, topic, consent: true, consentAt: ts, ts, ipH });
 
   try {
     let lastError = null;
@@ -84,13 +90,27 @@ module.exports = async (req, res) => {
             return null;
           }
         })
-        .filter((r) => r && r.ip === ip && now - new Date(r.ts).getTime() < RATE_LIMIT_WINDOW_MS);
+        .filter((r) => r && r.ipH === ipH && now - new Date(r.ts).getTime() < RATE_LIMIT_WINDOW_MS);
       if (recentFromIp.length >= RATE_LIMIT_MAX) {
         res.status(429).json({ ok: false, error: "rate_limited" });
         return;
       }
 
-      const newContent = currentContent + (currentContent.endsWith("\n") || !currentContent ? "" : "\n") + record + "\n";
+      const kept = currentContent
+        .split("\n")
+        .map((l) => l.trim())
+        .filter(Boolean)
+        .map((l) => {
+          try {
+            const r = JSON.parse(l);
+            delete r.ip;
+            if (!r.ts || now - new Date(r.ts).getTime() >= RATE_LIMIT_WINDOW_MS) delete r.ipH;
+            return JSON.stringify(r);
+          } catch {
+            return l;
+          }
+        });
+      const newContent = [...kept, record].join("\n") + "\n";
 
       const putRes = await githubRequest(`contents/${PATH}`, {
         method: "PUT",

@@ -87,6 +87,10 @@
         fetch("/api/questions-list", { headers: { "X-Admin-Key": key } }),
       ]);
 
+      if (leadsRes.status === 429 || questionsRes.status === 429) {
+        err.textContent = "Çok fazla hatalı deneme. 15 dakika sonra tekrar dene.";
+        return false;
+      }
       if (leadsRes.status === 401 || questionsRes.status === 401) {
         err.textContent = "Anahtar hatalı.";
         return false;

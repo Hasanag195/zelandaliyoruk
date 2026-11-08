@@ -68,7 +68,7 @@ function accordionItem(i, lang) {
     return `<div class="accordion-item accordion-item--info">
               <p class="accordion-item-label">${label}</p>
               <p class="accordion-item-content">${content}</p>
-              <a href="${esc(i.url)}" target="_blank" rel="noopener" class="accordion-item-link">${T(lang, "officialLink")} <span class="accordion-arrow">↗</span></a>
+              <a href="${esc(i.url)}" target="_blank" rel="noopener" class="accordion-item-link">${i.linkText ? esc(L(i.linkText, lang)) : T(lang, "officialLink")} <span class="accordion-arrow">↗</span></a>
             </div>`;
   }
   if (i.url) {

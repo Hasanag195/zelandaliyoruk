@@ -153,6 +153,7 @@ const TOPICS = [
               en: "Germany's Ausbildung system doesn't exist in the same form in New Zealand. The closest equivalent is an apprenticeship: you learn the trade on the job, so you generally need a job in that field and the right to work in New Zealand first. If you're here on a work visa, it must cover the whole training period. Fees can vary by training provider and visa. This is general information; for your own situation, check with Immigration New Zealand or a licensed adviser (iaa.govt.nz).",
             },
             url: "https://www.competenz.org.nz/guides/understanding-apprenticeships",
+            linkText: { tr: "Kaynağa git (Competenz)", en: "Go to source (Competenz)" },
           },
           {
             label: { tr: "Zaten bir iş teklifin varsa", en: "If you already have a job offer" },
@@ -371,6 +372,7 @@ const TOPICS = [
               en: "Actual costs of our two-person household in Tauranga as of November 2026: rent 2,815, groceries 1,730, petrol 540, electricity 270, phones 180, gym 173, car servicing about 170, car insurance 150, internet 112, water NZ$27. Weekly costs were multiplied by 4.33 (52 weeks ÷ 12 months). This is a personal example and varies a lot by city, home and lifestyle. You can download the table as a PDF.",
             },
             url: "/pdf/aylik-gider-2026.pdf",
+            linkText: { tr: "PDF'i aç", en: "Open the PDF" },
           },
           {
             label: { tr: "🎬 Video: Yeni Zelanda'da Aylık Gerçek Giderim (2026)", en: "🎬 Video: My Real Monthly Costs in New Zealand (2026, in Turkish)" },
